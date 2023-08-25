@@ -1,0 +1,90 @@
+@mixin darkstone {
+  /* Text colors */
+  --kd-color-text-primary: var(--kd-color-neutral-white);
+
+  /* Accent colors */
+  --kd-color-background-accent-primary: var(--kd-color-springgreen-20);
+  --kd-color-background-accent-secondary: var(--kd-color-coolgray-40);
+  --kd-color-background-accent-tertiary: var(--kd-color-darkstone-60);
+
+  /* Background colors */
+  --kd-color-background-ui-default: var(--kd-color-darkstone-80);
+}
+
+@mixin spruce-dark {
+  /* Text colors */
+  --kd-color-text-primary: var(--kd-color-neutral-white);
+
+  /* Accent colors */
+  --kd-color-background-accent-primary: var(--kd-color-springgreen-20);
+  --kd-color-background-accent-secondary: var(--kd-color-spruce-30);
+  --kd-color-background-accent-tertiary: var(--kd-color-spruce-70);
+
+  /* Background colors */
+  --kd-color-background-ui-default: var(--kd-color-spruce-80);
+}
+
+@mixin spruce {
+  /* Text colors */
+  --kd-color-text-primary: var(--kd-color-neutral-white);
+
+  /* Accent colors */
+  --kd-color-background-accent-primary: var(--kd-color-springgreen-20);
+  --kd-color-background-accent-secondary: var(--kd-color-springgreen-10);
+  --kd-color-background-accent-tertiary: var(--kd-color-spruce-50);
+
+  /* Background colors */
+  --kd-color-background-ui-default: var(--kd-color-spruce-60);
+}
+
+@mixin darkgreen {
+  /* Text colors */
+  --kd-color-text-primary: var(--kd-color-neutral-white);
+
+  /* Accent colors */
+  --kd-color-background-accent-primary: var(--kd-color-springgreen-10);
+  --kd-color-background-accent-secondary: var(--kd-color-springgreen-20);
+  --kd-color-background-accent-tertiary: var(--kd-color-springgreen-50);
+
+  /* Background colors */
+  --kd-color-background-ui-default: var(--kd-color-springgreen-60);
+}
+
+@mixin lightgreen {
+  /* Text colors */
+  --kd-color-text-primary: var(--kd-color-deepforest-90);
+
+  /* Accent colors */
+  --kd-color-background-accent-primary: var(--kd-color-deepforest-90);
+  --kd-color-background-accent-secondary: var(--kd-color-spruce-70);
+  --kd-color-background-accent-tertiary: var(--kd-color-springgreen-30);
+
+  /* Background colors */
+  --kd-color-background-ui-default: var(--kd-color-springgreen-20);
+}
+
+@mixin skye {
+  /* Text colors */
+  --kd-color-text-primary: var(--kd-color-darkstone-80);
+
+  /* Accent colors */
+  --kd-color-background-accent-primary: var(--kd-color-warmred-50);
+  --kd-color-background-accent-secondary: var(--kd-color-spruce-60);
+  --kd-color-background-accent-tertiary: var(--kd-color-skye-20);
+
+  /* Background colors */
+  --kd-color-background-ui-default: var(--kd-color-skye-10);
+}
+
+@mixin cloud {
+  /* Text colors */
+  --kd-color-text-primary: var(--kd-color-darkstone-80);
+
+  /* Accent colors */
+  --kd-color-background-accent-primary: var(--kd-color-springgreen-20);
+  --kd-color-background-accent-secondary: var(--kd-color-spruce-60);
+  --kd-color-background-accent-tertiary: var(--kd-color-cloud-20);
+
+  /* Background colors */
+  --kd-color-background-ui-default: var(--kd-color-cloud-10);
+}

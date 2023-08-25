@@ -1,0 +1,54 @@
+import { Meta, Story, Canvas, Controls, Stories } from '@storybook/blocks';
+import * as componentPalettesStories from './ComponentPalettes.stories.js';
+
+<Meta of={componentPalettesStories} />
+
+# component-palettes
+
+Use the component-palette switcher at the top of Storybook (picture icon) to switch between different component-palettes. This can be done anywhere in the Storybook.
+
+## Example
+
+<Canvas>
+  <Story of={componentPalettesStories.Example} />
+</Canvas>
+
+## Usage
+
+### SCSS Mixins
+
+```css
+@use '~@kyndryl-design-system/shidoka-content/scss/mixins/component-palettes.scss';
+
+.your-css-selector {
+  @include component-palettes.darkstone;
+}
+```
+
+### Utility Classes
+
+#### Import to SCSS
+
+```css
+@use '~@kyndryl-design-system/shidoka-content/scss/utility/component-palettes.scss';
+```
+
+#### Import to CSS
+
+```css
+@import '@kyndryl-design-system/shidoka-content/css/component-palettes.css';
+```
+
+#### Import to JS
+
+```js
+import '@kyndryl-design-system/shidoka-content/css/component-palettes.css';
+```
+
+#### Example HTML
+
+```html
+<div class="kd-component-palette--darkstone">
+  <!-- rest of your HTML here -->
+</div>
+```

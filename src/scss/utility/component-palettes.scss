@@ -1,0 +1,29 @@
+@use '../mixins/component-palettes.scss';
+
+.kd-component-palette--darkstone {
+  @include component-palettes.darkstone;
+}
+
+.kd-component-palette--spruce-dark {
+  @include component-palettes.spruce-dark;
+}
+
+.kd-component-palette--spruce {
+  @include component-palettes.spruce;
+}
+
+.kd-component-palette--darkgreen {
+  @include component-palettes.darkgreen;
+}
+
+.kd-component-palette--lightgreen {
+  @include component-palettes.lightgreen;
+}
+
+.kd-component-palette--cloud {
+  @include component-palettes.cloud;
+}
+
+.kd-component-palette--skye {
+  @include component-palettes.skye;
+}

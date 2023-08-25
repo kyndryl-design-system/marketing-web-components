@@ -4,6 +4,9 @@ import customElements from '../custom-elements.json';
 
 import './global.scss?global';
 
+import '../src/scss/root.scss?global';
+import '../src/scss/utility/index.scss?global';
+
 export default {
   parameters: {
     actions: { argTypesRegex: '^on.*' },
@@ -22,26 +25,39 @@ export default {
       list: [
         { name: 'light', class: '', color: '#fff' },
         {
-          name: 'darkstone-80',
-          class: 'kd-theme--darkstone-80',
+          name: 'darkstone',
+          class: 'kd-component-palette--darkstone',
           color: '#3d3c3c',
         },
-        { name: 'spruce-80', class: 'kd-theme--spruce-80', color: '#163d43' },
-        { name: 'spruce-60', class: 'kd-theme--spruce-60', color: ' 	#29707a' },
         {
-          name: 'springgreen-60',
-          class: 'kd-theme--springgreen-60',
+          name: 'spruce dark',
+          class: 'kd-component-palette--spruce-dark',
+          color: '#163d43',
+        },
+        {
+          name: 'spruce',
+          class: 'kd-component-palette--spruce',
+          color: ' 	#29707a',
+        },
+        {
+          name: 'dark green',
+          class: 'kd-component-palette--darkgreen',
           color: '#187e3f',
         },
         {
-          name: 'springgreen-20',
-          class: 'kd-theme--springgreen-20',
+          name: 'light green',
+          class: 'kd-component-palette--lightgreen',
           color: '#4cdd84',
         },
         {
-          name: 'warmred-50',
-          class: 'kd-theme--warmred-50',
-          color: '#ff462d',
+          name: 'cloud',
+          class: 'kd-component-palette--cloud',
+          color: '#f2f1ee',
+        },
+        {
+          name: 'skye',
+          class: 'kd-component-palette--skye',
+          color: '#e4f4f1',
         },
       ],
     },
