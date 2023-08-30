@@ -37,7 +37,7 @@ export default {
 };
 
 export const Example = {
-  render: (args) => {
+  render: () => {
     return html`
       <div class="kd-component-palette--darkstone-80">
         <div class="component-paletted-container">
