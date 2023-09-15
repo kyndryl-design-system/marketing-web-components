@@ -9,7 +9,7 @@ import stylesheet from './eyebrow.scss';
 import { classMap } from 'lit-html/directives/class-map.js';
 
 @customElement(`kd-eyebrow`)
-export class kdEyebrow extends LitElement {
+export class eyebrow extends LitElement {
   static styles = [stylesheet];
 
   render() {

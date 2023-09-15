@@ -13,7 +13,7 @@ import stylesheet from './alternatingFeatureWithImage.scss';
 import '../eyebrow/eyebrow';
 
 @customElement('kd-alternating-feature-with-image')
-export class kdAlternatingFeatureWithImage extends LitElement {
+export class AlternatingFeatureWithImage extends LitElement {
   static styles = [stylesheet];
 
   @property({ type: String }) reverse;
