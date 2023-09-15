@@ -61,6 +61,9 @@
 
   /* Background colors */
   --kd-color-background-ui-default: var(--kd-color-springgreen-20);
+
+  /* Overrides */
+  --kd-color-background-primary: var(--kd-color-background-accent-secondary);
 }
 
 @mixin skye {

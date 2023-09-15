@@ -1,0 +1,12 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+
+@use 'sass:map';
+
+.kd-eyebrow {
+  p {
+    color: var(--kd-color-background-accent-primary);
+    margin: 0 0 16px 0;
+  }
+}
