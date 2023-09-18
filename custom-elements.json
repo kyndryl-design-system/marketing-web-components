@@ -27,33 +27,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/stories/alternatingFeatureWithImage.stories.ts",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "alternatingFeatureWithImage"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "module": "src/stories/alternatingFeatureWithImage.stories.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "alternatingFeatureWithImage",
-          "declaration": {
-            "name": "alternatingFeatureWithImage",
-            "module": "src/stories/alternatingFeatureWithImage.stories.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/common/helpers/helpers.ts",
       "declarations": [
         {
@@ -106,6 +79,37 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/components/alternatingFeatureWithImage/alternatingFeatureWithImage.stories.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "alternatingFeatureWithImage",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\n  args,\n  render: (args) => {\n    return html`\n      <kd-alternating-feature-with-image\n        reverse=\"${args.reverse}\"\n        bleedmedia=\"${args.bleedMedia}\"\n        headlineText=\"${args.headlineText}\"\n        eyebrowtext=\"${args.eyebrowText}\"\n        buttonLabel=\"${args.buttonLabel}\"\n        buttonLink=\"${args.buttonLink}\"\n      >\n        <div slot=\"media\">\n          <img\n            src=\"https://s7d1.scene7.com/is/image/kyndryl/ls_windingriver_16x9?qlt=85&amp;wid=1200&amp;ts=1650983065999&amp;dpr=off\"\n            alt=\"image alt text\"\n            class=\"kd-layout__aspect-ratio--16x9 kd-layout__object-fit--cover\"\n          />\n        </div>\n        <div slot=\"text\">\n          <p>\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu\n            facilisi pellentesque morbi molestie sed ut at sed ac. Semper tortor\n            feugiat non sem eget libero. Risus semper facilisis convallis vitae.\n          </p>\n        </div>\n      </kd-alternating-feature-with-image>\n    `;\n  },\n}"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "src/components/alternatingFeatureWithImage/alternatingFeatureWithImage.stories.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "alternatingFeatureWithImage",
+          "declaration": {
+            "name": "alternatingFeatureWithImage",
+            "module": "src/components/alternatingFeatureWithImage/alternatingFeatureWithImage.stories.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/alternatingFeatureWithImage/alternatingFeatureWithImage.ts",
       "declarations": [
         {
@@ -116,36 +120,64 @@
             {
               "kind": "field",
               "name": "reverse",
+              "type": {
+                "text": "string"
+              },
+              "default": "'false'",
               "attribute": "reverse"
             },
             {
               "kind": "field",
               "name": "bleedMedia",
+              "type": {
+                "text": "string"
+              },
+              "default": "'false'",
               "attribute": "bleedMedia"
             },
             {
               "kind": "field",
               "name": "buttonLabel",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
               "attribute": "buttonLabel"
             },
             {
               "kind": "field",
               "name": "buttonLink",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
               "attribute": "buttonLink"
             },
             {
               "kind": "field",
               "name": "buttonType",
+              "type": {
+                "text": "string"
+              },
+              "default": "'primary-web'",
               "attribute": "buttonType"
             },
             {
               "kind": "field",
               "name": "headlineText",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
               "attribute": "headlineText"
             },
             {
               "kind": "field",
               "name": "eyebrowText",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
               "attribute": "eyebrowText"
             },
             {
@@ -172,30 +204,58 @@
           "attributes": [
             {
               "name": "reverse",
+              "type": {
+                "text": "string"
+              },
+              "default": "'false'",
               "fieldName": "reverse"
             },
             {
               "name": "bleedMedia",
+              "type": {
+                "text": "string"
+              },
+              "default": "'false'",
               "fieldName": "bleedMedia"
             },
             {
               "name": "buttonLabel",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
               "fieldName": "buttonLabel"
             },
             {
               "name": "buttonLink",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
               "fieldName": "buttonLink"
             },
             {
               "name": "buttonType",
+              "type": {
+                "text": "string"
+              },
+              "default": "'primary-web'",
               "fieldName": "buttonType"
             },
             {
               "name": "headlineText",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
               "fieldName": "headlineText"
             },
             {
               "name": "eyebrowText",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
               "fieldName": "eyebrowText"
             }
           ],
@@ -222,6 +282,21 @@
           "declaration": {
             "name": "AlternatingFeatureWithImage",
             "module": "src/components/alternatingFeatureWithImage/alternatingFeatureWithImage.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/alternatingFeatureWithImage/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "AlternatingFeatureWithImage",
+          "declaration": {
+            "name": "AlternatingFeatureWithImage",
+            "module": "./alternatingFeatureWithImage"
           }
         }
       ]
@@ -256,6 +331,21 @@
           "declaration": {
             "name": "Eyebrow",
             "module": "src/components/eyebrow/eyebrow.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/eyebrow/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "Eyebrow",
+          "declaration": {
+            "name": "Eyebrow",
+            "module": "./eyebrow"
           }
         }
       ]

@@ -3,7 +3,7 @@
  */
 
 import { html, LitElement } from 'lit';
-import { state, property, customElement } from 'lit/decorators.js';
+import { property, customElement } from 'lit/decorators.js';
 
 import { classMap } from 'lit-html/directives/class-map.js';
 
@@ -15,15 +15,15 @@ import '../eyebrow/eyebrow';
 
 @customElement('kd-alternating-feature-with-image')
 export class AlternatingFeatureWithImage extends LitElement {
-  static styles = [stylesheet];
+  static override styles = [stylesheet];
 
-  @property({ type: String }) reverse;
-  @property({ type: String }) bleedMedia;
-  @property({ type: String }) buttonLabel;
-  @property({ type: String }) buttonLink;
-  @property({ type: String }) buttonType;
-  @property({ type: String }) headlineText;
-  @property({ type: String }) eyebrowText;
+  @property({ type: String }) reverse = 'false';
+  @property({ type: String }) bleedMedia = 'false';
+  @property({ type: String }) buttonLabel = '';
+  @property({ type: String }) buttonLink = '';
+  @property({ type: String }) buttonType = 'primary-web';
+  @property({ type: String }) headlineText = '';
+  @property({ type: String }) eyebrowText = '';
 
   // @property() theme: THEMES;
 
@@ -137,7 +137,7 @@ export class AlternatingFeatureWithImage extends LitElement {
     `;
   }
 
-  render() {
+  override render() {
     const classesContainer = {
       [`kd-alternating-feature-with-image`]: true,
     };
