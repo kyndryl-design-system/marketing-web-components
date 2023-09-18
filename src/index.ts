@@ -1,2 +1,2 @@
-export { eyebrow } from './components/eyebrow';
-export { alternatingFeatureWithImage } from './components/alternatingFeatureWithImage';
+export { Eyebrow } from './components/eyebrow';
+export { AlternatingFeatureWithImage } from './components/alternatingFeatureWithImage';

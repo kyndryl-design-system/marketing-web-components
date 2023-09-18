@@ -8,6 +8,7 @@ import { state, property, customElement } from 'lit/decorators.js';
 import { classMap } from 'lit-html/directives/class-map.js';
 
 import '@kyndryl-design-system/foundation/components/button';
+import '@kyndryl-design-system/foundation/components/icon';
 import chevronRightIcon from '@carbon/icons/es/chevron--right/20';
 import stylesheet from './alternatingFeatureWithImage.scss';
 import '../eyebrow/eyebrow';
@@ -137,13 +138,13 @@ export class AlternatingFeatureWithImage extends LitElement {
   }
 
   render() {
-    const classesContainer = classMap({
+    const classesContainer = {
       [`kd-alternating-feature-with-image`]: true,
-    });
+    };
 
     if (this.reverse === 'true') {
       return html`
-        <div class="${classesContainer}">
+        <div class="${classMap(classesContainer)}">
           <div class="full-bleed-grid">  
             ${this.slot1Template}      
             ${this.slot2Template}      
@@ -153,7 +154,7 @@ export class AlternatingFeatureWithImage extends LitElement {
       `;
     } else {
       return html`
-        <div class="${classesContainer}">
+        <div class="${classMap(classesContainer)}">
           <div class="full-bleed-grid">  
               ${this.slot2Template}      
               ${this.slot1Template}
@@ -162,5 +163,10 @@ export class AlternatingFeatureWithImage extends LitElement {
         </div>
       `;
     }
+  }
+}
+declare global {
+  interface HTMLElementTagNameMap {
+    'kd-alternating-feature-with-image': AlternatingFeatureWithImage;
   }
 }

@@ -9,7 +9,7 @@ import stylesheet from './eyebrow.scss';
 import { classMap } from 'lit-html/directives/class-map.js';
 
 @customElement(`kd-eyebrow`)
-export class eyebrow extends LitElement {
+export class Eyebrow extends LitElement {
   static styles = [stylesheet];
 
   render() {
@@ -20,5 +20,11 @@ export class eyebrow extends LitElement {
         </p>
       </div>
     `;
+  }
+}
+
+declare global {
+  interface HTMLElementTagNameMap {
+    'kd-eyebrow': Eyebrow;
   }
 }
