@@ -9,10 +9,10 @@ export default {
   title: 'Components/Alternating Feature with Image',
   component: `kd-alternating-feature-with-image`,
   argTypes: {
-    reverse: {
+    mediaPosition: {
       control: { type: 'radio' },
-      options: ['true', 'false'],
-      description: 'Image followed by text',
+      options: ['left', 'right'],
+      description: 'Media on the left or right',
     },
 
     bleedMedia: {
@@ -40,7 +40,7 @@ export default {
 };
 
 const args = {
-  reverse: 'false',
+  mediaPosition: 'left',
   bleedMedia: 'false',
   eyebrowText: 'Lorem Ipsum',
   headlineText: 'Lorem ipsum dolor sit amet',
@@ -53,7 +53,7 @@ export const alternatingFeatureWithImage = {
   render: (args: any) => {
     return html`
       <kd-alternating-feature-with-image
-        reverse="${args.reverse}"
+        mediaPosition="${args.mediaPosition}"
         bleedmedia="${args.bleedMedia}"
         headlineText="${args.headlineText}"
         eyebrowtext="${args.eyebrowText}"

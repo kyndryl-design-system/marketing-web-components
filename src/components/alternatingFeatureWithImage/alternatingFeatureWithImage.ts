@@ -17,7 +17,7 @@ import '../eyebrow/eyebrow';
 export class AlternatingFeatureWithImage extends LitElement {
   static override styles = [stylesheet];
 
-  @property({ type: String }) reverse = 'false';
+  @property({ type: String }) mediaPosition = 'left';
   @property({ type: String }) bleedMedia = 'false';
   @property({ type: String }) buttonLabel = '';
   @property({ type: String }) buttonLink = '';
@@ -55,7 +55,7 @@ export class AlternatingFeatureWithImage extends LitElement {
   }
 
   get slot1Template() {
-    if (this.reverse === 'true') {
+    if (this.mediaPosition === 'left') {
       if (this.bleedMedia === 'true') {
         return html`
           <div class="container-one container-media">
@@ -82,7 +82,7 @@ export class AlternatingFeatureWithImage extends LitElement {
         <div class="full-bleed-internal-container container-one container-text">
           <div class="kd-grid kd-grid-padding">
             <div
-              class="kd-grid__col--sm-4 kd-grid__col--md-8 kd-grid__col--lg-6 internal-text-slot"
+              class="kd-grid__col--sm-4 kd-grid__col--md-7 kd-grid__col--lg-6 internal-text-slot"
             >
               ${this.textCard}
             </div>
@@ -93,12 +93,12 @@ export class AlternatingFeatureWithImage extends LitElement {
   }
 
   get slot2Template() {
-    if (this.reverse === 'true') {
+    if (this.mediaPosition === 'left') {
       return html`
         <div class="full-bleed-internal-container container-two container-text">
           <div class="kd-grid kd-grid-padding">
             <div
-              class="kd-grid__col--sm-4 kd-grid__col--md-8 kd-grid__col--lg-6 internal-text-slot"
+              class="kd-grid__col--sm-4 kd-grid__col--md-7 kd-grid__col--lg-6 internal-text-slot right-text-slot"
             >
               ${this.textCard}
             </div>
@@ -131,7 +131,9 @@ export class AlternatingFeatureWithImage extends LitElement {
   get textCard() {
     return html`
       ${this.eyebrowTemplate}
-      <h3 class="headline-06-light">${this.headlineText}</h3>
+      <h3 class="kd-type--headline-06 kd-type--weight-light">
+        ${this.headlineText}
+      </h3>
       <slot name="text"></slot>
       ${this.ctaTemplate}
     `;
@@ -142,23 +144,19 @@ export class AlternatingFeatureWithImage extends LitElement {
       [`kd-alternating-feature-with-image`]: true,
     };
 
-    if (this.reverse === 'true') {
+    if (this.mediaPosition === 'left') {
       return html`
         <div class="${classMap(classesContainer)}">
-          <div class="full-bleed-grid">  
-            ${this.slot1Template}      
-            ${this.slot2Template}      
-          </div>
+          <div class="full-bleed-grid">
+            ${this.slot1Template} ${this.slot2Template}
           </div>
         </div>
       `;
     } else {
       return html`
         <div class="${classMap(classesContainer)}">
-          <div class="full-bleed-grid">  
-              ${this.slot2Template}      
-              ${this.slot1Template}
-          </div>
+          <div class="full-bleed-grid">
+            ${this.slot2Template} ${this.slot1Template}
           </div>
         </div>
       `;

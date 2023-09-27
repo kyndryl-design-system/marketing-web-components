@@ -13,7 +13,7 @@ export class Eyebrow extends LitElement {
   override render() {
     return html`
       <div class="kd-eyebrow">
-        <p class="kd-type--ui-03">
+        <p class="kd-type--ui-03 kd-type--weight-light">
           <slot></slot>
         </p>
       </div>

@@ -6,6 +6,7 @@
 
 @use '~@kyndryl-design-system/foundation/scss/variables/breakpoints.scss';
 @use '~@kyndryl-design-system/foundation/scss/utility/grid.scss';
+@use '~@kyndryl-design-system/foundation/scss/utility/typography.scss';
 
 .kd-alternating-feature-with-image {
   background: var(--kd-color-background-ui-default);
@@ -41,42 +42,30 @@
       grid-row-start: 1;
       grid-column: 1 / span 2;
     }
+  }
 
+  @media (min-width: breakpoints.$bp-lg) {
     .container-two .internal-text-slot,
     .container-two .internal-media-slot {
       grid-column-start: 7;
     }
   }
 
-  @media (min-width: breakpoints.$bp-xl) {
+  @media (min-width: breakpoints.$bp-sm) {
     .internal-text-slot {
-      padding: 64px 96px 0px 24px;
-    }
-  }
-  @media (min-width: breakpoints.$bp-xl) {
-    .internal-text-slot {
-      padding: 64px 96px 0px 24px;
-    }
-  }
-  @media (min-width: breakpoints.$bp-lg) and (max-width: breakpoints.$bp-max) {
-    .internal-text-slot {
-      padding: 64px 96px 0px 24px;
-    }
-  }
-  @media (min-width: breakpoints.$bp-md) and (max-width: breakpoints.$bp-xl) {
-    .internal-text-slot {
-      padding: 48px 96px 0px 16px;
+      padding: 24px 0px 24px 0px;
     }
   }
 
-  @media (min-width: breakpoints.$bp-sm) and (max-width: breakpoints.$bp-lg) {
-    .internal-text-slot {
-      padding: 64px 96px 64px 32px;
-    }
-  }
   @media (min-width: breakpoints.$bp-md) {
     .internal-text-slot {
-      padding: 32px 48px 32px 0px;
+      padding: 40px 0px 40px 0px;
+    }
+  }
+
+  @media (min-width: breakpoints.$bp-lg) {
+    .internal-text-slot {
+      padding: 40px 96px 40px 24px;
     }
   }
 
