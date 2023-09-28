@@ -1,0 +1,12 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+
+@use '~@kyndryl-design-system/shidoka-foundation/scss/utility/typography.scss';
+
+.kd-eyebrow {
+  p {
+    color: var(--kd-color-background-accent-secondary);
+    margin: 0 0 16px 0;
+  }
+}

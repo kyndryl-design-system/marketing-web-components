@@ -9,6 +9,11 @@
 
   /* Background colors */
   --kd-color-background-ui-default: var(--kd-color-darkstone-80);
+
+  --kd-color-background-primary: var(--kd-color-background-accent-secondary);
+  --kd-color-background-primary-hover: var(
+    --kd-color-background-accent-secondary
+  );
 }
 
 @mixin spruce-dark {
@@ -22,6 +27,11 @@
 
   /* Background colors */
   --kd-color-background-ui-default: var(--kd-color-spruce-80);
+
+  --kd-color-background-primary: var(--kd-color-background-accent-secondary);
+  --kd-color-background-primary-hover: var(
+    --kd-color-background-accent-secondary
+  );
 }
 
 @mixin spruce {
@@ -35,6 +45,11 @@
 
   /* Background colors */
   --kd-color-background-ui-default: var(--kd-color-spruce-60);
+
+  --kd-color-background-primary: var(--kd-color-background-accent-secondary);
+  --kd-color-background-primary-hover: var(
+    --kd-color-background-accent-secondary
+  );
 }
 
 @mixin darkgreen {
@@ -48,6 +63,11 @@
 
   /* Background colors */
   --kd-color-background-ui-default: var(--kd-color-springgreen-60);
+
+  --kd-color-background-primary: var(--kd-color-background-accent-secondary);
+  --kd-color-background-primary-hover: var(
+    --kd-color-background-accent-secondary
+  );
 }
 
 @mixin lightgreen {
@@ -61,6 +81,11 @@
 
   /* Background colors */
   --kd-color-background-ui-default: var(--kd-color-springgreen-20);
+
+  --kd-color-background-primary: var(--kd-color-background-accent-secondary);
+  --kd-color-background-primary-hover: var(
+    --kd-color-background-accent-secondary
+  );
 }
 
 @mixin skye {
@@ -74,6 +99,11 @@
 
   /* Background colors */
   --kd-color-background-ui-default: var(--kd-color-skye-10);
+
+  --kd-color-background-primary: var(--kd-color-background-accent-secondary);
+  --kd-color-background-primary-hover: var(
+    --kd-color-background-accent-secondary
+  );
 }
 
 @mixin cloud {
@@ -87,4 +117,9 @@
 
   /* Background colors */
   --kd-color-background-ui-default: var(--kd-color-cloud-10);
+
+  --kd-color-background-primary: var(--kd-color-background-accent-secondary);
+  --kd-color-background-primary-hover: var(
+    --kd-color-background-accent-secondary
+  );
 }
