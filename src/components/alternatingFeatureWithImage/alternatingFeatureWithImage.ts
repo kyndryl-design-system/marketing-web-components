@@ -7,9 +7,10 @@ import { property, customElement } from 'lit/decorators.js';
 
 import { classMap } from 'lit-html/directives/class-map.js';
 
-import '@kyndryl-design-system/foundation/components/button';
-import '@kyndryl-design-system/foundation/components/icon';
-import chevronRightIcon from '@carbon/icons/es/chevron--right/20';
+import '@kyndryl-design-system/shidoka-foundation/components/button';
+import '@kyndryl-design-system/shidoka-foundation/components/icon';
+import '@kyndryl-design-system/shidoka-foundation/components/link';
+import chevronRightIcon from '@carbon/icons/es/chevron--right/16';
 import stylesheet from './alternatingFeatureWithImage.scss';
 import '../eyebrow/eyebrow';
 
@@ -25,8 +26,6 @@ export class AlternatingFeatureWithImage extends LitElement {
   @property({ type: String }) headlineText = '';
   @property({ type: String }) eyebrowText = '';
 
-  // @property() theme: THEMES;
-
   get eyebrowTemplate() {
     if (this.eyebrowText) {
       return html` <kd-eyebrow>${this.eyebrowText}</kd-eyebrow> `;
@@ -38,16 +37,10 @@ export class AlternatingFeatureWithImage extends LitElement {
   get ctaTemplate() {
     if (this.buttonLabel) {
       return html`
-        <kd-button
-          kind="primary-app"
-          type="button"
-          iconposition="right"
-          description=""
-          href="${this.buttonLink}"
-        >
+        <kd-link href="${this.buttonLink}" target="_self" kind="secondary">
           ${this.buttonLabel}
           <kd-icon slot="icon" .icon=${chevronRightIcon}></kd-icon>
-        </kd-button>
+        </kd-link>
       `;
     } else {
       return null;

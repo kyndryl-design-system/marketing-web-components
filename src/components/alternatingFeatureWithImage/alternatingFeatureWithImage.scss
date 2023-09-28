@@ -4,9 +4,9 @@
 
 @use 'sass:map';
 
-@use '~@kyndryl-design-system/foundation/scss/variables/breakpoints.scss';
-@use '~@kyndryl-design-system/foundation/scss/utility/grid.scss';
-@use '~@kyndryl-design-system/foundation/scss/utility/typography.scss';
+@use '~@kyndryl-design-system/shidoka-foundation/scss/variables/breakpoints.scss';
+@use '~@kyndryl-design-system/shidoka-foundation/scss/utility/grid.scss';
+@use '~@kyndryl-design-system/shidoka-foundation/scss/utility/typography.scss';
 
 .kd-alternating-feature-with-image {
   background: var(--kd-color-background-ui-default);
