@@ -1,4 +1,5 @@
 import { html } from 'lit';
+import { Button } from '@kyndryl-design-system/shidoka-foundation';
 
 export default {
   title: 'Shidoka Content/Component Palettes',
@@ -42,7 +43,11 @@ export const Example = {
       <div class="kd-component-palette--darkstone-80">
         <div class="component-paletted-container">
           <h3>Component</h3>
-          <p>Accent Colors</p>
+          <h4>Button</h4>
+          <kd-button kind="primary-web">Primary Web</kd-button>
+          <kd-button kind="secondary">Secondary</kd-button>
+          <kd-button kind="tertiary">Tertiary</kd-button>
+          <h4>Accent Colors</h4>
           <div class="color-box primary-color"></div>
           <div class="color-box secondary-color"></div>
           <div class="color-box tertiary-color"></div>
