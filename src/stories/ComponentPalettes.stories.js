@@ -44,9 +44,10 @@ export const Example = {
         <div class="component-paletted-container">
           <h3>Component</h3>
           <h4>Button</h4>
-          <kd-button kind="primary-app">Primary Web</kd-button>
-          <kd-button kind="secondary">Secondary</kd-button>
-          <kd-button kind="tertiary">Tertiary</kd-button>
+          <kd-button kind="primary-app">Primary App button</kd-button>
+          <kd-button kind="primary-web">Primary Web button</kd-button>
+          <kd-button kind="secondary">Secondary button</kd-button>
+          <kd-button kind="tertiary">Tertiary button</kd-button>
           <h4>Accent Colors</h4>
           <div class="color-box primary-color"></div>
           <div class="color-box secondary-color"></div>
