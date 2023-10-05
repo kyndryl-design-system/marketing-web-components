@@ -9,13 +9,17 @@
 
   /* Background colors */
   --kd-color-background-ui-default: var(--kd-color-darkstone-80);
-
+  --kd-color-text-inversed: var(--kd-color-darkstone-80);
   --kd-color-background-primary: var(--kd-color-neutral-white);
   --kd-color-background-primary-hover: var(--kd-color-darkstone-20);
   --kd-color-background-primary-hover-subtle: var(--kd-color-darkstone-90);
   --kd-color-background-primary-pressed: var(--kd-color-darkstone-100);
   --kd-color-background-secondary: var(--kd-color-darkstone-80);
+  --kd-color-background-secondary-hover: var(--kd-color-darkstone-20);
+  --kd-color-border-primary: var(--kd-color-neutral-white);
   --kd-color-background-tertiary: var(--kd-color-neutral-white);
+  --kd-color-text-tertiary: var(--kd-color-neutral-white);
+  --kd-color-background-accent-subtle: var(--kd-color-darkstone-90);
   --kd-color-background-inverse: var(--kd-color-neutral-white);
   --kd-color-border-focus: var(--kd-color-spruce-30);
 }
@@ -31,13 +35,17 @@
 
   /* Background colors */
   --kd-color-background-ui-default: var(--kd-color-spruce-80);
-
+  --kd-color-text-inversed: var(--kd-color-darkstone-80);
   --kd-color-background-primary: var(--kd-color-neutral-white);
   --kd-color-background-primary-hover: var(--kd-color-darkstone-20);
   --kd-color-background-primary-hover-subtle: var(--kd-color-spruce-90);
   --kd-color-background-primary-pressed: var(--kd-color-spruce-90);
   --kd-color-background-secondary: var(--kd-color-darkstone-80);
+  --kd-color-background-secondary-hover: var(--kd-color-darkstone-20);
+  --kd-color-border-primary: var(--kd-color-neutral-white);
   --kd-color-background-tertiary: var(--kd-color-neutral-white);
+  --kd-color-text-tertiary: var(--kd-color-neutral-white);
+  --kd-color-background-accent-subtle: var(--kd-color-spruce-90);
   --kd-color-background-inverse: var(--kd-color-neutral-white);
   --kd-color-border-focus: var(--kd-color-spruce-30);
 }
@@ -53,13 +61,17 @@
 
   /* Background colors */
   --kd-color-background-ui-default: var(--kd-color-spruce-60);
-
+  --kd-color-text-inversed: var(--kd-color-darkstone-80);
   --kd-color-background-primary: var(--kd-color-neutral-white);
   --kd-color-background-primary-hover: var(--kd-color-darkstone-20);
   --kd-color-background-primary-hover-subtle: var(--kd-color-spruce-80);
   --kd-color-background-primary-pressed: var(--kd-color-spruce-80);
   --kd-color-background-secondary: var(--kd-color-darkstone-80);
+  --kd-color-background-secondary-hover: var(--kd-color-darkstone-20);
+  --kd-color-border-primary: var(--kd-color-neutral-white);
   --kd-color-background-tertiary: var(--kd-color-neutral-white);
+  --kd-color-text-tertiary: var(--kd-color-neutral-white);
+  --kd-color-background-accent-subtle: var(--kd-color-spruce-80);
   --kd-color-background-inverse: var(--kd-color-neutral-white);
   --kd-color-border-focus: var(--kd-color-spruce-30);
 }
@@ -75,13 +87,17 @@
 
   /* Background colors */
   --kd-color-background-ui-default: var(--kd-color-springgreen-60);
-
+  --kd-color-text-inversed: var(--kd-color-darkstone-80);
   --kd-color-background-primary: var(--kd-color-neutral-white);
   --kd-color-background-primary-hover: var(--kd-color-darkstone-20);
   --kd-color-background-primary-hover-subtle: var(--kd-color-springgreen-70);
   --kd-color-background-primary-pressed: var(--kd-color-darkstone-100);
   --kd-color-background-secondary: var(--kd-color-darkstone-80);
+  --kd-color-background-secondary-hover: var(--kd-color-darkstone-20);
+  --kd-color-border-primary: var(--kd-color-neutral-white);
   --kd-color-background-tertiary: var(--kd-color-neutral-white);
+  --kd-color-text-tertiary: var(--kd-color-neutral-white);
+  --kd-color-background-accent-subtle: var(--kd-color-springgreen-70);
   --kd-color-background-inverse: var(--kd-color-neutral-white);
   --kd-color-border-focus: var(--kd-color-spruce-30);
 }
@@ -97,13 +113,17 @@
 
   /* Background colors */
   --kd-color-background-ui-default: var(--kd-color-springgreen-20);
-
+  --kd-color-text-inversed: var(--kd-color-neutral-white);
   --kd-color-background-primary: var(--kd-color-darkstone-80);
   --kd-color-background-primary-hover: var(--kd-color-darkstone-60);
   --kd-color-background-primary-hover-subtle: var(--kd-color-darkstone-10);
   --kd-color-background-primary-pressed: var(--kd-color-darkstone-100);
   --kd-color-background-secondary: var(--kd-color-neutral-white);
+  --kd-color-background-secondary-hover: var(--kd-color-darkstone-60);
+  --kd-color-border-primary: var(--kd-color-darkstone-80);
   --kd-color-background-tertiary: var(--kd-color-spruce-60);
+  --kd-color-text-tertiary: var(--kd-color-spruce-60);
+  --kd-color-background-accent-subtle: var(--kd-color-darkstone-10);
   --kd-color-background-inverse: var(--kd-color-neutral-white);
   --kd-color-border-focus: var(--kd-color-spruce-60);
 }
@@ -119,13 +139,17 @@
 
   /* Background colors */
   --kd-color-background-ui-default: var(--kd-color-skye-10);
-
+  --kd-color-text-inversed: var(--kd-color-neutral-white);
   --kd-color-background-primary: var(--kd-color-darkstone-80);
   --kd-color-background-primary-hover: var(--kd-color-darkstone-60);
   --kd-color-background-primary-hover-subtle: var(--kd-color-darkstone-10);
   --kd-color-background-primary-pressed: var(--kd-color-darkstone-100);
   --kd-color-background-secondary: var(--kd-color-neutral-white);
+  --kd-color-background-secondary-hover: var(--kd-color-darkstone-60);
+  --kd-color-border-primary: var(--kd-color-darkstone-80);
   --kd-color-background-tertiary: var(--kd-color-spruce-60);
+  --kd-color-text-tertiary: var(--kd-color-spruce-60);
+  --kd-color-background-accent-subtle: var(--kd-color-darkstone-10);
   --kd-color-background-inverse: var(--kd-color-neutral-white);
   --kd-color-border-focus: var(--kd-color-spruce-60);
 }
@@ -141,13 +165,18 @@
 
   /* Background colors */
   --kd-color-background-ui-default: var(--kd-color-cloud-10);
-
+  --kd-color-text-inversed: var(--kd-color-neutral-white);
   --kd-color-background-primary: var(--kd-color-darkstone-80);
+  --kd-color-background-secondary: var(--kd-color-neutral-white);
   --kd-color-background-primary-hover: var(--kd-color-darkstone-60);
   --kd-color-background-primary-hover-subtle: var(--kd-color-darkstone-10);
   --kd-color-background-primary-pressed: var(--kd-color-darkstone-100);
   --kd-color-background-secondary: var(--kd-color-neutral-white);
+  --kd-color-background-secondary-hover: var(--kd-color-darkstone-60);
+  --kd-color-border-primary: var(--kd-color-darkstone-80);
   --kd-color-background-tertiary: var(--kd-color-spruce-60);
+  --kd-color-text-tertiary: var(--kd-color-spruce-60);
+  --kd-color-background-accent-subtle: var(--kd-color-darkstone-10);
   --kd-color-background-inverse: var(--kd-color-neutral-white);
   --kd-color-border-focus: var(--kd-color-spruce-60);
 }
