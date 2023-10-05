@@ -46,7 +46,6 @@ export const Example = {
           <div class="color-box primary-color"></div>
           <div class="color-box secondary-color"></div>
           <div class="color-box tertiary-color"></div>
-          <br />
         </div>
       </div>
     `;
