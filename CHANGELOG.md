@@ -1,3 +1,10 @@
+# [1.0.0-beta.3](https://github.com/kyndryl-design-system/shidoka-content/compare/v1.0.0-beta.2...v1.0.0-beta.3) (2023-10-05)
+
+
+### Bug Fixes
+
+* **workflow:** trigger release ([747d2b2](https://github.com/kyndryl-design-system/shidoka-content/commit/747d2b277024ce1975845fb2531e7332afb52302))
+
 # [1.0.0-beta.2](https://github.com/kyndryl-design-system/shidoka-content/compare/v1.0.0-beta.1...v1.0.0-beta.2) (2023-10-05)
 
 
