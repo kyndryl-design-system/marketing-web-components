@@ -1,4 +1,4 @@
-name: kyndryl-shidoka-content
+name: shidoka-content
 on:
   push:
     branches:
