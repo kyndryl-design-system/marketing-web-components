@@ -1,3 +1,11 @@
+# [1.0.0-beta.4](https://github.com/kyndryl-design-system/shidoka-content/compare/v1.0.0-beta.3...v1.0.0-beta.4) (2023-10-06)
+
+
+### Bug Fixes
+
+* **eyebrow:** correct font-weight ([667ae27](https://github.com/kyndryl-design-system/shidoka-content/commit/667ae27102de25cc9114dce4b395c77018d66b34))
+* **eyebrow:** correct link style ([9c4e55e](https://github.com/kyndryl-design-system/shidoka-content/commit/9c4e55e74815db56672634061196fbadb2340754))
+
 # [1.0.0-beta.3](https://github.com/kyndryl-design-system/shidoka-content/compare/v1.0.0-beta.2...v1.0.0-beta.3) (2023-10-05)
 
 
