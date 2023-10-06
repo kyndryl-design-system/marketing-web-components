@@ -1,3 +1,10 @@
+# [1.0.0-beta.5](https://github.com/kyndryl-design-system/shidoka-content/compare/v1.0.0-beta.4...v1.0.0-beta.5) (2023-10-06)
+
+
+### Bug Fixes
+
+* **workflow:** update name ([24128b7](https://github.com/kyndryl-design-system/shidoka-content/commit/24128b7632872f5272488643051467e76d17772a))
+
 # [1.0.0-beta.4](https://github.com/kyndryl-design-system/shidoka-content/compare/v1.0.0-beta.3...v1.0.0-beta.4) (2023-10-06)
 
 
