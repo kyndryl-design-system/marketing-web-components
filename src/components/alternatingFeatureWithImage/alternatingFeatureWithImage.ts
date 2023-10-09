@@ -37,7 +37,12 @@ export class AlternatingFeatureWithImage extends LitElement {
   get ctaTemplate() {
     if (this.buttonLabel) {
       return html`
-        <kd-link href="${this.buttonLink}" target="_self" kind="secondary">
+        <kd-link
+          href="${this.buttonLink}"
+          target="_self"
+          kind="secondary"
+          standalone
+        >
           ${this.buttonLabel}
           <kd-icon slot="icon" .icon=${chevronRightIcon}></kd-icon>
         </kd-link>
