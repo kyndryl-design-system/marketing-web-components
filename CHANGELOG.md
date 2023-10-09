@@ -1,3 +1,15 @@
+# [1.0.0-beta.6](https://github.com/kyndryl-design-system/shidoka-content/compare/v1.0.0-beta.5...v1.0.0-beta.6) (2023-10-09)
+
+
+### Bug Fixes
+
+* **button-colors:** add in component palette values ([2cc1a45](https://github.com/kyndryl-design-system/shidoka-content/commit/2cc1a4566b6991369eab1f42a8f0ff25dda75ccc))
+* **button-colors:** change text-inverse to bg-inverse ([0fcc249](https://github.com/kyndryl-design-system/shidoka-content/commit/0fcc24968b044a6f73875b6ebd9d682cece8f7a4))
+* **button-colors:** change text-inverse to bg-inverse ([2478fd0](https://github.com/kyndryl-design-system/shidoka-content/commit/2478fd0b93d8b4de4d39f64cca3368e83cfda27e))
+* **button-colors:** revise implementation ([78ecebf](https://github.com/kyndryl-design-system/shidoka-content/commit/78ecebf07225f114a32afb7daf90b0cb1be3162d))
+* **button-colors:** revise story ([a190983](https://github.com/kyndryl-design-system/shidoka-content/commit/a190983498c5b4c73efe2b6247ac942a6dacfb18))
+* **button-colors:** revise story ([b3513e0](https://github.com/kyndryl-design-system/shidoka-content/commit/b3513e0a43e1c2105359fb8aadbd6f5a3e9e3f04))
+
 # [1.0.0-beta.5](https://github.com/kyndryl-design-system/shidoka-content/compare/v1.0.0-beta.4...v1.0.0-beta.5) (2023-10-06)
 
 
