@@ -81,14 +81,13 @@ export const Example = {
           </kd-button>
           <h4>Link</h4>
           <kd-link
+            standalone=""
             target="_self"
             kind="secondary"
             href="https://www.kyndryl.com"
           >
             Standalone Link
-            <kd-icon standalone slot="icon" .icon=${chevronRightIcon}
-              >></kd-icon
-            >
+            <kd-icon slot="icon" .icon=${chevronRightIcon}>></kd-icon>
           </kd-link>
           <h4>Accent Colors</h4>
           <div class="color-box primary-color"></div>
