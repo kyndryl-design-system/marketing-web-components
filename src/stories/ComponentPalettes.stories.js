@@ -47,7 +47,7 @@ export const Example = {
           <h3>Component</h3>
           <h4>Button</h4>
           <kd-button
-            kind="primary-app"
+            kind="primary-web"
             type="button"
             size="medium"
             iconposition="right"
