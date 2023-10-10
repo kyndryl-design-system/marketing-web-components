@@ -86,7 +86,9 @@ export const Example = {
             href="https://www.kyndryl.com"
           >
             Standalone Link
-            <kd-icon slot="icon" .icon=${chevronRightIcon}>></kd-icon>
+            <kd-icon standalone slot="icon" .icon=${chevronRightIcon}
+              >></kd-icon
+            >
           </kd-link>
           <h4>Accent Colors</h4>
           <div class="color-box primary-color"></div>
