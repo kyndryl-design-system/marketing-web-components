@@ -47,7 +47,7 @@ export const Example = {
           <h3>Component</h3>
           <h4>Button</h4>
           <kd-button
-            kind="primary-app"
+            kind="primary-web"
             type="button"
             size="medium"
             iconposition="right"
@@ -81,6 +81,7 @@ export const Example = {
           </kd-button>
           <h4>Link</h4>
           <kd-link
+            standalone=""
             target="_self"
             kind="secondary"
             href="https://www.kyndryl.com"
