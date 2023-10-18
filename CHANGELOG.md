@@ -1,3 +1,12 @@
+# [1.0.0-beta.7](https://github.com/kyndryl-design-system/shidoka-content/compare/v1.0.0-beta.6...v1.0.0-beta.7) (2023-10-18)
+
+
+### Bug Fixes
+
+* **colors:** correct button type and associated colors ([6be259d](https://github.com/kyndryl-design-system/shidoka-content/commit/6be259db802b437530f9cfb298b1f01dc4acd427))
+* **colors:** correct link type used in story ([25fdd91](https://github.com/kyndryl-design-system/shidoka-content/commit/25fdd914e2f88ef2075fea4794e5d21b0f51014c))
+* **colors:** correct link type used in story ([24d9fba](https://github.com/kyndryl-design-system/shidoka-content/commit/24d9fba1dd5f477c496b3c9968cf18db394ad277))
+
 # [1.0.0-beta.6](https://github.com/kyndryl-design-system/shidoka-content/compare/v1.0.0-beta.5...v1.0.0-beta.6) (2023-10-09)
 
 
