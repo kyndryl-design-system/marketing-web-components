@@ -38,7 +38,7 @@
 }
 
 .kd-stats-carousel-pagination-item {
-	background: var(--kd-color-text-brand);
+	background: var(--kd-color-background-accent-primary);
 	border-radius: 50%;
 	display: block;
 	height: var(--kd-spacing-4);
@@ -48,6 +48,6 @@
 
 	&.is-active {
 		background: transparent;
-		outline-color: var(--kd-color-text-brand);
+		outline-color: var(--kd-color-background-accent-primary);
 	}
 }

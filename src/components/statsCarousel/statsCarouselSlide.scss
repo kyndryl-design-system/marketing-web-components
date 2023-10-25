@@ -8,7 +8,7 @@
 
 .kd-stats-carousel-slide-stat-container {
 	align-items: flex-start;
-	color: var(--kd-color-text-brand);
+	color: var(--kd-color-background-accent-primary);
 	display: flex;
 
 	@media (min-width: breakpoints.$bp-lg) {
@@ -38,7 +38,7 @@
 }
 
 .kd-stats-carousel-slide-description {
-	border-top: 2px solid var(--kd-color-border-brand);
+	border-top: 2px solid var(--kd-color-background-accent-primary);
 	padding-top: var(--kd-spacing-32);
 
 	::slotted(*) {
