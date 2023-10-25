@@ -7,12 +7,20 @@
 }
 
 .kd-stats-carousel-slide-stat-container {
-	align-items: center;
+	align-items: flex-start;
 	color: var(--kd-color-text-brand);
 	display: flex;
 
 	@media (min-width: breakpoints.$bp-lg) {
 		justify-content: flex-end;
+	}
+
+	&.is-center {
+		align-items: center;
+	}
+
+	&.is-subscript {
+		align-items: flex-end;
 	}
 }
 
