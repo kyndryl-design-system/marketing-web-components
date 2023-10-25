@@ -1,0 +1,23 @@
+.kd-layout__object-fit--cover {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    width: 100%;
+  }
+  
+  .kd-alternating-feature-with-image .internal-text-slot {
+    padding: 0px 40px !important;
+    background-color: aqua !important;
+  }
+  
+  @media only screen and (max-width: 868px) {
+    .cover {
+      aspect-ratio: 16/9;
+      display: block;
+      max-height: 100%;
+      max-width: 80%;
+      position: relative;
+    }
+  }
+  
