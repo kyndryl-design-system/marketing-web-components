@@ -5,57 +5,31 @@
 import { html } from 'lit';
 import './expertFeature';
 import '../eyebrow';
+import '@kyndryl-design-system/shidoka-foundation/components/button';
 import chevronRightIcon from '@carbon/icons/es/chevron--right/20';
+import twitterLogo from '@carbon/icons/es/logo--linkedin/24';
 
 export default {
-  title: 'Components/Expert Feature',
+  title: 'Components/Features/Expert Feature',
   component: `kd-expert-feature`,
   argTypes: {
-    mediaPosition: {
+    mediaSize: {
       control: { type: 'radio' },
-      options: ['left', 'right'],
-      description: 'Media on the left or right',
-    },
-
-    bleedMedia: {
-      control: { type: 'radio' },
-      options: ['true', 'false'],
-      description: 'Bleed the media slot to the edge of the browser',
-    },
-    headlineText: {
-      control: { type: 'text' },
-      description: 'Headline Text (required)',
-    },
-    eyebrowText: {
-      control: { type: 'text' },
-      description: 'Eyebrow Text',
-    },
-    buttonLabel: {
-      control: { type: 'text' },
-      description: 'Button Label',
-    },
-    buttonLink: {
-      control: { type: 'text' },
-      description: 'Button Link',
+      options: ['full', 'half'],
+      description: 'Media full width or half width',
     },
   },
 };
 
 const args = {
-  mediaPosition: 'left',
-  bleedMedia: 'false',
-  eyebrowText: 'Lorem Ipsum',
-  headlineText: 'Lorem ipsum dolor sit amet',
-  buttonLabel: 'Button text',
-  buttonLink: 'https://www.kyndryl.com',
+  mediaSize: 'full',
 };
 
 export const expertFeature = {
   args,
   render: (args: any) => {
     return html`
-      <kd-expert-feature>
-        
+      <kd-expert-feature mediaSize="${args.mediaSize}">    
           <img
             src="https://s7d1.scene7.com/is/image/kyndryl/ls_windingriver_16x9?qlt=85&amp;wid=1200&amp;ts=1650983065999&amp;dpr=off"
             alt="image alt text"
@@ -82,7 +56,7 @@ export const expertFeature = {
         </div>
         <div slot="cta">
           <kd-button
-            kind="primary-web"
+            kind="secondary"
             type="button"
             size="medium"
             iconposition="right"
@@ -99,7 +73,7 @@ export const expertFeature = {
         <div slot="expert-title">
           Vice President, State and Local Government | United States
         </div>
-        <div slot="social-media"></div>
+        <div slot="social-media"><a href="https://www.linkedin.com"><kd-icon slot="icon" .icon=${twitterLogo}></kd-icon></a></div>
         <div slot="title">quick take</div>
       </kd-expert-feature>
     `;

@@ -14,6 +14,11 @@
   background: var(--kd-color-background-ui-default);
   color: var(--kd-color-text-primary);
 
+  .kd-grid-padding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .media-container {
     position: relative;
   }
@@ -40,5 +45,39 @@
     left: 48px;
     color: #fff;
     font-size: 50px;
+  }
+
+  .sidebar {
+    position: relative;
+  }
+
+  .body-copy {
+    padding-top: 24px;
+  }
+
+  .cta {
+    padding-top: 40px;
+  }
+
+  .social-media {
+    padding-top: 24px;
+  }
+
+  .spacer-line {
+    width: 16px;
+    height: 2px;
+    background-color: var(--kd-color-background-accent-primary);
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .sidebar:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    left: -16px;
+    bottom: 0;
+    background: var(--kd-color-border-primary);
+    width: 1px;
   }
 }
