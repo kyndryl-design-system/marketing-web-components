@@ -10,7 +10,7 @@ import chevronRightIcon from '@carbon/icons/es/chevron--right/20';
 import twitterLogo from '@carbon/icons/es/logo--linkedin/24';
 
 export default {
-  title: 'Components/Features/Expert Feature',
+  title: 'Features/Expert Feature',
   component: `kd-expert-feature`,
   argTypes: {
     mediaSize: {

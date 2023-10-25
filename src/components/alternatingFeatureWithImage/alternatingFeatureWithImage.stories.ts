@@ -6,7 +6,7 @@ import { html } from 'lit';
 import './alternatingFeatureWithImage';
 
 export default {
-  title: 'Components/Alternating Feature with Image',
+  title: 'Features/Alternating Feature with Image',
   component: `kd-alternating-feature-with-image`,
   argTypes: {
     mediaPosition: {
