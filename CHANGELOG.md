@@ -1,3 +1,10 @@
+# [1.0.0-beta.8](https://github.com/kyndryl-design-system/shidoka-content/compare/v1.0.0-beta.7...v1.0.0-beta.8) (2023-10-25)
+
+
+### Bug Fixes
+
+* move foundation to peer dependencies ([fd7858e](https://github.com/kyndryl-design-system/shidoka-content/commit/fd7858e38b20f885c8ec418e3508763930be98c5))
+
 # [1.0.0-beta.7](https://github.com/kyndryl-design-system/shidoka-content/compare/v1.0.0-beta.6...v1.0.0-beta.7) (2023-10-18)
 
 
