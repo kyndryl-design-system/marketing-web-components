@@ -18,6 +18,7 @@ export default {
     preserveModules: true,
     preserveModulesRoot: 'src',
   },
+  external: [/shidoka-foundation\/components/],
   plugins: [
     del({ targets: 'dist/*' }),
     multiInput.default(),
@@ -28,7 +29,6 @@ export default {
         { src: 'package.json', dest: 'dist' },
         { src: 'README.md', dest: 'dist' },
         { src: 'src/root.css', dest: 'dist' },
-        { src: 'src/assets', dest: 'dist' },
       ],
     }),
     InlineSvg(),
