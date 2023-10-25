@@ -1,0 +1,34 @@
+@use '~@kyndryl-design-system/shidoka-foundation/scss/variables/breakpoints.scss';
+@use '~@kyndryl-design-system/shidoka-foundation/scss/utility/grid.scss';
+@use '~@kyndryl-design-system/shidoka-foundation/scss/utility/typography.scss';
+
+.kd-stats-carousel-slide {
+	align-items: center;
+}
+
+.kd-stats-carousel-slide-stat-container {
+	align-items: center;
+	color: var(--kd-color-text-brand);
+	display: flex;
+
+	@media (min-width: breakpoints.$bp-lg) {
+		justify-content: flex-end;
+	}
+}
+
+.kd-stats-carousel-slide-stat {
+	display: inline-flex;
+}
+
+.kd-stats-carousel-slide-symbol {
+	display: inline-flex;
+}
+
+.kd-stats-carousel-slide-description {
+	border-top: 2px solid var(--kd-color-border-brand);
+	padding-top: var(--kd-spacing-32);
+
+	::slotted(*) {
+		margin: 0;
+	}
+}

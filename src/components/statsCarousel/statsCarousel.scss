@@ -1,0 +1,27 @@
+@use '~@kyndryl-design-system/shidoka-foundation/scss/variables/breakpoints.scss';
+@use '~@kyndryl-design-system/shidoka-foundation/scss/utility/grid.scss';
+@use '~@kyndryl-design-system/shidoka-foundation/scss/utility/typography.scss';
+
+.kd-stats-carousel-container {
+	padding: var(--kd-spacing-80) 0;
+	width: 100%;
+
+	@media (min-width: breakpoints.$bp-md) {
+		padding: var(--kd-spacing-120) 0;
+	}
+}
+
+.kd-stats-carousel-title {
+	margin: 0 0 var(--kd-spacing-16);
+
+	@media (min-width: breakpoints.$bp-lg) {
+		margin-bottom: var(--kd-spacing-48);
+	}
+}
+
+.kd-stats-carousel-slides {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	width: 100%;
+}
