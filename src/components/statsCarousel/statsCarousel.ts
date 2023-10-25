@@ -26,6 +26,9 @@ export class StatsCarousel extends LitElement {
 	@state()
 	isInit: boolean = true;
 
+	@state()
+	activeSlideIndex: number = 0;
+
 	private resizeTimer: any;
 	private resizeDelay: number = 100;
 	private resetDelay: number = 300;
@@ -114,6 +117,12 @@ export class StatsCarousel extends LitElement {
 				y: 0,
 				ease: 'power2.inOut',
 				duration: duration,
+				onStart: () => {
+					this.activeSlideIndex = i;
+				},
+				onReverseComplete: () => {
+					this.activeSlideIndex = i - 1;
+				},
 			});
 
 			const tweenOut = gsap.fromTo(slide, {
@@ -165,24 +174,41 @@ export class StatsCarousel extends LitElement {
 		});
 	}
 
+	private get renderPagination() {
+		return html`
+			<div class="kd-stats-carousel-pagination">
+				${this.slides.map((_slide, i) => {
+					return html`
+						<div class="kd-stats-carousel-pagination-item ${i === this.activeSlideIndex ? 'is-active' : ''}"></div>
+					`
+				})}
+			</div>
+		`
+	}
+
 	override render() {
 		return html`
 			<div class="kd-stats-carousel">
 				<div class="kd-stats-carousel-container">
 					<div class="kd-grid">
-						<div class="kd-grid__col--sm-4 kd-grid__col--md-1"></div>
-						<div class="kd-grid__col--sm-4 kd-grid__col--md-6 kd-grid__col--lg-10">
+						<div class="kd-stats-carousel-col kd-grid__col--sm-4 kd-grid__col--md-6 kd-grid__col--lg-10">
 							${this.carouselTitle ?
 								html`
 								<h2 class="kd-stats-carousel-title kd-type--headline-06">${this.carouselTitle}</h2>
 							`
 								: null
 							}
+						</div>
+					</div>
+					<div class="kd-grid">
+						<div class="kd-stats-carousel-col kd-grid__col--sm-4 kd-grid__col--md-6 kd-grid__col--lg-10">
 							<div class="kd-stats-carousel-slides">
 								<slot @slotchange=${this.handleSlotChange}></slot>
 							</div>
 						</div>
-						<div class="kd-grid__col--sm-4 kd-grid__col--md-1"></div>
+						<div class="kd-grid__col--sm-4 kd-grid__col--md-1">
+							${this.renderPagination}
+						</div>
 					</div>
 				</div>
 			</div>

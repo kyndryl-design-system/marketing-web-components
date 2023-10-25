@@ -51,19 +51,14 @@ export class StatsCarouselSlide extends LitElement {
 		`
 	}
 	override render() {
-
 		return html`
 			<div class="kd-stats-carousel-slide kd-grid">
-				<div class="kd-grid__col--sm-4 kd-grid__col--md-1"></div>
-				<div class="kd-grid__col--sm-4 kd-grid__col--md-8 kd-grid__col--lg-5">
-					<div class="kd-stats-carousel-slide-stat-container kd-type--hero-04 kd-type--weight-bold">
-						${this.renderStat}
-					</div>
+				<div class="kd-grid__col--sm-4 kd-grid__col--md-8 kd-grid__col--lg-6">
+					${this.renderStat}
 				</div>
-				<div class="kd-stats-carousel-slide-description kd-grid__col--sm-4 kd-grid__col--md-8 kd-grid__col--lg-5 kd-type--body-01">
+				<div class="kd-stats-carousel-slide-description kd-grid__col--sm-4 kd-grid__col--md-8 kd-grid__col--lg-6 kd-type--body-01">
 					<slot></slot>
 				</div>
-				<div class="kd-grid__col--sm-4 kd-grid__col--md-1"></div>
 			</div>
 		`;
 	}

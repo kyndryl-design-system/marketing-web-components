@@ -13,6 +13,11 @@
 
 	@media (min-width: breakpoints.$bp-lg) {
 		justify-content: flex-end;
+		padding-right: var(--kd-spacing-16);
+	}
+
+	@media (min-width: breakpoints.$bp-xl) {
+		padding-right: var(--kd-spacing-48);
 	}
 
 	&.is-center {
