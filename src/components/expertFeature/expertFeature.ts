@@ -18,13 +18,14 @@ export class ExpertFeature extends LitElement {
   override render() {
     const classesContainer = {
       [`kd-expert-feature`]: true,
+      [`${this.mediaSize}-media`]: true,
     };
     if (this.mediaSize == 'half') {
       return html` <div class="${classMap(classesContainer)}">
         <div class="kd-grid">
           <div class="kd-grid__col--sm-4 kd-grid__col--md-8 kd-grid__col--lg-6">
             <div class="media-container">
-              <div class="media kd-layout__aspect-ratio--1x1">
+              <div class="media">
                 <slot name="media"></slot>
               </div>
               <div class="title kd-type--headline-01 kd-type--weight-bold">
@@ -73,7 +74,7 @@ export class ExpertFeature extends LitElement {
     } else {
       return html` <div class="${classMap(classesContainer)}">
         <div class="media-container">
-          <div class="media kd-layout__aspect-ratio--21x9">
+          <div class="media">
             <slot name="media"></slot>
           </div>
           <div class="title kd-type--headline-01 kd-type--weight-bold">
