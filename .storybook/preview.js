@@ -4,7 +4,6 @@ import customElements from '../custom-elements.json';
 
 import './global.scss?global';
 
-import '../src/scss/root.scss?global';
 import '../src/scss/utility/index.scss?global';
 
 export default {

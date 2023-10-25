@@ -1,3 +1,10 @@
+# [1.0.0-beta.9](https://github.com/kyndryl-design-system/shidoka-content/compare/v1.0.0-beta.8...v1.0.0-beta.9) (2023-10-25)
+
+
+### Bug Fixes
+
+* build externals ([c38aa86](https://github.com/kyndryl-design-system/shidoka-content/commit/c38aa860065678b11408e9ce86b34bc9950cd17f))
+
 # [1.0.0-beta.8](https://github.com/kyndryl-design-system/shidoka-content/compare/v1.0.0-beta.7...v1.0.0-beta.8) (2023-10-25)
 
 
