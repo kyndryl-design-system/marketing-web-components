@@ -1,4 +1,6 @@
 import { html } from 'lit';
+import { createColorPaletteLabels, createOptionsArray } from '../../common/helpers/helpers';
+import { COLOR_PALETTE_LABELS, COLOR_PALETTE_VALUES } from '../../common/defs/colorPalettes';
 import './index';
 import { STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS } from './defs';
 
@@ -9,11 +11,20 @@ export default {
 		carouselTitle: {
 			control: { type: 'text' },
 		},
+		colorPalette: {
+			description: 'Color palette',
+			options: createOptionsArray(COLOR_PALETTE_VALUES),
+			control: {
+				type: 'select',
+				labels: createColorPaletteLabels(COLOR_PALETTE_LABELS, COLOR_PALETTE_VALUES),
+			},
+		},
 	},
 };
 
 const args = {
 	carouselTitle: 'Dicimus non negare adipiscing vacuitatem accesseris in isto hoc aegyptum ei inquit animus cum.',
+	colorPalette: '',
 }
 
 export const statsCarousel = {
@@ -22,6 +33,7 @@ export const statsCarousel = {
 		return html`
 			<kd-stats-carousel
 				carouselTitle="${args.carouselTitle}"
+				colorPalette="${args.colorPalette}"
 			>
 				<kd-stats-carousel-slide
 					stat="100"

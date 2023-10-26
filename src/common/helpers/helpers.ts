@@ -25,3 +25,28 @@ export function createOptionsArray(options: any = {}) {
 
   return optionsArray;
 }
+
+/**
+ * Return an object of color palette labels for a Storybook select control.
+ * Each property of the object has a key of the css class (COLOR_PALETTE_VALUES)
+ * and a value of the friendly label name (COLOR_PALETTE_LABELS)
+ * Example: {
+ *   [COLOR_PALETTE_VALUES.DARK_STONE]: COLOR_PALETTE_LABELS.DARK_STONE,
+ *   ...
+ * }
+ * @param labels Object of color palette labels (COLOR_PALETTE_LABELS)
+ * @param values Object of color palette values (COLOR_PALETTE_VALUES)
+ */
+export function createColorPaletteLabels(labels: {[index: string]:any} = {}, values: {[index: string]:any} = {}) {
+  let optionsLabels: {[index: string]:any} = {}
+
+  const labelKeys =  Object.keys(labels);
+
+  labelKeys.map((key: string) => {
+    if (key in values) {
+      optionsLabels[values[key]] = labels[key];
+    }
+  })
+
+  return optionsLabels;
+}

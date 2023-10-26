@@ -18,6 +18,10 @@ export class StatsCarousel extends LitElement {
 	@property({ type: String })
 	carouselTitle = '';
 
+	/** Global Color Palette */
+	@property({ type: String })
+	colorPalette = '';
+
 	/**
 	 * Outer component element that triggers scroll animations.
 	 * @ignore
@@ -237,7 +241,7 @@ export class StatsCarousel extends LitElement {
 
 	override render() {
 		return html`
-			<div class="kd-stats-carousel">
+			<div class="kd-stats-carousel ${this.colorPalette}">
 				<div class="kd-stats-carousel-container">
 					<div class="kd-grid">
 						<div class="kd-stats-carousel-col kd-grid__col--sm-4 kd-grid__col--md-6 kd-grid__col--lg-10">
