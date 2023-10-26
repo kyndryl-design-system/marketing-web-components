@@ -428,7 +428,7 @@
           "type": {
             "text": "object"
           },
-          "default": "{\n\targs: {},\n\trender: () => {\n\t\treturn html`\n\t\t\t<kd-stats-carousel>\n\t\t\t\t\n\t\t\t\t\t<kd-stats-carousel-slide\n\t\t\t\t\t\tstat=\"100\"\n\t\t\t\t\t\tsymbol=\"$\"\n\t\t\t\t\t\tsymbolPlacement=\"${STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS.BEFORE}\"\n\t\t\t\t\t>\n\t\t\t\t\t\t<p>Lorem ipsum</p>\n\t\t\t\t\t</kd-stats-carousel-slide>\n\t\t\t\t\n\t\t\t</kd-stats-carousel>\n\t\t`;\n\t}\n}"
+          "default": "{\n\targs,\n\trender: (args: any) => {\n\t\treturn html`\n\t\t\t<kd-stats-carousel\n\t\t\t\tcarouselTitle=\"${args.carouselTitle}\"\n\t\t\t>\n\t\t\t\t<kd-stats-carousel-slide\n\t\t\t\t\tstat=\"100\"\n\t\t\t\t\tsymbol=\"$\"\n\t\t\t\t\tsymbolPlacement=\"${STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS.BEFORE}\"\n\t\t\t\t>\n\t\t\t\t\t<p>Fregellanum quae quis optimis id traditur pertinacior viros dici et. Vos quam etiam quidem restatis mecum inquam redargueret quidem me nihil dedocendi homines et. In nihil autem se homines est lorem eo.</p>\n\t\t\t\t</kd-stats-carousel-slide>\n\t\t\t\t<kd-stats-carousel-slide\n\t\t\t\t\tstat=\"200\"\n\t\t\t\t\tsymbol=\"%\"\n\t\t\t\t\tsymbolPlacement=\"${STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS.AFTER}\"\n\t\t\t\t>\n\t\t\t\t\t<p>Sironem flagitiosum eo est esse eo odit locus lustravit atqui. Nisi eius est habent.</p>\n\t\t\t\t</kd-stats-carousel-slide>\n\t\t\t\t<kd-stats-carousel-slide\n\t\t\t\t\tstat=\"300k\"\n\t\t\t\t\tsymbol=\"$\"\n\t\t\t\t\tsymbolPlacement=\"${STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS.BEFORE}\"\n\t\t\t\t>\n\t\t\t\t\t<p>In nihil autem se homines est lorem eo.</p>\n\t\t\t\t</kd-stats-carousel-slide>\n\t\t\t</kd-stats-carousel>\n\t\t`;\n\t}\n}"
         }
       ],
       "exports": [
@@ -455,9 +455,61 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "",
+          "description": "Stats Carousel.\nContainer for Stats Carousel Slide components.\nThe component pins when scrolling into view and unpins after scrolling through all slides.",
           "name": "StatsCarousel",
-          "members": [],
+          "slots": [
+            {
+              "description": "Slot for Stat Carousel Slide components.",
+              "name": "unnamed"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "carouselTitle",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Component title. Max character count: 66",
+              "attribute": "carouselTitle"
+            },
+            {
+              "kind": "method",
+              "name": "handleSlotChange"
+            },
+            {
+              "kind": "method",
+              "name": "resetView",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "setHeight",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "removeHeight",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "initScrollTrigger",
+              "privacy": "private"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "carouselTitle",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Component title. Max character count: 66",
+              "fieldName": "carouselTitle"
+            }
+          ],
           "superclass": {
             "name": "LitElement",
             "package": "lit"
@@ -495,7 +547,7 @@
           "type": {
             "text": "object"
           },
-          "default": "{\n\targs,\n\trender: (args: any) => {\n\t\treturn html`\n\t\t\t<kd-stats-carousel-slide\n\t\t\t\tstat=\"${args.stat}\"\n\t\t\t\tsymbol=\"${args.symbol}\"\n\t\t\t\tsymbolPlacement=\"${args.symbolPlacement}\"\n\t\t\t>\n\t\t\t\t<p>Lorem ipsum</p>\n\t\t\t</kd-stats-carousel-slide>\n\t\t`;\n\t}\n}"
+          "default": "{\n\targs,\n\trender: (args: any) => {\n\t\treturn html`\n\t\t\t<kd-stats-carousel-slide\n\t\t\t\tstat=\"${args.stat}\"\n\t\t\t\tsymbol=\"${args.symbol}\"\n\t\t\t\tsymbolPlacement=\"${args.symbolPlacement}\"\n\t\t\t\tsymbolAlignment=\"${args.symbolAlignment}\"\n\t\t\t>\n\t\t\t\t<p>Fregellanum quae quis optimis id traditur pertinacior viros dici et. Vos quam etiam quidem restatis mecum inquam redargueret quidem me nihil dedocendi homines et. In nihil autem se homines est lorem eo.</p>\n\t\t\t</kd-stats-carousel-slide>\n\t\t`;\n\t}\n}"
         }
       ],
       "exports": [
@@ -522,8 +574,14 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "",
+          "description": "Stats Carousel Slide.\nComponent to be used within a Stats Carousel container component.",
           "name": "StatsCarouselSlide",
+          "slots": [
+            {
+              "description": "Slot for description text. Max character count: 152",
+              "name": "unnamed"
+            }
+          ],
           "members": [
             {
               "kind": "field",
@@ -532,6 +590,7 @@
                 "text": "string"
               },
               "default": "''",
+              "description": "Stat value should be a number, but it can include a text character (e.g. 100k). Max character count: 7",
               "attribute": "stat"
             },
             {
@@ -541,20 +600,26 @@
                 "text": "string"
               },
               "default": "''",
+              "description": "Symbol associated with stat value (e.g. $, %, etc.). Max character count: 1",
               "attribute": "symbol"
             },
             {
               "kind": "field",
               "name": "symbolPlacement",
               "type": {
-                "text": "STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS"
+                "text": "string"
               },
+              "description": "Symbol placement before or after the stat value.",
               "attribute": "symbolPlacement"
             },
             {
               "kind": "field",
-              "name": "renderStat",
-              "privacy": "private"
+              "name": "symbolAlignment",
+              "type": {
+                "text": "string"
+              },
+              "description": "Vertical alignment of symbol.",
+              "attribute": "symbolAlignment"
             }
           ],
           "attributes": [
@@ -564,6 +629,7 @@
                 "text": "string"
               },
               "default": "''",
+              "description": "Stat value should be a number, but it can include a text character (e.g. 100k). Max character count: 7",
               "fieldName": "stat"
             },
             {
@@ -572,21 +638,31 @@
                 "text": "string"
               },
               "default": "''",
+              "description": "Symbol associated with stat value (e.g. $, %, etc.). Max character count: 1",
               "fieldName": "symbol"
             },
             {
               "name": "symbolPlacement",
               "type": {
-                "text": "STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS"
+                "text": "string"
               },
+              "description": "Symbol placement before or after the stat value.",
               "fieldName": "symbolPlacement"
+            },
+            {
+              "name": "symbolAlignment",
+              "type": {
+                "text": "string"
+              },
+              "description": "Vertical alignment of symbol.",
+              "fieldName": "symbolAlignment"
             }
           ],
           "superclass": {
             "name": "LitElement",
             "package": "lit"
           },
-          "tagName": "kd-stat-carousel-slide",
+          "tagName": "kd-stats-carousel-slide",
           "customElement": true
         }
       ],
@@ -601,7 +677,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "kd-stat-carousel-slide",
+          "name": "kd-stats-carousel-slide",
           "declaration": {
             "name": "StatsCarouselSlide",
             "module": "src/components/statsCarousel/statsCarouselSlide.ts"

@@ -5,14 +5,23 @@ import { STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS } from './defs';
 export default {
 	title: 'Components/Stats Carousel',
 	component: 'kd-stats-carousel',
+	argTypes: {
+		carouselTitle: {
+			control: { type: 'text' },
+		},
+	},
 };
 
+const args = {
+	carouselTitle: 'Dicimus non negare adipiscing vacuitatem accesseris in isto hoc aegyptum ei inquit animus cum.',
+}
+
 export const statsCarousel = {
-	args: {},
-	render: () => {
+	args,
+	render: (args: any) => {
 		return html`
 			<kd-stats-carousel
-				carouselTitle="Dicimus non negare adipiscing vacuitatem accesseris in isto hoc aegyptum ei inquit animus cum."
+				carouselTitle="${args.carouselTitle}"
 			>
 				<kd-stats-carousel-slide
 					stat="100"

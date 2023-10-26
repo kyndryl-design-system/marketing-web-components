@@ -9,21 +9,17 @@ export default {
 	argTypes: {
 		stat: {
 			control: { type: 'text' },
-			description: 'Stat value',
 		},
 		symbol: {
 			control: { type: 'text' },
-			description: 'Stat symbol',
 		},
 		symbolPlacement: {
 			control: { type: 'radio' },
 			options: createOptionsArray(STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS),
-			description: 'Stat symbol placement',
 		},
 		symbolAlignment: {
 			control: { type: 'radio' },
 			options: createOptionsArray(STAT_CAROUSEL_SLIDE_SYMBOL_ALIGNMENT),
-			description: 'Stat symbol alignment',
 		},
 	},
 };

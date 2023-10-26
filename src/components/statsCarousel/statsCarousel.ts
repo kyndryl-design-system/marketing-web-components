@@ -4,33 +4,78 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import stylesheet from './statsCarousel.scss';
 
+/**
+ * Stats Carousel.
+ * Container for Stats Carousel Slide components.
+ * The component pins when scrolling into view and unpins after scrolling through all slides.
+ * @slot unnamed - Slot for Stat Carousel Slide components.
+ */
 @customElement('kd-stats-carousel')
 export class StatsCarousel extends LitElement {
 	static override styles = stylesheet;
 
+	/** Component title. Max character count: 66 */
 	@property({ type: String })
 	carouselTitle = '';
 
+	/**
+	 * Outer component element that triggers scroll animations.
+	 * @ignore
+	 */
 	@query('.kd-stats-carousel')
 	carousel!: HTMLElement;
 
+	/**
+	 * Carousel container that gets pinned on scroll.
+	 * @ignore
+	 */
 	@query('.kd-stats-carousel-container')
 	carouselContainer!: HTMLElement;
 
+	/**
+	 * Container of all slide components.
+	 * @ignore
+	 */
 	@query('.kd-stats-carousel-slides')
 	slidesContainer!: HTMLElement;
 
+	/**
+	 * All Stats Carousel Slide components
+	 * @ignore
+	 */
 	@queryAssignedElements({ selector: 'kd-stats-carousel-slide' })
 	slides!: Array<HTMLElement>;
 
+	/**
+	 * Check mounted state to init ScrollTrigger.
+	 * @ignore
+	 */
 	@state()
 	isInit: boolean = true;
 
+	/**
+	 * Track active slide to update pagination dots.
+	 * @ignore
+	 */
 	@state()
 	activeSlideIndex: number = 0;
 
+	/**
+	 * SetTimeout used to reset view on resize event.
+	 * @ignore
+	 */
 	private resizeTimer: any;
+
+	/**
+	 * resizeTimer delay to wait until all resize events complete.
+	 * @ignore
+	 */
 	private resizeDelay: number = 100;
+
+	/**
+	 * Delay resetting view until repaint completes.
+	 * @ignore
+	 */
 	private resetDelay: number = 300;
 
 	override connectedCallback() {
@@ -174,6 +219,10 @@ export class StatsCarousel extends LitElement {
 		});
 	}
 
+	/**
+	 * Render pagination dots with active class based on activeSlideIndex.
+	 * @ignore
+	 */
 	private get renderPagination() {
 		return html`
 			<div class="kd-stats-carousel-pagination">
@@ -194,8 +243,8 @@ export class StatsCarousel extends LitElement {
 						<div class="kd-stats-carousel-col kd-grid__col--sm-4 kd-grid__col--md-6 kd-grid__col--lg-10">
 							${this.carouselTitle ?
 								html`
-								<h2 class="kd-stats-carousel-title kd-type--headline-06">${this.carouselTitle}</h2>
-							`
+									<h2 class="kd-stats-carousel-title kd-type--headline-06">${this.carouselTitle}</h2>
+								`
 								: null
 							}
 						</div>
