@@ -1,0 +1,102 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+
+@use 'sass:map';
+
+@use '~@kyndryl-design-system/shidoka-foundation/scss/variables/breakpoints.scss';
+@use '~@kyndryl-design-system/shidoka-foundation/scss/utility/grid.scss';
+@use '~@kyndryl-design-system/shidoka-foundation/scss/utility/typography.scss';
+@use '~@kyndryl-design-system/shidoka-foundation/scss/utility/layout.scss';
+@use '~@kyndryl-design-system/shidoka-foundation/scss/utility/spacing.scss';
+
+.kd-expert-feature {
+  background: var(--kd-color-background-ui-default);
+  color: var(--kd-color-text-primary);
+
+  .media {
+    aspect-ratio: 21/9;
+    display: block;
+    max-height: 100%;
+    max-width: 100%;
+    position: relative;
+    @media (max-width: breakpoints.$bp-lg) {
+      aspect-ratio: 16 / 9;
+    }
+    @media (max-width: breakpoints.$bp-md) {
+      aspect-ratio: 3 / 4;
+    }
+  }
+
+  &.half-media .media {
+    aspect-ratio: 1 / 1;
+    @media (max-width: breakpoints.$bp-lg) {
+      aspect-ratio: 16 / 9;
+    }
+    @media (max-width: breakpoints.$bp-md) {
+      aspect-ratio: 3 / 4;
+    }
+  }
+
+  .kd-grid-padding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .media-container {
+    position: relative;
+  }
+
+  .media ::slotted(img) {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    width: 100%;
+  }
+
+  .title {
+    position: absolute;
+    bottom: 28px;
+    left: 48px;
+    color: #fff;
+    font-size: 50px;
+  }
+
+  .sidebar {
+    position: relative;
+  }
+
+  .body-copy {
+    padding-top: 24px;
+  }
+
+  .cta {
+    padding-top: 40px;
+  }
+
+  .social-media {
+    padding-top: 24px;
+  }
+
+  .spacer-line {
+    width: 16px;
+    height: 2px;
+    background-color: var(--kd-color-background-accent-primary);
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  &:not(.half-media) {
+    @media (min-width: breakpoints.$bp-lg) {
+      .sidebar:before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        left: -16px;
+        bottom: 0;
+        background: var(--kd-color-border-primary);
+        width: 1px;
+      }
+    }
+  }
+}
