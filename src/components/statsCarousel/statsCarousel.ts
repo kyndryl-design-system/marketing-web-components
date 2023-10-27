@@ -82,6 +82,12 @@ export class StatsCarousel extends LitElement {
 	 */
 	private resetDelay = 300;
 
+	/**
+	 * Base gsap animation duration for each slide
+	 * @ignore
+	 */
+	private animDuration = 1;
+
 	override connectedCallback() {
 		super.connectedCallback();
 		gsap.registerPlugin(ScrollTrigger);
@@ -151,56 +157,62 @@ export class StatsCarousel extends LitElement {
 		});
 	}
 
+	// create tween in animation (function used to prevent animating on init)
+	private getTweenIn(slide: HTMLElement, i: number) {
+		return gsap.fromTo(slide, {
+			autoAlpha: 0,
+			y: '50%',
+		}, {
+			autoAlpha: 1,
+			y: 0,
+			ease: 'power2.inOut',
+			duration: this.animDuration,
+			onStart: () => {
+				this.activeSlideIndex = i;
+			},
+			onReverseComplete: () => {
+				this.activeSlideIndex = i - 1;
+			},
+		});
+	}
+
+	// create tween out animation (function used to prevent animating on init)
+	private getTweenOut(slide: HTMLElement) {
+		return gsap.fromTo(slide, {
+			autoAlpha: 1,
+			y: 0,
+		}, {
+			autoAlpha: 0,
+			y: '-50%',
+			ease: 'power2.inOut',
+			duration: this.animDuration,
+		});
+	}
+
+	// create empty tween to delay next slide animation (function used to prevent animating on init)
+	private getTweenSpacer() {
+		return gsap.to({},  {
+			duration: this.animDuration * 3,
+		});
+	}
+
 	private initScrollTrigger() {
 		const slidesTimeline = gsap.timeline();
 
 		this.slides.forEach((slide, i: number) => {
-			const duration = 1;
-
-			const tweenIn = gsap.fromTo(slide, {
-				autoAlpha: 0,
-				y: '50%',
-			}, {
-				autoAlpha: 1,
-				y: 0,
-				ease: 'power2.inOut',
-				duration: duration,
-				onStart: () => {
-					this.activeSlideIndex = i;
-				},
-				onReverseComplete: () => {
-					this.activeSlideIndex = i - 1;
-				},
-			});
-
-			const tweenOut = gsap.fromTo(slide, {
-				autoAlpha: 1,
-				y: 0,
-			}, {
-				autoAlpha: 0,
-				y: '-50%',
-				ease: 'power2.inOut',
-				duration: duration,
-			});
-
-			// empty tween to delay next slide animation
-			const tweenSpacer = gsap.to({},  {
-				duration: duration * 3,
-			});
-
 			// don't animate first slide in
 			if (i !== 0) {
-				slidesTimeline.add(tweenIn);
+				slidesTimeline.add(this.getTweenIn(slide, i));
 			}
 
 			// don't animate last slide out
 			if (i !== this.slides.length - 1) {
-				slidesTimeline.add(tweenOut, `+=${duration}`);
+				slidesTimeline.add(this.getTweenOut(slide), `+=${this.animDuration}`);
 			}
 
-			// add spacer between slides for timing
+			// add spacer after last slide for timing
 			if (i === this.slides.length - 1) {
-				slidesTimeline.add(tweenSpacer);
+				slidesTimeline.add(this.getTweenSpacer());
 			}
 		});
 
