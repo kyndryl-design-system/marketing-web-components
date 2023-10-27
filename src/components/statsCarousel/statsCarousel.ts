@@ -204,7 +204,16 @@ export class StatsCarousel extends LitElement {
 			}
 		});
 
+		// fix scroll behavior on Storybook docs preview
+		const elDocsStory = this.closest('.docs-story');
+		const elDocsStoryContainer = elDocsStory?.querySelector<HTMLElement>('.innerZoomElementWrapper');
+		if (elDocsStoryContainer) {
+			elDocsStoryContainer.style.height = '50vh';
+			elDocsStoryContainer.style.overflow = 'auto';
+		}
+
 		ScrollTrigger.create({
+			scroller: elDocsStoryContainer ? elDocsStoryContainer : window,
 			trigger: this.carousel,
 			// offset the center positions so the content is center aligned in viewport
 			start: () => {
