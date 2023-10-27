@@ -55,32 +55,32 @@ export class StatsCarousel extends LitElement {
 	 * @ignore
 	 */
 	@state()
-	isInit: boolean = true;
+	isInit = true;
 
 	/**
 	 * Track active slide to update pagination dots.
 	 * @ignore
 	 */
 	@state()
-	activeSlideIndex: number = 0;
+	activeSlideIndex = 0;
 
 	/**
 	 * SetTimeout used to reset view on resize event.
 	 * @ignore
 	 */
-	private resizeTimer: any;
+	private resizeTimer: ReturnType<typeof setTimeout> | undefined;
 
 	/**
 	 * resizeTimer delay to wait until all resize events complete.
 	 * @ignore
 	 */
-	private resizeDelay: number = 100;
+	private resizeDelay = 100;
 
 	/**
 	 * Delay resetting view until repaint completes.
 	 * @ignore
 	 */
-	private resetDelay: number = 300;
+	private resetDelay = 300;
 
 	override connectedCallback() {
 		super.connectedCallback();
@@ -116,7 +116,6 @@ export class StatsCarousel extends LitElement {
 
 	private setHeight() {
 		const slideHeights: number[] = [];
-		let maxHeight: number;
 
 		// set the overall scrolling height
 		this.carousel.style.minHeight = `${this.slides.length * 100}vh`;
@@ -129,7 +128,7 @@ export class StatsCarousel extends LitElement {
 		});
 
 		// get the tallest slide height
-		maxHeight = Math.max(...(slideHeights));
+		const maxHeight: number = Math.max(...(slideHeights));
 
 		// set heights
 		this.slides.forEach((slide) => {
@@ -155,7 +154,7 @@ export class StatsCarousel extends LitElement {
 	private initScrollTrigger() {
 		const slidesTimeline = gsap.timeline();
 
-		this.slides.forEach((slide: any, i: number) => {
+		this.slides.forEach((slide, i: number) => {
 			const duration = 1;
 
 			const tweenIn = gsap.fromTo(slide, {

@@ -27,9 +27,9 @@ const args = {
 	colorPalette: '',
 }
 
-export const statsCarousel = {
+export const StatsCarousel = {
 	args,
-	render: (args: any) => {
+	render: ({...args}) => {
 		return html`
 			<kd-stats-carousel
 				carouselTitle="${args.carouselTitle}"

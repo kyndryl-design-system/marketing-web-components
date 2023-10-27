@@ -31,9 +31,9 @@ const args = {
 	symbolAlignment: STAT_CAROUSEL_SLIDE_SYMBOL_ALIGNMENT.SUPERSCRIPT,
 }
 
-export const statsCarouselSlide = {
+export const StatsCarouselSlide = {
 	args,
-	render: (args: any) => {
+	render: ({...args}) => {
 		return html`
 			<kd-stats-carousel-slide
 				stat="${args.stat}"

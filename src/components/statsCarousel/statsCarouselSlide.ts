@@ -14,11 +14,11 @@ export class StatsCarouselSlide extends LitElement {
 
 	/** Stat value should be a number, but it can include a text character (e.g. 100k). Max character count: 7 */
 	@property({ type: String })
-	stat: string = '';
+	stat = '';
 
 	/** Symbol associated with stat value (e.g. $, %, etc.). Max character count: 1 */
 	@property({ type: String })
-	symbol: string = '';
+	symbol = '';
 
 	/** Symbol placement before or after the stat value. */
 	@property({ type: String })
