@@ -50,6 +50,11 @@ export default {
           color: '#4cdd84',
         },
         {
+          name: 'warm red',
+          class: 'kd-component-palette--warmred',
+          color: '#ff462d',
+        },
+        {
           name: 'cloud',
           class: 'kd-component-palette--cloud',
           color: '#f2f1ee',
