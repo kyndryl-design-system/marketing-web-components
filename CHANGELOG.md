@@ -1,3 +1,23 @@
+# [1.0.0-beta.10](https://github.com/kyndryl-design-system/shidoka-content/compare/v1.0.0-beta.9...v1.0.0-beta.10) (2023-10-31)
+
+
+### Bug Fixes
+
+* **colors:** fix cloud accent colors ([59cc9c8](https://github.com/kyndryl-design-system/shidoka-content/commit/59cc9c80e469896c2170fafd649461c32af41b1e))
+
+
+### Features
+
+* **stats-carousel:** add pagination ([b071018](https://github.com/kyndryl-design-system/shidoka-content/commit/b0710188b154be914fe3292dfa9fb5f16c855f81))
+* **stats-carousel:** add stat symbol alignment option ([4edabd8](https://github.com/kyndryl-design-system/shidoka-content/commit/4edabd8069cdb60c8ed23d0e3cfadaa04494074b))
+* **stats-carousel:** create global color palette defs/helpers for component level options ([3207abd](https://github.com/kyndryl-design-system/shidoka-content/commit/3207abd0c56e6f956201eeecb21d1ffb1f27d702))
+* **stats-carousel:** fix eslint errors/warnings ([bb00c63](https://github.com/kyndryl-design-system/shidoka-content/commit/bb00c63d3b2528a98c32e814722709aad1ea0ba6))
+* **stats-carousel:** fix scroll behavior on Storybook docs preview ([8b99bcc](https://github.com/kyndryl-design-system/shidoka-content/commit/8b99bcc1b38c54930c914087de44f0a9bac24c0d))
+* **stats-carousel:** prevent animating on init ([c0c91bd](https://github.com/kyndryl-design-system/shidoka-content/commit/c0c91bd924373a53c2e197c9456b6523c9bef712))
+* **stats-carousel:** start stats carousel ([b4a0605](https://github.com/kyndryl-design-system/shidoka-content/commit/b4a0605bbbd383740b379b4c2d57b1da4cc810ff))
+* **stats-carousel:** update color tokens ([56b8cbc](https://github.com/kyndryl-design-system/shidoka-content/commit/56b8cbc1018bc8a168278b14cf9ea1a8253cf2df))
+* **stats-carousel:** update documentation ([cbbd717](https://github.com/kyndryl-design-system/shidoka-content/commit/cbbd717242328453d1378426a098cdf2c11601e9))
+
 # [1.0.0-beta.9](https://github.com/kyndryl-design-system/shidoka-content/compare/v1.0.0-beta.8...v1.0.0-beta.9) (2023-10-25)
 
 
