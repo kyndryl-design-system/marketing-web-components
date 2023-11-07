@@ -1,3 +1,10 @@
+# [1.0.0-beta.11](https://github.com/kyndryl-design-system/shidoka-content/compare/v1.0.0-beta.10...v1.0.0-beta.11) (2023-11-07)
+
+
+### Bug Fixes
+
+* **component-palette:** add warm red palette ([40d5f5e](https://github.com/kyndryl-design-system/shidoka-content/commit/40d5f5e3da3f5d61dc9d24aea3c21f777ed1f760))
+
 # [1.0.0-beta.10](https://github.com/kyndryl-design-system/shidoka-content/compare/v1.0.0-beta.9...v1.0.0-beta.10) (2023-10-31)
 
 
