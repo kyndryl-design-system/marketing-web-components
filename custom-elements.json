@@ -22,6 +22,22 @@
             "name": "AlternatingFeatureWithImage",
             "module": "./components/alternatingFeatureWithImage"
           }
+        },
+        {
+          "kind": "js",
+          "name": "StatsCarousel",
+          "declaration": {
+            "name": "StatsCarousel",
+            "module": "./components/statsCarousel"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "StatsCarouselSlide",
+          "declaration": {
+            "name": "StatsCarouselSlide",
+            "module": "./components/statsCarousel"
+          }
         }
       ]
     },
@@ -56,6 +72,21 @@
               }
             }
           ]
+        },
+        {
+          "kind": "function",
+          "name": "createOptionsArray",
+          "parameters": [
+            {
+              "name": "options",
+              "default": "{}",
+              "type": {
+                "text": "*"
+              },
+              "description": " imported enums object"
+            }
+          ],
+          "description": "Convert an object to an array of only its values.\nUsed when importing enums in component stories for populating argType dropdowns."
         }
       ],
       "exports": [
@@ -74,6 +105,14 @@
             "name": "stringToReactHtml",
             "module": "src/common/helpers/helpers.ts"
           }
+        },
+        {
+          "kind": "js",
+          "name": "createOptionsArray",
+          "declaration": {
+            "name": "createOptionsArray",
+            "module": "src/common/helpers/helpers.ts"
+          }
         }
       ]
     },
@@ -87,7 +126,7 @@
           "type": {
             "text": "object"
           },
-          "default": "{\n  args,\n  render: (args) => {\n    return html`\n      <kd-alternating-feature-with-image\n        mediaPosition=\"${args.mediaPosition}\"\n        bleedmedia=\"${args.bleedMedia}\"\n        headlineText=\"${args.headlineText}\"\n        eyebrowtext=\"${args.eyebrowText}\"\n        buttonLabel=\"${args.buttonLabel}\"\n        buttonLink=\"${args.buttonLink}\"\n      >\n        <div slot=\"media\">\n          <img\n            src=\"https://s7d1.scene7.com/is/image/kyndryl/ls_windingriver_16x9?qlt=85&amp;wid=1200&amp;ts=1650983065999&amp;dpr=off\"\n            alt=\"image alt text\"\n            class=\"kd-layout__aspect-ratio--16x9 kd-layout__object-fit--cover\"\n          />\n        </div>\n        <div slot=\"text\">\n          <p>\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu\n            facilisi pellentesque morbi molestie sed ut at sed ac. Semper tortor\n            feugiat non sem eget libero. Risus semper facilisis convallis vitae.\n          </p>\n        </div>\n      </kd-alternating-feature-with-image>\n    `;\n  },\n}"
+          "default": "{\n  args,\n  render: (args: any) => {\n    return html`\n      <kd-alternating-feature-with-image\n        mediaPosition=\"${args.mediaPosition}\"\n        bleedmedia=\"${args.bleedMedia}\"\n        headlineText=\"${args.headlineText}\"\n        eyebrowtext=\"${args.eyebrowText}\"\n        buttonLabel=\"${args.buttonLabel}\"\n        buttonLink=\"${args.buttonLink}\"\n      >\n        <div slot=\"media\">\n          <img\n            src=\"https://s7d1.scene7.com/is/image/kyndryl/ls_windingriver_16x9?qlt=85&amp;wid=1200&amp;ts=1650983065999&amp;dpr=off\"\n            alt=\"image alt text\"\n            class=\"kd-layout__aspect-ratio--16x9 kd-layout__object-fit--cover\"\n          />\n        </div>\n        <div slot=\"text\">\n          <p>\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu\n            facilisi pellentesque morbi molestie sed ut at sed ac. Semper tortor\n            feugiat non sem eget libero. Risus semper facilisis convallis vitae.\n          </p>\n        </div>\n      </kd-alternating-feature-with-image>\n    `;\n  },\n}"
         }
       ],
       "exports": [
@@ -123,7 +162,7 @@
               "type": {
                 "text": "string"
               },
-              "default": "'false'",
+              "default": "'left'",
               "attribute": "mediaPosition"
             },
             {
@@ -207,7 +246,7 @@
               "type": {
                 "text": "string"
               },
-              "default": "'false'",
+              "default": "'left'",
               "fieldName": "mediaPosition"
             },
             {
@@ -346,6 +385,302 @@
           "declaration": {
             "name": "Eyebrow",
             "module": "./eyebrow"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/statsCarousel/defs.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/statsCarousel/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "StatsCarousel",
+          "declaration": {
+            "name": "StatsCarousel",
+            "module": "./statsCarousel"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "StatsCarouselSlide",
+          "declaration": {
+            "name": "StatsCarouselSlide",
+            "module": "./statsCarouselSlide"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/statsCarousel/statsCarousel.stories.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "statsCarousel",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\n\targs,\n\trender: (args: any) => {\n\t\treturn html`\n\t\t\t<kd-stats-carousel\n\t\t\t\tcarouselTitle=\"${args.carouselTitle}\"\n\t\t\t>\n\t\t\t\t<kd-stats-carousel-slide\n\t\t\t\t\tstat=\"100\"\n\t\t\t\t\tsymbol=\"$\"\n\t\t\t\t\tsymbolPlacement=\"${STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS.BEFORE}\"\n\t\t\t\t>\n\t\t\t\t\t<p>Fregellanum quae quis optimis id traditur pertinacior viros dici et. Vos quam etiam quidem restatis mecum inquam redargueret quidem me nihil dedocendi homines et. In nihil autem se homines est lorem eo.</p>\n\t\t\t\t</kd-stats-carousel-slide>\n\t\t\t\t<kd-stats-carousel-slide\n\t\t\t\t\tstat=\"200\"\n\t\t\t\t\tsymbol=\"%\"\n\t\t\t\t\tsymbolPlacement=\"${STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS.AFTER}\"\n\t\t\t\t>\n\t\t\t\t\t<p>Sironem flagitiosum eo est esse eo odit locus lustravit atqui. Nisi eius est habent.</p>\n\t\t\t\t</kd-stats-carousel-slide>\n\t\t\t\t<kd-stats-carousel-slide\n\t\t\t\t\tstat=\"300k\"\n\t\t\t\t\tsymbol=\"$\"\n\t\t\t\t\tsymbolPlacement=\"${STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS.BEFORE}\"\n\t\t\t\t>\n\t\t\t\t\t<p>In nihil autem se homines est lorem eo.</p>\n\t\t\t\t</kd-stats-carousel-slide>\n\t\t\t</kd-stats-carousel>\n\t\t`;\n\t}\n}"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "src/components/statsCarousel/statsCarousel.stories.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "statsCarousel",
+          "declaration": {
+            "name": "statsCarousel",
+            "module": "src/components/statsCarousel/statsCarousel.stories.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/statsCarousel/statsCarousel.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "Stats Carousel.\nContainer for Stats Carousel Slide components.\nThe component pins when scrolling into view and unpins after scrolling through all slides.",
+          "name": "StatsCarousel",
+          "slots": [
+            {
+              "description": "Slot for Stat Carousel Slide components.",
+              "name": "unnamed"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "carouselTitle",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Component title. Max character count: 66",
+              "attribute": "carouselTitle"
+            },
+            {
+              "kind": "method",
+              "name": "handleSlotChange"
+            },
+            {
+              "kind": "method",
+              "name": "resetView",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "setHeight",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "removeHeight",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "initScrollTrigger",
+              "privacy": "private"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "carouselTitle",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Component title. Max character count: 66",
+              "fieldName": "carouselTitle"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "kd-stats-carousel",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "StatsCarousel",
+          "declaration": {
+            "name": "StatsCarousel",
+            "module": "src/components/statsCarousel/statsCarousel.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "kd-stats-carousel",
+          "declaration": {
+            "name": "StatsCarousel",
+            "module": "src/components/statsCarousel/statsCarousel.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/statsCarousel/statsCarouselSlide.stories.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "statsCarouselSlide",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\n\targs,\n\trender: (args: any) => {\n\t\treturn html`\n\t\t\t<kd-stats-carousel-slide\n\t\t\t\tstat=\"${args.stat}\"\n\t\t\t\tsymbol=\"${args.symbol}\"\n\t\t\t\tsymbolPlacement=\"${args.symbolPlacement}\"\n\t\t\t\tsymbolAlignment=\"${args.symbolAlignment}\"\n\t\t\t>\n\t\t\t\t<p>Fregellanum quae quis optimis id traditur pertinacior viros dici et. Vos quam etiam quidem restatis mecum inquam redargueret quidem me nihil dedocendi homines et. In nihil autem se homines est lorem eo.</p>\n\t\t\t</kd-stats-carousel-slide>\n\t\t`;\n\t}\n}"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "src/components/statsCarousel/statsCarouselSlide.stories.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "statsCarouselSlide",
+          "declaration": {
+            "name": "statsCarouselSlide",
+            "module": "src/components/statsCarousel/statsCarouselSlide.stories.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/statsCarousel/statsCarouselSlide.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "Stats Carousel Slide.\nComponent to be used within a Stats Carousel container component.",
+          "name": "StatsCarouselSlide",
+          "slots": [
+            {
+              "description": "Slot for description text. Max character count: 152",
+              "name": "unnamed"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "stat",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Stat value should be a number, but it can include a text character (e.g. 100k). Max character count: 7",
+              "attribute": "stat"
+            },
+            {
+              "kind": "field",
+              "name": "symbol",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Symbol associated with stat value (e.g. $, %, etc.). Max character count: 1",
+              "attribute": "symbol"
+            },
+            {
+              "kind": "field",
+              "name": "symbolPlacement",
+              "type": {
+                "text": "string"
+              },
+              "description": "Symbol placement before or after the stat value.",
+              "attribute": "symbolPlacement"
+            },
+            {
+              "kind": "field",
+              "name": "symbolAlignment",
+              "type": {
+                "text": "string"
+              },
+              "description": "Vertical alignment of symbol.",
+              "attribute": "symbolAlignment"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "stat",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Stat value should be a number, but it can include a text character (e.g. 100k). Max character count: 7",
+              "fieldName": "stat"
+            },
+            {
+              "name": "symbol",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Symbol associated with stat value (e.g. $, %, etc.). Max character count: 1",
+              "fieldName": "symbol"
+            },
+            {
+              "name": "symbolPlacement",
+              "type": {
+                "text": "string"
+              },
+              "description": "Symbol placement before or after the stat value.",
+              "fieldName": "symbolPlacement"
+            },
+            {
+              "name": "symbolAlignment",
+              "type": {
+                "text": "string"
+              },
+              "description": "Vertical alignment of symbol.",
+              "fieldName": "symbolAlignment"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "kd-stats-carousel-slide",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "StatsCarouselSlide",
+          "declaration": {
+            "name": "StatsCarouselSlide",
+            "module": "src/components/statsCarousel/statsCarouselSlide.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "kd-stats-carousel-slide",
+          "declaration": {
+            "name": "StatsCarouselSlide",
+            "module": "src/components/statsCarousel/statsCarouselSlide.ts"
           }
         }
       ]
