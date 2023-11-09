@@ -8,6 +8,7 @@ import '../src/scss/utility/index.scss?global';
 
 export default {
   parameters: {
+    layout: 'fullscreen',
     actions: { argTypesRegex: '^on.*' },
     controls: {
       matchers: {
