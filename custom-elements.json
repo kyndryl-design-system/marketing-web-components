@@ -43,6 +43,12 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/common/defs/colorPalettes.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/common/helpers/helpers.ts",
       "declarations": [
         {
@@ -87,6 +93,29 @@
             }
           ],
           "description": "Convert an object to an array of only its values.\nUsed when importing enums in component stories for populating argType dropdowns."
+        },
+        {
+          "kind": "function",
+          "name": "createColorPaletteLabels",
+          "parameters": [
+            {
+              "name": "labels",
+              "default": "{}",
+              "type": {
+                "text": "{[index: string]:string}"
+              },
+              "description": "Object of color palette labels (COLOR_PALETTE_LABELS)"
+            },
+            {
+              "name": "values",
+              "default": "{}",
+              "type": {
+                "text": "{[index: string]:string}"
+              },
+              "description": "Object of color palette values (COLOR_PALETTE_VALUES)"
+            }
+          ],
+          "description": "Return an object of color palette labels for a Storybook select control.\nEach property of the object has a key of the css class (COLOR_PALETTE_VALUES)\nand a value of the friendly label name (COLOR_PALETTE_LABELS)\nExample: {\n  [COLOR_PALETTE_VALUES.DARK_STONE]: COLOR_PALETTE_LABELS.DARK_STONE,\n  ...\n}"
         }
       ],
       "exports": [
@@ -111,6 +140,14 @@
           "name": "createOptionsArray",
           "declaration": {
             "name": "createOptionsArray",
+            "module": "src/common/helpers/helpers.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "createColorPaletteLabels",
+          "declaration": {
+            "name": "createColorPaletteLabels",
             "module": "src/common/helpers/helpers.ts"
           }
         }
@@ -391,6 +428,247 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/components/leadspaceInterior/defs.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/leadspaceInterior/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LeadspaceInterior",
+          "declaration": {
+            "name": "LeadspaceInterior",
+            "module": "./leadspaceInterior"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/leadspaceInterior/leadspaceInterior.stories.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "LeadspaceInterior",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\n\targs,\n\trender: ({...args}) => {\n\t\tconsole.log('args.isFullBleed', args.isFullBleed);\n\t\treturn html`\n\t\t\t<kd-leadspace-interior\n\t\t\t\tcolorPalette=\"${args.colorPalette}\"\n\t\t\t\tmediaPosition=\"${args.mediaPosition}\"\n\t\t\t\t.isFullBleed=\"${args.isFullBleed}\"\n\t\t\t\theadlineText=\"${args.headlineText}\"\n\t\t\t\teyebrowText=\"${args.eyebrowText}\"\n\t\t\t\tprimaryCtaText=\"${args.primaryCtaText}\"\n\t\t\t\tprimaryCtaLink=\"${args.primaryCtaLink}\"\n\t\t\t\tsecondaryCtaText=\"${args.secondaryCtaText}\"\n\t\t\t>\n\t\t\t\t<div slot=\"media\">\n\t\t\t\t\t<img\n\t\t\t\t\t\tsrc=\"https://s7d1.scene7.com/is/image/kyndryl/ls_windingriver_16x9?qlt=85&amp;wid=1200&amp;ts=1650983065999&amp;dpr=off\"\n\t\t\t\t\t\talt=\"image alt text\"\n\t\t\t\t\t\tclass=\"kd-layout__aspect-ratio--16x9 kd-layout__object-fit--cover\"\n\t\t\t\t\t/>\n\t\t\t\t</div>\n\t\t\t\t<div slot=\"description\">\n\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu facilisi pellentesque morbi molestie sed ut at sed ac. Semper tortor feugiat non sem eget libero. Risus semper facilisis convallis vitae.</p>\n\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu facilisi pellentesque morbi molestie sed ut at sed ac. Semper tortor feugiat non sem eget libero. Risus semper facilisis convallis vitae.</p>\n\t\t\t\t</div>\n\t\t\t</kd-leadspace-interior>\n\t\t`;\n\t}\n}"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "src/components/leadspaceInterior/leadspaceInterior.stories.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "LeadspaceInterior",
+          "declaration": {
+            "name": "LeadspaceInterior",
+            "module": "src/components/leadspaceInterior/leadspaceInterior.stories.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/leadspaceInterior/leadspaceInterior.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "LeadspaceInterior",
+          "members": [
+            {
+              "kind": "field",
+              "name": "colorPalette",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Global Color Palette",
+              "attribute": "colorPalette"
+            },
+            {
+              "kind": "field",
+              "name": "mediaPosition",
+              "type": {
+                "text": "string"
+              },
+              "description": "Media position.",
+              "attribute": "mediaPosition"
+            },
+            {
+              "kind": "field",
+              "name": "isFullBleed",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "true",
+              "description": "Media and background go to the edge of the browser.",
+              "attribute": "isFullBleed"
+            },
+            {
+              "kind": "field",
+              "name": "eyebrowText",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Eyebrow text.",
+              "attribute": "eyebrowText"
+            },
+            {
+              "kind": "field",
+              "name": "headlineText",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Component title.",
+              "attribute": "headlineText"
+            },
+            {
+              "kind": "field",
+              "name": "primaryCtaText",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Primary CTA text.",
+              "attribute": "primaryCtaText"
+            },
+            {
+              "kind": "field",
+              "name": "primaryCtaLink",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Primary CTA link.",
+              "attribute": "primaryCtaLink"
+            },
+            {
+              "kind": "field",
+              "name": "secondaryCtaText",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Secondary Media CTA text.",
+              "attribute": "secondaryCtaText"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "colorPalette",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Global Color Palette",
+              "fieldName": "colorPalette"
+            },
+            {
+              "name": "mediaPosition",
+              "type": {
+                "text": "string"
+              },
+              "description": "Media position.",
+              "fieldName": "mediaPosition"
+            },
+            {
+              "name": "isFullBleed",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "true",
+              "description": "Media and background go to the edge of the browser.",
+              "fieldName": "isFullBleed"
+            },
+            {
+              "name": "eyebrowText",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Eyebrow text.",
+              "fieldName": "eyebrowText"
+            },
+            {
+              "name": "headlineText",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Component title.",
+              "fieldName": "headlineText"
+            },
+            {
+              "name": "primaryCtaText",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Primary CTA text.",
+              "fieldName": "primaryCtaText"
+            },
+            {
+              "name": "primaryCtaLink",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Primary CTA link.",
+              "fieldName": "primaryCtaLink"
+            },
+            {
+              "name": "secondaryCtaText",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Secondary Media CTA text.",
+              "fieldName": "secondaryCtaText"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "kd-leadspace-interior",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LeadspaceInterior",
+          "declaration": {
+            "name": "LeadspaceInterior",
+            "module": "src/components/leadspaceInterior/leadspaceInterior.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "kd-leadspace-interior",
+          "declaration": {
+            "name": "LeadspaceInterior",
+            "module": "src/components/leadspaceInterior/leadspaceInterior.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/statsCarousel/defs.ts",
       "declarations": [],
       "exports": []
@@ -424,11 +702,11 @@
       "declarations": [
         {
           "kind": "variable",
-          "name": "statsCarousel",
+          "name": "StatsCarousel",
           "type": {
             "text": "object"
           },
-          "default": "{\n\targs,\n\trender: (args: any) => {\n\t\treturn html`\n\t\t\t<kd-stats-carousel\n\t\t\t\tcarouselTitle=\"${args.carouselTitle}\"\n\t\t\t>\n\t\t\t\t<kd-stats-carousel-slide\n\t\t\t\t\tstat=\"100\"\n\t\t\t\t\tsymbol=\"$\"\n\t\t\t\t\tsymbolPlacement=\"${STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS.BEFORE}\"\n\t\t\t\t>\n\t\t\t\t\t<p>Fregellanum quae quis optimis id traditur pertinacior viros dici et. Vos quam etiam quidem restatis mecum inquam redargueret quidem me nihil dedocendi homines et. In nihil autem se homines est lorem eo.</p>\n\t\t\t\t</kd-stats-carousel-slide>\n\t\t\t\t<kd-stats-carousel-slide\n\t\t\t\t\tstat=\"200\"\n\t\t\t\t\tsymbol=\"%\"\n\t\t\t\t\tsymbolPlacement=\"${STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS.AFTER}\"\n\t\t\t\t>\n\t\t\t\t\t<p>Sironem flagitiosum eo est esse eo odit locus lustravit atqui. Nisi eius est habent.</p>\n\t\t\t\t</kd-stats-carousel-slide>\n\t\t\t\t<kd-stats-carousel-slide\n\t\t\t\t\tstat=\"300k\"\n\t\t\t\t\tsymbol=\"$\"\n\t\t\t\t\tsymbolPlacement=\"${STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS.BEFORE}\"\n\t\t\t\t>\n\t\t\t\t\t<p>In nihil autem se homines est lorem eo.</p>\n\t\t\t\t</kd-stats-carousel-slide>\n\t\t\t</kd-stats-carousel>\n\t\t`;\n\t}\n}"
+          "default": "{\n\targs,\n\trender: ({...args}) => {\n\t\treturn html`\n\t\t\t<kd-stats-carousel\n\t\t\t\tcarouselTitle=\"${args.carouselTitle}\"\n\t\t\t\tcolorPalette=\"${args.colorPalette}\"\n\t\t\t>\n\t\t\t\t<kd-stats-carousel-slide\n\t\t\t\t\tstat=\"100\"\n\t\t\t\t\tsymbol=\"$\"\n\t\t\t\t\tsymbolPlacement=\"${STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS.BEFORE}\"\n\t\t\t\t>\n\t\t\t\t\t<p>Fregellanum quae quis optimis id traditur pertinacior viros dici et. Vos quam etiam quidem restatis mecum inquam redargueret quidem me nihil dedocendi homines et. In nihil autem se homines est lorem eo.</p>\n\t\t\t\t</kd-stats-carousel-slide>\n\t\t\t\t<kd-stats-carousel-slide\n\t\t\t\t\tstat=\"200\"\n\t\t\t\t\tsymbol=\"%\"\n\t\t\t\t\tsymbolPlacement=\"${STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS.AFTER}\"\n\t\t\t\t>\n\t\t\t\t\t<p>Sironem flagitiosum eo est esse eo odit locus lustravit atqui. Nisi eius est habent.</p>\n\t\t\t\t</kd-stats-carousel-slide>\n\t\t\t\t<kd-stats-carousel-slide\n\t\t\t\t\tstat=\"300k\"\n\t\t\t\t\tsymbol=\"$\"\n\t\t\t\t\tsymbolPlacement=\"${STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS.BEFORE}\"\n\t\t\t\t>\n\t\t\t\t\t<p>In nihil autem se homines est lorem eo.</p>\n\t\t\t\t</kd-stats-carousel-slide>\n\t\t\t</kd-stats-carousel>\n\t\t`;\n\t}\n}"
         }
       ],
       "exports": [
@@ -441,9 +719,9 @@
         },
         {
           "kind": "js",
-          "name": "statsCarousel",
+          "name": "StatsCarousel",
           "declaration": {
-            "name": "statsCarousel",
+            "name": "StatsCarousel",
             "module": "src/components/statsCarousel/statsCarousel.stories.ts"
           }
         }
@@ -475,6 +753,16 @@
               "attribute": "carouselTitle"
             },
             {
+              "kind": "field",
+              "name": "colorPalette",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Global Color Palette",
+              "attribute": "colorPalette"
+            },
+            {
               "kind": "method",
               "name": "handleSlotChange"
             },
@@ -495,6 +783,43 @@
             },
             {
               "kind": "method",
+              "name": "getTweenIn",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "slide",
+                  "type": {
+                    "text": "HTMLElement"
+                  }
+                },
+                {
+                  "name": "i",
+                  "type": {
+                    "text": "number"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "getTweenOut",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "slide",
+                  "type": {
+                    "text": "HTMLElement"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "getTweenSpacer",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
               "name": "initScrollTrigger",
               "privacy": "private"
             }
@@ -508,6 +833,15 @@
               "default": "''",
               "description": "Component title. Max character count: 66",
               "fieldName": "carouselTitle"
+            },
+            {
+              "name": "colorPalette",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Global Color Palette",
+              "fieldName": "colorPalette"
             }
           ],
           "superclass": {
@@ -543,11 +877,11 @@
       "declarations": [
         {
           "kind": "variable",
-          "name": "statsCarouselSlide",
+          "name": "StatsCarouselSlide",
           "type": {
             "text": "object"
           },
-          "default": "{\n\targs,\n\trender: (args: any) => {\n\t\treturn html`\n\t\t\t<kd-stats-carousel-slide\n\t\t\t\tstat=\"${args.stat}\"\n\t\t\t\tsymbol=\"${args.symbol}\"\n\t\t\t\tsymbolPlacement=\"${args.symbolPlacement}\"\n\t\t\t\tsymbolAlignment=\"${args.symbolAlignment}\"\n\t\t\t>\n\t\t\t\t<p>Fregellanum quae quis optimis id traditur pertinacior viros dici et. Vos quam etiam quidem restatis mecum inquam redargueret quidem me nihil dedocendi homines et. In nihil autem se homines est lorem eo.</p>\n\t\t\t</kd-stats-carousel-slide>\n\t\t`;\n\t}\n}"
+          "default": "{\n\targs,\n\trender: ({...args}) => {\n\t\treturn html`\n\t\t\t<kd-stats-carousel-slide\n\t\t\t\tstat=\"${args.stat}\"\n\t\t\t\tsymbol=\"${args.symbol}\"\n\t\t\t\tsymbolPlacement=\"${args.symbolPlacement}\"\n\t\t\t\tsymbolAlignment=\"${args.symbolAlignment}\"\n\t\t\t>\n\t\t\t\t<p>Fregellanum quae quis optimis id traditur pertinacior viros dici et. Vos quam etiam quidem restatis mecum inquam redargueret quidem me nihil dedocendi homines et. In nihil autem se homines est lorem eo.</p>\n\t\t\t</kd-stats-carousel-slide>\n\t\t`;\n\t}\n}"
         }
       ],
       "exports": [
@@ -560,9 +894,9 @@
         },
         {
           "kind": "js",
-          "name": "statsCarouselSlide",
+          "name": "StatsCarouselSlide",
           "declaration": {
-            "name": "statsCarouselSlide",
+            "name": "StatsCarouselSlide",
             "module": "src/components/statsCarousel/statsCarouselSlide.stories.ts"
           }
         }
