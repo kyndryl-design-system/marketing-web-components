@@ -6,4 +6,20 @@
 @use '~@kyndryl-design-system/shidoka-foundation/scss/utility/grid.scss';
 @use '~@kyndryl-design-system/shidoka-foundation/scss/utility/typography.scss';
 .kd-left-column-navigation {
+  .left-nav-sticky {
+    top: 20px;
+    position: sticky;
+
+    .nav-item {
+      padding: 1em;
+      border-left: 2px solid #999;
+      margin-left: 0px;
+
+      &.active {
+        border-left: 4px solid #333;
+        margin-left: -1px;
+        padding-left: 15px;
+      }
+    }
+  }
 }

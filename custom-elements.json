@@ -27,58 +27,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/common/helpers/helpers.ts",
-      "declarations": [
-        {
-          "kind": "function",
-          "name": "debounce",
-          "parameters": [
-            {
-              "name": "fn",
-              "type": {
-                "text": "Function"
-              }
-            },
-            {
-              "name": "ms",
-              "default": "100"
-            }
-          ]
-        },
-        {
-          "kind": "function",
-          "name": "stringToReactHtml",
-          "parameters": [
-            {
-              "name": "string",
-              "type": {
-                "text": "String"
-              }
-            }
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "debounce",
-          "declaration": {
-            "name": "debounce",
-            "module": "src/common/helpers/helpers.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "stringToReactHtml",
-          "declaration": {
-            "name": "stringToReactHtml",
-            "module": "src/common/helpers/helpers.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/components/alternatingFeatureWithImage/alternatingFeatureWithImage.stories.ts",
       "declarations": [
         {
@@ -87,7 +35,7 @@
           "type": {
             "text": "object"
           },
-          "default": "{\n  args,\n  render: (args) => {\n    return html`\n      <kd-alternating-feature-with-image\n        mediaPosition=\"${args.mediaPosition}\"\n        bleedmedia=\"${args.bleedMedia}\"\n        headlineText=\"${args.headlineText}\"\n        eyebrowtext=\"${args.eyebrowText}\"\n        buttonLabel=\"${args.buttonLabel}\"\n        buttonLink=\"${args.buttonLink}\"\n      >\n        <div slot=\"media\">\n          <img\n            src=\"https://s7d1.scene7.com/is/image/kyndryl/ls_windingriver_16x9?qlt=85&amp;wid=1200&amp;ts=1650983065999&amp;dpr=off\"\n            alt=\"image alt text\"\n            class=\"kd-layout__aspect-ratio--16x9 kd-layout__object-fit--cover\"\n          />\n        </div>\n        <div slot=\"text\">\n          <p>\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu\n            facilisi pellentesque morbi molestie sed ut at sed ac. Semper tortor\n            feugiat non sem eget libero. Risus semper facilisis convallis vitae.\n          </p>\n        </div>\n      </kd-alternating-feature-with-image>\n    `;\n  },\n}"
+          "default": "{\n  args,\n  render: (args: any) => {\n    return html`\n      <kd-alternating-feature-with-image\n        mediaPosition=\"${args.mediaPosition}\"\n        bleedmedia=\"${args.bleedMedia}\"\n        headlineText=\"${args.headlineText}\"\n        eyebrowtext=\"${args.eyebrowText}\"\n        buttonLabel=\"${args.buttonLabel}\"\n        buttonLink=\"${args.buttonLink}\"\n      >\n        <div slot=\"media\">\n          <img\n            src=\"https://s7d1.scene7.com/is/image/kyndryl/ls_windingriver_16x9?qlt=85&amp;wid=1200&amp;ts=1650983065999&amp;dpr=off\"\n            alt=\"image alt text\"\n            class=\"kd-layout__aspect-ratio--16x9 kd-layout__object-fit--cover\"\n          />\n        </div>\n        <div slot=\"text\">\n          <p>\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu\n            facilisi pellentesque morbi molestie sed ut at sed ac. Semper tortor\n            feugiat non sem eget libero. Risus semper facilisis convallis vitae.\n          </p>\n        </div>\n      </kd-alternating-feature-with-image>\n    `;\n  },\n}"
         }
       ],
       "exports": [
@@ -123,7 +71,7 @@
               "type": {
                 "text": "string"
               },
-              "default": "'false'",
+              "default": "'left'",
               "attribute": "mediaPosition"
             },
             {
@@ -207,7 +155,7 @@
               "type": {
                 "text": "string"
               },
-              "default": "'false'",
+              "default": "'left'",
               "fieldName": "mediaPosition"
             },
             {
@@ -346,6 +294,145 @@
           "declaration": {
             "name": "Eyebrow",
             "module": "./eyebrow"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/leftColumnNavigation/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LeftColumnNavigation",
+          "declaration": {
+            "name": "LeftColumnNavigation",
+            "module": "./leftColumnNavigation"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/leftColumnNavigation/leftColumnNavigation.stories.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "leftColumnNavigation",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\r\n  args,\r\n  render: (args: any) => {\r\n    return html`\r\n      <kd-left-column-navigation>\r\n        <a data-title=\"Paragraph 1\" name=\"Paragraph+1\"></a>\r\n        <h2>Paragraph 1</h2>\r\n        <p>\r\n          Hendrerit rutrum molestie iaculis dignissim erat cras lacinia lacus.\r\n          Convallis, quisque orci eu imperdiet feugiat cursus sodales penatibus.\r\n          Cras magnis dictum ante parturient elit platea id etiam torquent\r\n          cursus non. Sem lacinia nisl montes arcu. Rutrum, velit curae; iaculis\r\n          quam condimentum? Parturient proin bibendum est, egestas ad diam nam\r\n          ante.\r\n        </p>\r\n        <a data-title=\"Paragraph 2\" name=\"Paragraph+2\"></a>\r\n        <h2>Paragraph 2</h2>\r\n        <p>\r\n          Consectetur habitasse molestie vel. Curabitur magna torquent montes\r\n          aliquet venenatis. Et pulvinar feugiat velit duis habitasse pretium\r\n          cursus nostra vel rhoncus aenean. Quisque lobortis, a feugiat nibh\r\n          libero ullamcorper dictumst. Ut montes habitasse vehicula donec. Sit\r\n          ac rutrum rutrum sapien nam. Pulvinar euismod pharetra mollis\r\n          dignissim placerat dolor dis! Ligula, a vehicula duis. Duis\r\n          suspendisse congue praesent. Netus, magna vitae tortor tortor\r\n          porttitor fringilla sodales. Venenatis conubia dictum a ultrices.\r\n          Proin, leo vehicula cubilia risus hac cum! Per fusce facilisi leo.\r\n          Turpis lacinia sem curae; laoreet neque! Cum egestas?\r\n        </p>\r\n        <a data-title=\"Paragraph 3\" name=\"Paragraph+3\"></a>\r\n        <h2>Paragraph 3</h2>\r\n        <p>\r\n          Egestas pulvinar volutpat pellentesque arcu a vehicula tempus neque\r\n          cursus. Nulla tellus egestas nostra dapibus nam primis, eu risus!\r\n          Aenean fringilla sit commodo nostra. Amet tortor per aliquam viverra\r\n          pellentesque duis vulputate scelerisque bibendum. Diam tellus senectus\r\n          senectus praesent elementum tincidunt fringilla sit fusce lorem arcu.\r\n          Tellus euismod, sed nec libero laoreet! Cum suspendisse velit lectus\r\n          ultrices dolor. Fringilla amet curae; facilisi proin imperdiet\r\n          himenaeos. Id ornare curae; facilisi nisi eros. Ridiculus aenean\r\n          nullam felis vivamus rutrum.\r\n        </p>\r\n        <a data-title=\"Paragraph 4\" name=\"Paragraph+4\"></a>\r\n        <h2>Paragraph 4</h2>\r\n        <p>\r\n          Quis adipiscing, phasellus fringilla nisi luctus morbi habitasse\r\n          platea. Ac hac cursus placerat bibendum elementum nisl, ipsum ad dis\r\n          inceptos in. Porta luctus adipiscing sociis consequat cum habitasse\r\n          egestas velit. Venenatis aptent eros aptent malesuada nam pretium.\r\n          Arcu sem natoque mus consequat ligula malesuada mollis ipsum gravida\r\n          eleifend. Gravida metus duis facilisis imperdiet semper mattis pretium\r\n          sodales, tortor urna. Pretium mollis augue lorem scelerisque tortor\r\n          dictum dui imperdiet torquent. Phasellus montes interdum ridiculus\r\n          fames metus fermentum. Cum sollicitudin dapibus nibh natoque faucibus\r\n          libero accumsan!\r\n        </p>\r\n        <a data-title=\"Paragraph 5\" name=\"Paragraph+5\"></a>\r\n        <h2>Paragraph 5</h2>\r\n        <p>\r\n          Dis amet adipiscing tempor euismod aliquam lacus justo amet. Porttitor\r\n          semper nibh class montes ipsum dictumst ullamcorper gravida dis eros\r\n          sit. Ante magna non natoque scelerisque? Parturient pretium elementum\r\n          viverra himenaeos eget leo tellus! Dictum accumsan platea placerat\r\n          ridiculus inceptos leo convallis fermentum vel ad nibh aliquet.\r\n          Imperdiet adipiscing aptent ornare dictumst dapibus magna luctus\r\n          platea. Quisque.\r\n        </p>\r\n      </kd-left-column-navigation>\r\n    `;\r\n  },\r\n}"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "src/components/leftColumnNavigation/leftColumnNavigation.stories.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "leftColumnNavigation",
+          "declaration": {
+            "name": "leftColumnNavigation",
+            "module": "src/components/leftColumnNavigation/leftColumnNavigation.stories.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/leftColumnNavigation/leftColumnNavigation.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "LeftColumnNavigation",
+          "members": [
+            {
+              "kind": "field",
+              "name": "navItems"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "kd-left-column-navigation",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LeftColumnNavigation",
+          "declaration": {
+            "name": "LeftColumnNavigation",
+            "module": "src/components/leftColumnNavigation/leftColumnNavigation.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "kd-left-column-navigation",
+          "declaration": {
+            "name": "LeftColumnNavigation",
+            "module": "src/components/leftColumnNavigation/leftColumnNavigation.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/common/helpers/helpers.ts",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "debounce",
+          "parameters": [
+            {
+              "name": "fn",
+              "type": {
+                "text": "Function"
+              }
+            },
+            {
+              "name": "ms",
+              "default": "100"
+            }
+          ]
+        },
+        {
+          "kind": "function",
+          "name": "stringToReactHtml",
+          "parameters": [
+            {
+              "name": "string",
+              "type": {
+                "text": "String"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "debounce",
+          "declaration": {
+            "name": "debounce",
+            "module": "src/common/helpers/helpers.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "stringToReactHtml",
+          "declaration": {
+            "name": "stringToReactHtml",
+            "module": "src/common/helpers/helpers.ts"
           }
         }
       ]

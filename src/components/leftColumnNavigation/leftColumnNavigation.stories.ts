@@ -7,7 +7,7 @@ import './leftColumnNavigation';
 
 export default {
   title: 'Components/Left Column Navigation',
-  component: `kd-left-column-navigation`,
+  component: 'kd-left-column-navigation',
   argTypes: {},
 };
 
@@ -18,7 +18,7 @@ export const leftColumnNavigation = {
   render: (args: any) => {
     return html`
       <kd-left-column-navigation>
-        <a data-title="Paragraph 1" name="Paragraph+1"></a>
+        <a data-title="Paragraph 1" name="Paragraph1"></a>
         <h2>Paragraph 1</h2>
         <p>
           Hendrerit rutrum molestie iaculis dignissim erat cras lacinia lacus.
@@ -26,9 +26,27 @@ export const leftColumnNavigation = {
           Cras magnis dictum ante parturient elit platea id etiam torquent
           cursus non. Sem lacinia nisl montes arcu. Rutrum, velit curae; iaculis
           quam condimentum? Parturient proin bibendum est, egestas ad diam nam
-          ante.
+          ante. Dis amet adipiscing tempor euismod aliquam lacus justo amet.
+          Porttitor semper nibh class montes ipsum dictumst ullamcorper gravida
+          dis eros sit. Ante magna non natoque scelerisque? Parturient pretium
+          elementum viverra himenaeos eget leo tellus! Dictum accumsan platea
+          placerat ridiculus inceptos leo convallis fermentum vel ad nibh
+          aliquet. Imperdiet adipiscing aptent ornare dictumst dapibus magna
+          luctus platea. Quisque. Dis amet adipiscing tempor euismod aliquam
+          lacus justo amet. Porttitor semper nibh class montes ipsum dictumst
+          ullamcorper gravida dis eros sit. Ante magna non natoque scelerisque?
+          Parturient pretium elementum viverra himenaeos eget leo tellus! Dictum
+          accumsan platea placerat ridiculus inceptos leo convallis fermentum
+          vel ad nibh aliquet. Imperdiet adipiscing aptent ornare dictumst
+          dapibus magna luctus platea. Quisque. Dis amet adipiscing tempor
+          euismod aliquam lacus justo amet. Porttitor semper nibh class montes
+          ipsum dictumst ullamcorper gravida dis eros sit. Ante magna non
+          natoque scelerisque? Parturient pretium elementum viverra himenaeos
+          eget leo tellus! Dictum accumsan platea placerat ridiculus inceptos
+          leo convallis fermentum vel ad nibh aliquet. Imperdiet adipiscing
+          aptent ornare dictumst dapibus magna luctus platea. Quisque.
         </p>
-        <a data-title="Paragraph 2" name="Paragraph+2"></a>
+        <a data-title="Paragraph 2" name="Paragraph2"></a>
         <h2>Paragraph 2</h2>
         <p>
           Consectetur habitasse molestie vel. Curabitur magna torquent montes
@@ -42,7 +60,7 @@ export const leftColumnNavigation = {
           Proin, leo vehicula cubilia risus hac cum! Per fusce facilisi leo.
           Turpis lacinia sem curae; laoreet neque! Cum egestas?
         </p>
-        <a data-title="Paragraph 3" name="Paragraph+3"></a>
+        <a data-title="Paragraph 3" name="Paragraph3"></a>
         <h2>Paragraph 3</h2>
         <p>
           Egestas pulvinar volutpat pellentesque arcu a vehicula tempus neque
@@ -53,9 +71,15 @@ export const leftColumnNavigation = {
           Tellus euismod, sed nec libero laoreet! Cum suspendisse velit lectus
           ultrices dolor. Fringilla amet curae; facilisi proin imperdiet
           himenaeos. Id ornare curae; facilisi nisi eros. Ridiculus aenean
-          nullam felis vivamus rutrum.
+          nullam felis vivamus rutrum. Dis amet adipiscing tempor euismod
+          aliquam lacus justo amet. Porttitor semper nibh class montes ipsum
+          dictumst ullamcorper gravida dis eros sit. Ante magna non natoque
+          scelerisque? Parturient pretium elementum viverra himenaeos eget leo
+          tellus! Dictum accumsan platea placerat ridiculus inceptos leo
+          convallis fermentum vel ad nibh aliquet. Imperdiet adipiscing aptent
+          ornare dictumst dapibus magna luctus platea. Quisque.
         </p>
-        <a data-title="Paragraph 4" name="Paragraph+4"></a>
+        <a data-title="Paragraph 4" name="Paragraph4"></a>
         <h2>Paragraph 4</h2>
         <p>
           Quis adipiscing, phasellus fringilla nisi luctus morbi habitasse
@@ -69,12 +93,65 @@ export const leftColumnNavigation = {
           fames metus fermentum. Cum sollicitudin dapibus nibh natoque faucibus
           libero accumsan!
         </p>
-        <a data-title="Paragraph 5" name="Paragraph+5"></a>
+        <a data-title="Paragraph 5" name="Paragraph5"></a>
         <h2>Paragraph 5</h2>
         <p>
           Dis amet adipiscing tempor euismod aliquam lacus justo amet. Porttitor
           semper nibh class montes ipsum dictumst ullamcorper gravida dis eros
           sit. Ante magna non natoque scelerisque? Parturient pretium elementum
+          viverra himenaeos eget leo tellus! Dictum accumsan platea placerat
+          ridiculus inceptos leo convallis fermentum vel ad nibh aliquet.
+          Imperdiet adipiscing aptent ornare dictumst dapibus magna luctus
+          platea. Quisque. Dis amet adipiscing tempor euismod aliquam lacus
+          justo amet. Porttitor semper nibh class montes ipsum dictumst
+          ullamcorper gravida dis eros sit. Ante magna non natoque scelerisque?
+          Parturient pretium elementum viverra himenaeos eget leo tellus! Dictum
+          accumsan platea placerat ridiculus inceptos leo convallis fermentum
+          vel ad nibh aliquet. Imperdiet adipiscing aptent ornare dictumst
+          dapibus magna luctus platea. Quisque.
+        </p>
+        <a data-title="Paragraph 6 - level 2" name="Paragraph6" level="2"></a>
+        <h2>Paragraph 6</h2>
+        <p>
+          Dis amet adipiscing tempor euismod aliquam lacus justo amet. Porttitor
+          semper nibh class montes ipsum dictumst ullamcorper gravida dis eros
+          sit. Ante magna non natoque scelerisque? Parturient pretium elementum
+          viverra himenaeos eget leo tellus! Dictum accumsan platea placerat
+          ridiculus inceptos leo convallis fermentum vel ad nibh aliquet.
+          Imperdiet adipiscing aptent ornare dictumst dapibus magna luctus
+          platea. Quisque. Dis amet adipiscing tempor euismod aliquam lacus
+          justo amet. Porttitor semper nibh class montes ipsum dictumst
+          ullamcorper gravida dis eros sit. Ante magna non natoque scelerisque?
+          Parturient pretium elementum viverra himenaeos eget leo tellus! Dictum
+          accumsan platea placerat ridiculus inceptos leo convallis fermentum
+          vel ad nibh aliquet. Imperdiet adipiscing aptent ornare dictumst
+          dapibus magna luctus platea. Quisque.
+        </p>
+        <a data-title="Paragraph 7" name="Paragraph7"></a>
+        <h2>Paragraph 7</h2>
+        <p>
+          Dis amet adipiscing tempor euismod aliquam lacus justo amet. Porttitor
+          semper nibh class montes ipsum dictumst ullamcorper gravida dis eros
+          sit. Ante magna non natoque scelerisque? Parturient pretium elementum
+          viverra himenaeos eget leo tellus! Dictum accumsan platea placerat
+          ridiculus inceptos leo convallis fermentum vel ad nibh aliquet.
+          Imperdiet adipiscing aptent ornare dictumst dapibus magna luctus
+          platea. Quisque. Dis amet adipiscing tempor euismod aliquam lacus
+          justo amet. Porttitor semper nibh class montes ipsum dictumst
+          ullamcorper gravida dis eros sit. Ante magna non natoque scelerisque?
+          Parturient pretium elementum viverra himenaeos eget leo tellus! Dictum
+          accumsan platea placerat ridiculus inceptos leo convallis fermentum
+          vel ad nibh aliquet. Imperdiet adipiscing aptent ornare dictumst
+          dapibus magna luctus platea. Quisque. Dis amet adipiscing tempor
+          euismod aliquam lacus justo amet. Porttitor semper nibh class montes
+          ipsum dictumst ullamcorper gravida dis eros sit. Ante magna non
+          natoque scelerisque? Parturient pretium elementum viverra himenaeos
+          eget leo tellus! Dictum accumsan platea placerat ridiculus inceptos
+          leo convallis fermentum vel ad nibh aliquet. Imperdiet adipiscing
+          aptent ornare dictumst dapibus magna luctus platea. Quisque. Dis amet
+          adipiscing tempor euismod aliquam lacus justo amet. Porttitor semper
+          nibh class montes ipsum dictumst ullamcorper gravida dis eros sit.
+          Ante magna non natoque scelerisque? Parturient pretium elementum
           viverra himenaeos eget leo tellus! Dictum accumsan platea placerat
           ridiculus inceptos leo convallis fermentum vel ad nibh aliquet.
           Imperdiet adipiscing aptent ornare dictumst dapibus magna luctus
