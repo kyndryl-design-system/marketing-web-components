@@ -1,18 +1,23 @@
 import { html } from 'lit';
-import { createColorPaletteLabels, createOptionsArray } from '../../common/helpers/helpers';
+import { createColorPaletteLabels, createOptionsArray, deleteObjectPropertyByValue } from '../../common/helpers/helpers';
 import { COLOR_PALETTE_LABELS, COLOR_PALETTE_VALUES } from '../../common/defs/colorPalettes';
 import './index';
 import { LEADSPACE_INTERIOR_MEDIA_POSITIONS } from './defs';
+
+const customColorPaletteValues = {...COLOR_PALETTE_VALUES};
+const customColorPaletteLabels = {...COLOR_PALETTE_LABELS};
+deleteObjectPropertyByValue(customColorPaletteValues, [COLOR_PALETTE_VALUES.WARM_RED]);
+deleteObjectPropertyByValue(customColorPaletteLabels, [COLOR_PALETTE_LABELS.WARM_RED]);
 
 export default {
 	title: 'Components/Leadspace Interior',
 	component: 'kd-leadspace-interior',
 	argTypes: {
 		colorPalette: {
-			options: createOptionsArray(COLOR_PALETTE_VALUES),
+			options: createOptionsArray(customColorPaletteValues),
 			control: {
 				type: 'select',
-				labels: createColorPaletteLabels(COLOR_PALETTE_LABELS, COLOR_PALETTE_VALUES),
+				labels: createColorPaletteLabels(customColorPaletteLabels, customColorPaletteValues),
 			},
 		},
 		mediaPosition: {

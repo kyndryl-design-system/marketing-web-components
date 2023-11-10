@@ -18,7 +18,7 @@ export class LeadspaceInterior extends LitElement {
 	@property({ type: String })
 	colorPalette = '';
 
-	/** Media on the left or right . */
+	/** Media on the left or right. */
 	@property({ type: String })
 	mediaPosition: string = LEADSPACE_INTERIOR_MEDIA_POSITIONS.LEFT;
 
