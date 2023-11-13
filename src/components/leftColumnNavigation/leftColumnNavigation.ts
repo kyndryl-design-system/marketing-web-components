@@ -111,6 +111,7 @@ export class LeftColumnNavigation extends LitElement {
       const destination = destinationElement.offsetTop - this.offset;
       window.scrollTo({ top: destination, behavior: 'smooth' });
     }
+    event.preventDefault();
   }
 
   override render() {
