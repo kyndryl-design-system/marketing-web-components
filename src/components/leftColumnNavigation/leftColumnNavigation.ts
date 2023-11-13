@@ -26,11 +26,8 @@ export class LeftColumnNavigation extends LitElement {
     this._setActiveNavItem();
   }
 
-  protected override updated(
-    _changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>
-  ): void {
+  protected override updated(): void {
     this._buildNavigation();
-    //this._setActiveNavItem();
   }
 
   private _buildNavigation() {
@@ -38,8 +35,8 @@ export class LeftColumnNavigation extends LitElement {
     this.navigationItems = [];
     bodyAnchors.forEach((item) => {
       const navItem: leftNavItem = {
-        name: item.getAttribute('name'),
-        level: item.getAttribute('level'),
+        id: item.getAttribute('id'),
+        level: item.getAttribute('data-level'),
         title: item.getAttribute('data-title'),
         offset: item.offsetTop,
       };
@@ -71,7 +68,7 @@ export class LeftColumnNavigation extends LitElement {
     this.renderRoot
       .querySelector(
         '.left-nav-sticky div.' +
-          this.navigationItems[closestPositiveItemIndex].name
+          this.navigationItems[closestPositiveItemIndex].id
       )
       ?.classList.add('active');
   }
@@ -85,11 +82,9 @@ export class LeftColumnNavigation extends LitElement {
             html`<div
               class="nav-item kd-type--body-02 level-${item.level
                 ? item.level
-                : '1'} ${item.name}"
+                : '1'} ${item.id}"
             >
-              <a
-                @click="${this._handleNavigationClickEvent}"
-                href="#${item.name}"
+              <a @click="${this._handleNavigationClickEvent}" href="#${item.id}"
                 >${item.title}</a
               >
             </div>`
@@ -110,8 +105,7 @@ export class LeftColumnNavigation extends LitElement {
   private _handleNavigationClickEvent(event: Event) {
     const target = event.target as HTMLAnchorElement;
     const namedAnchor = target.getAttribute('href')?.replace('#', '');
-    const destinationElement = this.querySelector(`[name="${namedAnchor}"]`);
-    const pixelsFromTop = window.scrollY;
+    const destinationElement = this.querySelector(`[id="${namedAnchor}"]`);
 
     if (destinationElement instanceof HTMLElement) {
       const destination = destinationElement.offsetTop - this.offset;
@@ -132,7 +126,7 @@ export class LeftColumnNavigation extends LitElement {
 }
 
 class leftNavItem {
-  name = '';
+  id = '';
   title = '';
   level = '';
   offset = 0;

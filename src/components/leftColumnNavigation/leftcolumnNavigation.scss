@@ -7,8 +7,10 @@
 @use '~@kyndryl-design-system/shidoka-foundation/scss/utility/typography.scss';
 .kd-left-column-navigation {
   .left-nav-sticky {
-    top: 20px;
+    top: 1em;
     position: sticky;
+    background: var(--kd-color-background-ui-default);
+    color: var(--kd-color-text-primary);
 
     .nav-item {
       padding: 1em;
@@ -19,6 +21,10 @@
         border-left: 4px solid #333;
         margin-left: -1px;
         padding-left: 15px;
+      }
+
+      &.level-2 {
+        padding-left: 2em;
       }
     }
   }

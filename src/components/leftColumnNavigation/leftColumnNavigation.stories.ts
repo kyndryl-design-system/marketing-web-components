@@ -18,7 +18,7 @@ export const leftColumnNavigation = {
   render: (args: any) => {
     return html`
       <kd-left-column-navigation>
-        <a data-title="Paragraph 1" name="Paragraph1"></a>
+        <a data-title="Paragraph 1" id="Paragraph1"></a>
         <h2>Paragraph 1</h2>
         <p>
           Hendrerit rutrum molestie iaculis dignissim erat cras lacinia lacus.
@@ -46,7 +46,7 @@ export const leftColumnNavigation = {
           leo convallis fermentum vel ad nibh aliquet. Imperdiet adipiscing
           aptent ornare dictumst dapibus magna luctus platea. Quisque.
         </p>
-        <a data-title="Paragraph 2" name="Paragraph2"></a>
+        <a data-title="Paragraph 2" id="Paragraph2"></a>
         <h2>Paragraph 2</h2>
         <p>
           Consectetur habitasse molestie vel. Curabitur magna torquent montes
@@ -60,7 +60,7 @@ export const leftColumnNavigation = {
           Proin, leo vehicula cubilia risus hac cum! Per fusce facilisi leo.
           Turpis lacinia sem curae; laoreet neque! Cum egestas?
         </p>
-        <a data-title="Paragraph 3" name="Paragraph3"></a>
+        <a data-title="Paragraph 3" id="Paragraph3"></a>
         <h2>Paragraph 3</h2>
         <p>
           Egestas pulvinar volutpat pellentesque arcu a vehicula tempus neque
@@ -79,7 +79,7 @@ export const leftColumnNavigation = {
           convallis fermentum vel ad nibh aliquet. Imperdiet adipiscing aptent
           ornare dictumst dapibus magna luctus platea. Quisque.
         </p>
-        <a data-title="Paragraph 4" name="Paragraph4"></a>
+        <a data-title="Paragraph 4" id="Paragraph4"></a>
         <h2>Paragraph 4</h2>
         <p>
           Quis adipiscing, phasellus fringilla nisi luctus morbi habitasse
@@ -93,7 +93,11 @@ export const leftColumnNavigation = {
           fames metus fermentum. Cum sollicitudin dapibus nibh natoque faucibus
           libero accumsan!
         </p>
-        <a data-title="Paragraph 5" name="Paragraph5"></a>
+        <a
+          data-title="Paragraph 5 - level 2"
+          id="Paragraph5"
+          data-level="2"
+        ></a>
         <h2>Paragraph 5</h2>
         <p>
           Dis amet adipiscing tempor euismod aliquam lacus justo amet. Porttitor
@@ -110,7 +114,11 @@ export const leftColumnNavigation = {
           vel ad nibh aliquet. Imperdiet adipiscing aptent ornare dictumst
           dapibus magna luctus platea. Quisque.
         </p>
-        <a data-title="Paragraph 6 - level 2" name="Paragraph6" level="2"></a>
+        <a
+          data-title="Paragraph 6 - level 2"
+          id="Paragraph6"
+          data-level="2"
+        ></a>
         <h2>Paragraph 6</h2>
         <p>
           Dis amet adipiscing tempor euismod aliquam lacus justo amet. Porttitor
@@ -127,7 +135,7 @@ export const leftColumnNavigation = {
           vel ad nibh aliquet. Imperdiet adipiscing aptent ornare dictumst
           dapibus magna luctus platea. Quisque.
         </p>
-        <a data-title="Paragraph 7" name="Paragraph7"></a>
+        <a data-title="Paragraph 7" id="Paragraph7"></a>
         <h2>Paragraph 7</h2>
         <p>
           Dis amet adipiscing tempor euismod aliquam lacus justo amet. Porttitor
