@@ -1,0 +1,146 @@
+@use '~@kyndryl-design-system/shidoka-foundation/scss/variables/breakpoints.scss';
+@use '~@kyndryl-design-system/shidoka-foundation/scss/utility/grid.scss';
+@use '~@kyndryl-design-system/shidoka-foundation/scss/utility/typography.scss';
+
+// Component container
+// --------------------------------------------------------------
+.kd-persistent-cta-container {
+	bottom: 0;
+	display: block;
+	left: 0;
+	position: fixed;
+	right: 0;
+	width: 100%;
+
+	@media (max-width: breakpoints.$bp-md) {
+		margin-right: var(--kd-spacing-16);
+	}
+}
+
+// CTA
+// -------------------------------
+.kd-persistent-cta {
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	right: 0;
+	text-decoration: none;
+	width: 48px;
+
+	@media (min-width: breakpoints.$bp-lg) {
+		width: 256px;
+	}
+
+	@media (min-width: breakpoints.$bp-xl) {
+		width: 280px;
+	}
+
+	@media (min-width: breakpoints.$bp-max) {
+		width: 352px;
+	}
+
+	&:hover,
+	&:focus {
+		.kd-persistent-cta-label-border {
+			background: var(--kd-color-warmred-50);
+			left: var(--kd-spacing-32);
+			width: 16px;
+		}
+
+		.kd-persistent-cta-label {
+			background: var(--kd-color-neutral-white);
+			color: var(--kd-color-darkstone-80);
+		}
+
+		.kd-persistent-cta-desc {
+			bottom: 100%;
+			opacity: 1;
+		}
+	}
+}
+
+// CTA label, icon, border
+// -------------------------------
+.kd-persistent-cta-label {
+	align-items: center;
+	background: var(--kd-color-spruce-60);
+	box-sizing: border-box;
+	color: var(--kd-color-neutral-white);
+	display: flex;
+	flex-direction: row;
+	height: 48px;
+	justify-content: center;
+	padding: var(--kd-spacing-8);
+	position: relative;
+	transition: all 0.3s ease-in-out;
+	width: 100%;
+	z-index: 1;
+
+	@media (min-width: breakpoints.$bp-lg) {
+		justify-content: flex-start;
+		height: 72px;
+		padding: var(--kd-spacing-24) var(--kd-spacing-32);
+	}
+}
+
+// Animated border
+.kd-persistent-cta-label-border {
+	@media (min-width: breakpoints.$bp-lg) {
+		background: var(--kd-color-spruce-60);
+		display: block;
+		height: 2px;
+		left: 0;
+		position: absolute;
+		top: 0;
+		transition: all 0.3s ease-in-out;
+		width: 100%;
+	}
+}
+
+// CTA text
+.kd-persistent-cta-label-text {
+	display: none;
+
+	@media (min-width: breakpoints.$bp-lg) {
+		display: block;
+		margin-right: var(--kd-spacing-8);
+	}
+}
+
+// CTA icon
+.kd-persistent-cta-label-icon {
+	align-items: center;
+	display: inline-flex;
+	justify-content: center;
+
+	::part(kd-icon-part) {
+		height: 32px;
+		width: 32px;
+
+		@media (min-width: breakpoints.$bp-lg) {
+			height: 20px;
+			width: 20px;
+		}
+	}
+}
+
+// Description
+// -------------------------------
+.kd-persistent-cta-desc {
+	display: none;
+
+	@media (min-width: breakpoints.$bp-lg) {
+		background: var(--kd-color-neutral-white);
+		bottom: -100%;
+		box-sizing: border-box;
+		color: var(--kd-color-darkstone-80);
+		display: block;
+		left: 0;
+		opacity: 0;
+		padding: var(--kd-spacing-32) var(--kd-spacing-32) var(--kd-spacing-24);
+		position: absolute;
+		transition: all 0.3s ease-in-out;
+		width: 100%;
+	}
+}

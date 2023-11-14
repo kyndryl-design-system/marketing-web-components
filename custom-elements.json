@@ -43,6 +43,12 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/common/defs/colorPalettes.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/common/helpers/helpers.ts",
       "declarations": [
         {
@@ -87,6 +93,29 @@
             }
           ],
           "description": "Convert an object to an array of only its values.\nUsed when importing enums in component stories for populating argType dropdowns."
+        },
+        {
+          "kind": "function",
+          "name": "createColorPaletteLabels",
+          "parameters": [
+            {
+              "name": "labels",
+              "default": "{}",
+              "type": {
+                "text": "{[index: string]:string}"
+              },
+              "description": "Object of color palette labels (COLOR_PALETTE_LABELS)"
+            },
+            {
+              "name": "values",
+              "default": "{}",
+              "type": {
+                "text": "{[index: string]:string}"
+              },
+              "description": "Object of color palette values (COLOR_PALETTE_VALUES)"
+            }
+          ],
+          "description": "Return an object of color palette labels for a Storybook select control.\nEach property of the object has a key of the css class (COLOR_PALETTE_VALUES)\nand a value of the friendly label name (COLOR_PALETTE_LABELS)\nExample: {\n  [COLOR_PALETTE_VALUES.DARK_STONE]: COLOR_PALETTE_LABELS.DARK_STONE,\n  ...\n}"
         }
       ],
       "exports": [
@@ -111,6 +140,14 @@
           "name": "createOptionsArray",
           "declaration": {
             "name": "createOptionsArray",
+            "module": "src/common/helpers/helpers.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "createColorPaletteLabels",
+          "declaration": {
+            "name": "createColorPaletteLabels",
             "module": "src/common/helpers/helpers.ts"
           }
         }
@@ -342,6 +379,167 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/components/callToAction/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "PersistentCta",
+          "declaration": {
+            "name": "PersistentCta",
+            "module": "./persistentCta"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/callToAction/persistentCta.stories.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "PersistentCta",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\n\targs,\n\trender: ({...args}) => {\n\t\treturn html`\n\t\t\t<div style=\"height: 50vh;\"></div><!-- simulate content height in Storybook  -->\n\t\t\t<kd-persistent-cta\n\t\t\t\tctaText=\"${args.ctaText}\"\n\t\t\t\tctaLink=\"${args.ctaLink}\"\n\t\t\t\t.openNewWindow=\"${args.openNewWindow}\"\n\t\t\t\tbodyText=\"${args.bodyText}\"\n\t\t\t></kd-persistent-cta>\n\t\t`;\n\t}\n}"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "src/components/callToAction/persistentCta.stories.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "PersistentCta",
+          "declaration": {
+            "name": "PersistentCta",
+            "module": "src/components/callToAction/persistentCta.stories.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/callToAction/persistentCta.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PersistentCta",
+          "members": [
+            {
+              "kind": "field",
+              "name": "ctaText",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Brief text that invites the reader to download the entire article or paper. Max character count: 28",
+              "attribute": "ctaText"
+            },
+            {
+              "kind": "field",
+              "name": "ctaLink",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "URL of the downloadable article or paper.",
+              "attribute": "ctaLink"
+            },
+            {
+              "kind": "field",
+              "name": "openNewWindow",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "true",
+              "description": "Open the download in a new window.",
+              "attribute": "openNewWindow"
+            },
+            {
+              "kind": "field",
+              "name": "bodyText",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "A brief explanation of the entire article or paper used to pique the interest of the reader. Max character count: 120",
+              "attribute": "bodyText"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "ctaText",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Brief text that invites the reader to download the entire article or paper. Max character count: 28",
+              "fieldName": "ctaText"
+            },
+            {
+              "name": "ctaLink",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "URL of the downloadable article or paper.",
+              "fieldName": "ctaLink"
+            },
+            {
+              "name": "openNewWindow",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "true",
+              "description": "Open the download in a new window.",
+              "fieldName": "openNewWindow"
+            },
+            {
+              "name": "bodyText",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "A brief explanation of the entire article or paper used to pique the interest of the reader. Max character count: 120",
+              "fieldName": "bodyText"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "kd-persistent-cta",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "PersistentCta",
+          "declaration": {
+            "name": "PersistentCta",
+            "module": "src/components/callToAction/persistentCta.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "kd-persistent-cta",
+          "declaration": {
+            "name": "PersistentCta",
+            "module": "src/components/callToAction/persistentCta.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/eyebrow/eyebrow.ts",
       "declarations": [
         {
@@ -424,11 +622,11 @@
       "declarations": [
         {
           "kind": "variable",
-          "name": "statsCarousel",
+          "name": "StatsCarousel",
           "type": {
             "text": "object"
           },
-          "default": "{\n\targs,\n\trender: (args: any) => {\n\t\treturn html`\n\t\t\t<kd-stats-carousel\n\t\t\t\tcarouselTitle=\"${args.carouselTitle}\"\n\t\t\t>\n\t\t\t\t<kd-stats-carousel-slide\n\t\t\t\t\tstat=\"100\"\n\t\t\t\t\tsymbol=\"$\"\n\t\t\t\t\tsymbolPlacement=\"${STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS.BEFORE}\"\n\t\t\t\t>\n\t\t\t\t\t<p>Fregellanum quae quis optimis id traditur pertinacior viros dici et. Vos quam etiam quidem restatis mecum inquam redargueret quidem me nihil dedocendi homines et. In nihil autem se homines est lorem eo.</p>\n\t\t\t\t</kd-stats-carousel-slide>\n\t\t\t\t<kd-stats-carousel-slide\n\t\t\t\t\tstat=\"200\"\n\t\t\t\t\tsymbol=\"%\"\n\t\t\t\t\tsymbolPlacement=\"${STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS.AFTER}\"\n\t\t\t\t>\n\t\t\t\t\t<p>Sironem flagitiosum eo est esse eo odit locus lustravit atqui. Nisi eius est habent.</p>\n\t\t\t\t</kd-stats-carousel-slide>\n\t\t\t\t<kd-stats-carousel-slide\n\t\t\t\t\tstat=\"300k\"\n\t\t\t\t\tsymbol=\"$\"\n\t\t\t\t\tsymbolPlacement=\"${STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS.BEFORE}\"\n\t\t\t\t>\n\t\t\t\t\t<p>In nihil autem se homines est lorem eo.</p>\n\t\t\t\t</kd-stats-carousel-slide>\n\t\t\t</kd-stats-carousel>\n\t\t`;\n\t}\n}"
+          "default": "{\n\targs,\n\trender: ({...args}) => {\n\t\treturn html`\n\t\t\t<kd-stats-carousel\n\t\t\t\tcarouselTitle=\"${args.carouselTitle}\"\n\t\t\t\tcolorPalette=\"${args.colorPalette}\"\n\t\t\t>\n\t\t\t\t<kd-stats-carousel-slide\n\t\t\t\t\tstat=\"100\"\n\t\t\t\t\tsymbol=\"$\"\n\t\t\t\t\tsymbolPlacement=\"${STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS.BEFORE}\"\n\t\t\t\t>\n\t\t\t\t\t<p>Fregellanum quae quis optimis id traditur pertinacior viros dici et. Vos quam etiam quidem restatis mecum inquam redargueret quidem me nihil dedocendi homines et. In nihil autem se homines est lorem eo.</p>\n\t\t\t\t</kd-stats-carousel-slide>\n\t\t\t\t<kd-stats-carousel-slide\n\t\t\t\t\tstat=\"200\"\n\t\t\t\t\tsymbol=\"%\"\n\t\t\t\t\tsymbolPlacement=\"${STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS.AFTER}\"\n\t\t\t\t>\n\t\t\t\t\t<p>Sironem flagitiosum eo est esse eo odit locus lustravit atqui. Nisi eius est habent.</p>\n\t\t\t\t</kd-stats-carousel-slide>\n\t\t\t\t<kd-stats-carousel-slide\n\t\t\t\t\tstat=\"300k\"\n\t\t\t\t\tsymbol=\"$\"\n\t\t\t\t\tsymbolPlacement=\"${STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS.BEFORE}\"\n\t\t\t\t>\n\t\t\t\t\t<p>In nihil autem se homines est lorem eo.</p>\n\t\t\t\t</kd-stats-carousel-slide>\n\t\t\t</kd-stats-carousel>\n\t\t`;\n\t}\n}"
         }
       ],
       "exports": [
@@ -441,9 +639,9 @@
         },
         {
           "kind": "js",
-          "name": "statsCarousel",
+          "name": "StatsCarousel",
           "declaration": {
-            "name": "statsCarousel",
+            "name": "StatsCarousel",
             "module": "src/components/statsCarousel/statsCarousel.stories.ts"
           }
         }
@@ -475,6 +673,16 @@
               "attribute": "carouselTitle"
             },
             {
+              "kind": "field",
+              "name": "colorPalette",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Global Color Palette",
+              "attribute": "colorPalette"
+            },
+            {
               "kind": "method",
               "name": "handleSlotChange"
             },
@@ -495,6 +703,43 @@
             },
             {
               "kind": "method",
+              "name": "getTweenIn",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "slide",
+                  "type": {
+                    "text": "HTMLElement"
+                  }
+                },
+                {
+                  "name": "i",
+                  "type": {
+                    "text": "number"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "getTweenOut",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "slide",
+                  "type": {
+                    "text": "HTMLElement"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "getTweenSpacer",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
               "name": "initScrollTrigger",
               "privacy": "private"
             }
@@ -508,6 +753,15 @@
               "default": "''",
               "description": "Component title. Max character count: 66",
               "fieldName": "carouselTitle"
+            },
+            {
+              "name": "colorPalette",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Global Color Palette",
+              "fieldName": "colorPalette"
             }
           ],
           "superclass": {
@@ -543,11 +797,11 @@
       "declarations": [
         {
           "kind": "variable",
-          "name": "statsCarouselSlide",
+          "name": "StatsCarouselSlide",
           "type": {
             "text": "object"
           },
-          "default": "{\n\targs,\n\trender: (args: any) => {\n\t\treturn html`\n\t\t\t<kd-stats-carousel-slide\n\t\t\t\tstat=\"${args.stat}\"\n\t\t\t\tsymbol=\"${args.symbol}\"\n\t\t\t\tsymbolPlacement=\"${args.symbolPlacement}\"\n\t\t\t\tsymbolAlignment=\"${args.symbolAlignment}\"\n\t\t\t>\n\t\t\t\t<p>Fregellanum quae quis optimis id traditur pertinacior viros dici et. Vos quam etiam quidem restatis mecum inquam redargueret quidem me nihil dedocendi homines et. In nihil autem se homines est lorem eo.</p>\n\t\t\t</kd-stats-carousel-slide>\n\t\t`;\n\t}\n}"
+          "default": "{\n\targs,\n\trender: ({...args}) => {\n\t\treturn html`\n\t\t\t<kd-stats-carousel-slide\n\t\t\t\tstat=\"${args.stat}\"\n\t\t\t\tsymbol=\"${args.symbol}\"\n\t\t\t\tsymbolPlacement=\"${args.symbolPlacement}\"\n\t\t\t\tsymbolAlignment=\"${args.symbolAlignment}\"\n\t\t\t>\n\t\t\t\t<p>Fregellanum quae quis optimis id traditur pertinacior viros dici et. Vos quam etiam quidem restatis mecum inquam redargueret quidem me nihil dedocendi homines et. In nihil autem se homines est lorem eo.</p>\n\t\t\t</kd-stats-carousel-slide>\n\t\t`;\n\t}\n}"
         }
       ],
       "exports": [
@@ -560,9 +814,9 @@
         },
         {
           "kind": "js",
-          "name": "statsCarouselSlide",
+          "name": "StatsCarouselSlide",
           "declaration": {
-            "name": "statsCarouselSlide",
+            "name": "StatsCarouselSlide",
             "module": "src/components/statsCarousel/statsCarouselSlide.stories.ts"
           }
         }
