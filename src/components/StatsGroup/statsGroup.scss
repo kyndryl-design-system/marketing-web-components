@@ -1,0 +1,35 @@
+@use '~@kyndryl-design-system/shidoka-foundation/scss/variables/breakpoints.scss';
+@use '~@kyndryl-design-system/shidoka-foundation/scss/utility/typography.scss';
+@use '~@kyndryl-design-system/shidoka-foundation/scss/mixins/spacing.scss';
+
+.title-color {
+  color: var(--kd-color-background-accent-primary);
+}
+
+.full-bleed-grid {
+  display: grid;
+}
+
+@media (min-width: breakpoints.$bp-sm) {
+  .full-bleed-grid {
+    padding-left: var(--kd-spacing-32);
+    padding-right: var(--kd-spacing-32);
+  }
+}
+@media (min-width: breakpoints.$bp-md) {
+  .full-bleed-grid {
+    grid-template-columns: 1fr;
+    padding-left: var(--kd-spacing-192);
+    padding-right: var(--kd-spacing-192);
+  }
+}
+
+@media (min-width: breakpoints.$bp-lg) {
+  .full-bleed-grid {
+    padding: var(--kd-spacing-2);
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .full-bleed-internal-container {
+    padding: var(--kd-spacing-32);
+  }
+}
