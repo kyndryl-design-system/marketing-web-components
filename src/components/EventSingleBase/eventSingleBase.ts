@@ -19,10 +19,15 @@ export class EventSingleBase extends LitElement {
   override render() {
     return html`
       <div class="container">
-        <button class="button">${this.date}</button>
+        <div
+          class="button kd-type--body-01 kd-type--weight-regular
+        "
+        >
+          ${this.date}
+        </div>
 
         <div class="text-container">
-          <p class="country">${this.location}</p>
+          <p class="country kd-type--body-02">${this.location}</p>
           <p class="timezone">${this.time}</p>
           <kd-link
             href="${this.buttonLink}"

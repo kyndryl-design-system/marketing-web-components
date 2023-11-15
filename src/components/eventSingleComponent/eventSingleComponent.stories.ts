@@ -3,11 +3,11 @@
  */
 
 import { html } from 'lit';
-import './image';
+import './eventSingleComponent';
 
 export default {
-  title: 'Components/Image',
-  component: `kd-image`,
+  title: 'Components/EventSingleComponent',
+  component: 'kd-event-single-component',
   argTypes: {
     mediaPosition: {
       control: { type: 'radio' },
@@ -42,28 +42,30 @@ export default {
 const args = {
   mediaPosition: 'left',
   bleedMedia: 'false',
-  date: '12:00 PM EST',
+  date: 'Nov 29',
+  time: '12:00 PM EST',
   location: 'Sydney',
-  headlineText: 'Lorem ipsum dolor sit amet dsdsdsdsdssd',
+  headlineText: 'Lorem ipsum dolor sit amet image story book',
   //   buttonLabel: 'Button text',
   buttonLink: 'https://www.kyndryl.com',
   eventSingleBaseComponent: 'yes',
 };
 
-export const alternatingFeatureWithImage = {
+export const ImageDateandTime= {
   args,
   render: (args: any) => {
     return html`
-      <kd-image
+      <kd-event-single-component
         mediaPosition="${args.mediaPosition}"
         bleedmedia="${args.bleedMedia}"
-        headlineText="${args.headlineText}"
         eyebrowtext="${args.eyebrowText}"
         buttonLabel="${args.buttonLabel}"
         buttonLink="${args.buttonLink}"
-        eventSingleBaseComponent="${args.eventSingleBaseComponent}"
         date="${args.date}"
+        time="${args.time}"
         location="${args.location}"
+        headlineText="${args.headlineText}"
+        eventSingleBaseComponent="${args.eventSingleBaseComponent}"
       >
         <div slot="media">
           <img
@@ -73,9 +75,13 @@ export const alternatingFeatureWithImage = {
           />
         </div>
         <div slot="text">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu
+            facilisi pellentesque morbi molestie sed ut at sed ac. Semper tortor
+            feugiat non sem eget libero. Risus semper facilisis convallis vitae.
+          </p>
         </div>
-      </kd-image>
+      </kd-event-single-component>
     `;
   },
 };

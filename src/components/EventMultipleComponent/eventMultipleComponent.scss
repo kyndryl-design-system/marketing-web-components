@@ -1,24 +1,67 @@
-@use 'sass:map';
-
 @use '~@kyndryl-design-system/shidoka-foundation/scss/variables/breakpoints.scss';
-@use '~@kyndryl-design-system/shidoka-foundation/scss/utility/grid.scss';
 @use '~@kyndryl-design-system/shidoka-foundation/scss/utility/typography.scss';
 @use '~@kyndryl-design-system/shidoka-foundation/scss/mixins/spacing.scss';
 
 .container {
   .title {
-    margin-bottom: var(--kd-spacing-80);
     margin-left: var(--kd-spacing-24);
+
+    .title-color {
+      color: var(--kd-color-background-accent-secondary);
+    }
   }
 }
 
 .full-bleed-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+}
+
+@media (min-width: breakpoints.$bp-sm) {
+}
+@media (min-width: breakpoints.$bp-md) {
+  .full-bleed-grid {
+    grid-template-columns: 1fr;
+  }
+  .full-bleed-internal-container {
+    padding-left: var(--kd-spacing-24);
+    padding-right: var(--kd-spacing-24);
+  }
+
+  .container {
+    .title {
+      svg {
+        width: 368px;
+        height: 78px;
+      }
+    }
+  }
 }
 
 @media (min-width: breakpoints.$bp-lg) {
+  .full-bleed-grid {
+    grid-template-columns: 1fr 1fr;
+  }
   .full-bleed-internal-container {
-    padding-left: var(--kd-spacing-40);
+    padding-left: var(--kd-spacing-24);
+    padding-right: var(--kd-spacing-24);
+  }
+}
+
+@media (min-width: breakpoints.$bp-max) {
+  .full-bleed-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .full-bleed-internal-container {
+    padding-left: var(--kd-spacing-24);
+    padding-right: var(--kd-spacing-24);
+  }
+
+  .container {
+    .title {
+      svg {
+        width: 628px;
+        height: 133px;
+      }
+    }
   }
 }

@@ -4,20 +4,22 @@
 .container {
   margin-top: 1rem;
   .text-container {
-    color: var(--kd-color-darkstone-80);
+    color: var(--kd-color-text-primary);
 
-    .country,
-    .timezone {
-      @include typography.type-body-02;
+    .country {
+      font-weight: var(--kd-font-weight-medium);
     }
+    // .timezone {
+    //   @include typography.type-body-02;
+    // }
   }
 
   .button {
-    @include typography.type-headline-08;
+    @include typography.type-body-01;
     padding: 10px 16px;
     background-color: var(--kd-color-transparent);
-    color: var(--kd-color-darkstone-80);
-    border: 2px solid var(--kd-color-border-accent-spruce-light);
+    color: var(--kd-color-text-primary);
+    border: 2px solid var(--kd-color-background-accent-secondary);
     border-radius: 6px;
   }
 }

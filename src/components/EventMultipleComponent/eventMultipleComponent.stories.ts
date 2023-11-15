@@ -35,7 +35,7 @@ export const Template = {
         headlineTextTwo="${args.headlineTextTwo}"
       >
         <div slot="text-one">
-          <p>
+          <p class="kd-type--body-02 kd-type--weight-regular">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu
             facilisi pellentesque morbi molestie sed ut at sed ac. Semper tortor
             feugiat non sem eget libero. Risus semper facilisis convallis vitae.
@@ -52,7 +52,7 @@ export const Template = {
           ></kd-event-single-base>
         </div>
         <div slot="text-two">
-          <p>
+          <p class="kd-type--body-02 kd-type--weight-regular">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu
             facilisi pellentesque morbi molestie sed ut at sed ac. Semper tortor
             feugiat non sem eget libero. Risus semper facilisis convallis vitae.

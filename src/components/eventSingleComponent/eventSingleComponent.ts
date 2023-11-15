@@ -1,12 +1,24 @@
+/**
+ * Copyright Kyndryl, Inc. 2023
+ */
+
 import { html, LitElement } from 'lit';
 import { property, customElement } from 'lit/decorators.js';
-import './image';
-import '../EventSingleBase/eventSingleBase';
+
+import { classMap } from 'lit-html/directives/class-map.js';
+
+import '@kyndryl-design-system/shidoka-foundation/components/button';
+import '@kyndryl-design-system/shidoka-foundation/components/icon';
+import '@kyndryl-design-system/shidoka-foundation/components/link';
+import chevronRightIcon from '@carbon/icons/es/chevron--right/16';
 import stylesheet from './eventSingleComponent.scss';
+import '../eyebrow/eyebrow';
+import '../EventSingleBase/eventSingleBase';
 
 @customElement('kd-event-single-component')
 export class EventSingleComponent extends LitElement {
   static override styles = [stylesheet];
+
   @property({ type: String }) mediaPosition = 'left';
   @property({ type: String }) bleedMedia = 'false';
   @property({ type: String }) buttonLabel = '';
@@ -14,46 +26,159 @@ export class EventSingleComponent extends LitElement {
   @property({ type: String }) buttonType = 'primary-web';
   @property({ type: String }) headlineText = '';
   @property({ type: String }) eyebrowText = '';
-  @property({ type: String }) eventSingleBaseComponent = 'true';
+  @property({ type: String }) eventSingleBaseComponent = '';
   @property({ type: String }) date = '';
-  @property({ type: String }) time = '';
   @property({ type: String }) location = '';
+  @property({ type: String }) time = '';
 
-  get imageAltTemp() {
-    return html` <kd-image
-      mediaPosition="${this.mediaPosition}"
-      bleedmedia="${this.bleedMedia}"
-      headlineText="${this.headlineText}"
-      eyebrowtext="${this.eyebrowText}"
-      buttonLabel="${this.buttonLabel}"
-      buttonLink="${this.buttonLink}"
-      eventSingleBaseComponent="${this.eventSingleBaseComponent}"
-      date="${this.date}"
-      location="${this.location}"
-      time="${this.time}"
-    >
-      <div slot="media">
-        <img
-          src="https://s7d1.scene7.com/is/image/kyndryl/ls_windingriver_16x9?qlt=85&amp;wid=1200&amp;ts=1650983065999&amp;dpr=off"
-          alt="image alt text"
-          class="kd-layout__aspect-ratio--16x9 kd-layout__object-fit--cover cover"
-        />
-      </div>
-      <div slot="text">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu facilisi
-          pellentesque morbi molestie sed ut at sed ac. Semper tortor feugiat
-          non sem eget libero. Risus semper facilisis convallis vitae.
-        </p>
-      </div>
-    </kd-image>`;
+  get eyebrowTemplate() {
+    if (this.eyebrowText) {
+      return html` <kd-eyebrow>${this.eyebrowText}</kd-eyebrow> `;
+    } else {
+      return null;
+    }
+  }
+
+  get ctaTemplate() {
+    if (this.buttonLabel) {
+      return html`
+        <kd-link
+          href="${this.buttonLink}"
+          target="_self"
+          kind="secondary"
+          standalone
+        >
+          ${this.buttonLabel}
+          <kd-icon slot="icon" .icon=${chevronRightIcon}></kd-icon>
+        </kd-link>
+      `;
+    } else if (this.eventSingleBaseComponent) {
+      return html`<div>
+        <kd-event-single-base
+          date="${this.date}"
+          location="${this.location}"
+          time="${this.time}"
+        ></kd-event-single-base>
+        <kd-event-single-base
+          date="${this.date}"
+          location="${this.location}"
+          time="${this.time}"
+        ></kd-event-single-base>
+      </div>`;
+    } else {
+      return null;
+    }
+  }
+
+  get slot1Template() {
+    if (this.mediaPosition === 'left') {
+      if (this.bleedMedia === 'true') {
+        return html`
+          <div class="container-one container-media">
+            <slot name="media"></slot>
+          </div>
+        `;
+      } else {
+        return html`
+          <div
+            class="full-bleed-internal-container container-one container-media"
+          >
+            <div class="kd-grid kd-grid-padding">
+              <div
+                class="kd-grid__col--sm-4 kd-grid__col--md-8 kd-grid__col--lg-6 internal-media-slot"
+              >
+                <slot name="media"></slot>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+    } else {
+      return html`
+        <div class="full-bleed-internal-container container-one container-text">
+          <div class="kd-grid kd-grid-padding">
+            <div
+              class="kd-grid__col--sm-4 kd-grid__col--md-7 kd-grid__col--lg-6 internal-text-slot"
+            >
+              ${this.textCard}
+            </div>
+          </div>
+        </div>
+      `;
+    }
+  }
+
+  get slot2Template() {
+    if (this.mediaPosition === 'left') {
+      return html`
+        <div class="full-bleed-internal-container container-two container-text">
+          <div class="kd-grid kd-grid-padding">
+            <div
+              class="kd-grid__col--sm-4 kd-grid__col--md-7 kd-grid__col--lg-6 internal-text-slot right-text-slot"
+            >
+              ${this.textCard}
+            </div>
+          </div>
+        </div>
+      `;
+    } else {
+      if (this.bleedMedia === 'true') {
+        return html` <div class="container-two container-media">
+          <slot name="media"></slot>
+        </div>`;
+      } else {
+        return html`
+          <div
+            class="full-bleed-internal-container container-two container-media"
+          >
+            <div class="kd-grid kd-grid-padding">
+              <div
+                class="kd-grid__col--sm-4 kd-grid__col--md-8 kd-grid__col--lg-6 internal-media-slot"
+              >
+                <slot name="media"></slot>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+    }
+  }
+
+  get textCard() {
+    return html`
+      ${this.eyebrowTemplate}
+      <h3 class="kd-type--headline-06 kd-type--weight-light">
+        ${this.headlineText}
+      </h3>
+      <slot name="text"></slot>
+      ${this.ctaTemplate}
+    `;
   }
 
   override render() {
-    return html` ${this.imageAltTemp} `;
+    const classesContainer = {
+      [`kd-event-single-component`]: true,
+    };
+
+    if (this.mediaPosition === 'left') {
+      return html`
+        <div class="${classMap(classesContainer)}">
+          <div class="full-bleed-grid">
+            ${this.slot1Template} ${this.slot2Template}
+          </div>
+        </div>
+      `;
+    } else {
+      return html`
+        <div class="${classMap(classesContainer)}">
+          <div class="full-bleed-grid">
+            ${this.slot2Template} ${this.slot1Template}
+          </div>
+        </div>
+      `;
+    }
   }
 }
-
 declare global {
   interface HTMLElementTagNameMap {
     'kd-event-single-component': EventSingleComponent;
