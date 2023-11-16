@@ -1,10 +1,10 @@
 import { html } from 'lit';
-import { createOptionsArray } from '../../common/helpers/helpers';
+import { createOptionsArray } from '../../../common/helpers/helpers';
 import './index';
 import { STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS, STAT_CAROUSEL_SLIDE_SYMBOL_ALIGNMENT } from './defs';
 
 export default {
-	title: 'Components/Stats Carousel/Stats Carousel Slide',
+	title: 'Components/Patterns/Stats Carousel/Stats Carousel Slide',
 	component: 'kd-stats-carousel-slide',
 	argTypes: {
 		stat: {

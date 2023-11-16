@@ -1,11 +1,11 @@
 import { html } from 'lit';
-import { createColorPaletteLabels, createOptionsArray } from '../../common/helpers/helpers';
-import { COLOR_PALETTE_LABELS, COLOR_PALETTE_VALUES } from '../../common/defs/colorPalettes';
+import { createColorPaletteLabels, createOptionsArray } from '../../../common/helpers/helpers';
+import { COLOR_PALETTE_LABELS, COLOR_PALETTE_VALUES } from '../../../common/defs/colorPalettes';
 import './index';
 import { STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS } from './defs';
 
 export default {
-	title: 'Components/Stats Carousel',
+	title: 'Components/Patterns/Stats Carousel',
 	component: 'kd-stats-carousel',
 	argTypes: {
 		carouselTitle: {
