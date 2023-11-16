@@ -1,14 +1,14 @@
 import { html, LitElement } from 'lit';
 import { property, customElement } from 'lit/decorators.js';
-import { COLOR_PALETTE_VALUES } from '../../common/defs/colorPalettes';
-import '../eyebrow/eyebrow';
+import { COLOR_PALETTE_VALUES } from '../../../common/defs/colorPalettes';
+import '../../eyebrow/eyebrow';
 import '@kyndryl-design-system/shidoka-foundation/components/button';
 import '@kyndryl-design-system/shidoka-foundation/components/icon';
 import '@kyndryl-design-system/shidoka-foundation/components/link';
 import chevronRightIcon from '@carbon/icons/es/chevron--right/16';
 import playIcon from '@carbon/icons/es/play/16';
 import stylesheet from './leadspaceInterior.scss';
-import {LEADSPACE_INTERIOR_MEDIA_POSITIONS} from './defs';
+import { LEADSPACE_INTERIOR_MEDIA_POSITIONS } from './defs';
 
 @customElement('kd-leadspace-interior')
 export class LeadspaceInterior extends LitElement {

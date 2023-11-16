@@ -1,6 +1,6 @@
 import { html } from 'lit';
-import { createColorPaletteLabels, createOptionsArray, deleteObjectPropertyByValue } from '../../common/helpers/helpers';
-import { COLOR_PALETTE_LABELS, COLOR_PALETTE_VALUES } from '../../common/defs/colorPalettes';
+import { createColorPaletteLabels, createOptionsArray, deleteObjectPropertyByValue } from '../../../common/helpers/helpers';
+import { COLOR_PALETTE_LABELS, COLOR_PALETTE_VALUES } from '../../../common/defs/colorPalettes';
 import './index';
 import { LEADSPACE_INTERIOR_MEDIA_POSITIONS } from './defs';
 
@@ -10,7 +10,7 @@ deleteObjectPropertyByValue(customColorPaletteValues, [COLOR_PALETTE_VALUES.WARM
 deleteObjectPropertyByValue(customColorPaletteLabels, [COLOR_PALETTE_LABELS.WARM_RED]);
 
 export default {
-	title: 'Components/Leadspace Interior',
+	title: 'Components/Leadspaces/Leadspace Interior',
 	component: 'kd-leadspace-interior',
 	argTypes: {
 		colorPalette: {
