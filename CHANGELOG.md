@@ -1,3 +1,10 @@
+# [1.0.0-beta.13](https://github.com/kyndryl-design-system/shidoka-content/compare/v1.0.0-beta.12...v1.0.0-beta.13) (2023-11-16)
+
+
+### Bug Fixes
+
+* **color-palette-options:** add warm red and ability to omit palettes per component ([7d259ce](https://github.com/kyndryl-design-system/shidoka-content/commit/7d259ceb2c5104d71cd050d066c250c523718d5b))
+
 # [1.0.0-beta.12](https://github.com/kyndryl-design-system/shidoka-content/compare/v1.0.0-beta.11...v1.0.0-beta.12) (2023-11-16)
 
 
