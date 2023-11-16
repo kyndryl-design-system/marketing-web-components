@@ -465,7 +465,7 @@
           "type": {
             "text": "object"
           },
-          "default": "{\n\targs,\n\trender: ({...args}) => {\n\t\treturn html`\n\t\t\t<kd-stats-carousel\n\t\t\t\tcarouselTitle=\"${args.carouselTitle}\"\n\t\t\t\tcolorPalette=\"${args.colorPalette}\"\n\t\t\t>\n\t\t\t\t<kd-stats-carousel-slide\n\t\t\t\t\tstat=\"100\"\n\t\t\t\t\tsymbol=\"$\"\n\t\t\t\t\tsymbolPlacement=\"${STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS.BEFORE}\"\n\t\t\t\t>\n\t\t\t\t\t<p>Fregellanum quae quis optimis id traditur pertinacior viros dici et. Vos quam etiam quidem restatis mecum inquam redargueret quidem me nihil dedocendi homines et. In nihil autem se homines est lorem eo.</p>\n\t\t\t\t</kd-stats-carousel-slide>\n\t\t\t\t<kd-stats-carousel-slide\n\t\t\t\t\tstat=\"200\"\n\t\t\t\t\tsymbol=\"%\"\n\t\t\t\t\tsymbolPlacement=\"${STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS.AFTER}\"\n\t\t\t\t>\n\t\t\t\t\t<p>Sironem flagitiosum eo est esse eo odit locus lustravit atqui. Nisi eius est habent.</p>\n\t\t\t\t</kd-stats-carousel-slide>\n\t\t\t\t<kd-stats-carousel-slide\n\t\t\t\t\tstat=\"300k\"\n\t\t\t\t\tsymbol=\"$\"\n\t\t\t\t\tsymbolPlacement=\"${STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS.BEFORE}\"\n\t\t\t\t>\n\t\t\t\t\t<p>In nihil autem se homines est lorem eo.</p>\n\t\t\t\t</kd-stats-carousel-slide>\n\t\t\t</kd-stats-carousel>\n\t\t`;\n\t}\n}"
+          "default": "{\n\targs,\n\trender: ({...args}) => {\n\t\treturn html`\n\t\t\t<kd-stats-carousel\n\t\t\t\tcarouselTitle=\"${args.carouselTitle}\"\n\t\t\t\tcolorPalette=\"${args.colorPalette}\"\n\t\t\t>\n\t\t\t\t<kd-stats-carousel-slide\n\t\t\t\t\tstat=\"$100\"\n\t\t\t\t\tsymbol=\"M\"\n\t\t\t\t\tsymbolPlacement=\"${STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS.AFTER}\"\n\t\t\t\t>\n\t\t\t\t\t<p>Fregellanum quae quis optimis id traditur pertinacior viros dici et. Vos quam etiam quidem restatis mecum inquam redargueret quidem me nihil dedocendi homines et. In nihil autem se homines est lorem eo.</p>\n\t\t\t\t</kd-stats-carousel-slide>\n\t\t\t\t<kd-stats-carousel-slide\n\t\t\t\t\tstat=\"50\"\n\t\t\t\t\tsymbol=\"%\"\n\t\t\t\t\tsymbolPlacement=\"${STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS.AFTER}\"\n\t\t\t\t>\n\t\t\t\t\t<p>Sironem flagitiosum eo est esse eo odit locus lustravit atqui. Nisi eius est habentuae an inquit arcesilas ratio quod eo autem avia an noster est.</p>\n\t\t\t\t</kd-stats-carousel-slide>\n\t\t\t\t<kd-stats-carousel-slide\n\t\t\t\t\tstat=\"$60,000\"\n\t\t\t\t\tsymbol=\"\"\n\t\t\t\t\tsymbolPlacement=\"${STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS.AFTER}\"\n\t\t\t\t>\n\t\t\t\t\t<p>In nihil autem se homines est lorem eocomitetur est inquam est tamen dolor aliud adiunxit quis dicis ad.</p>\n\t\t\t\t</kd-stats-carousel-slide>\n\t\t\t</kd-stats-carousel>\n\t\t`;\n\t}\n}"
         }
       ],
       "exports": [
@@ -508,7 +508,7 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "Component title. Max character count: 66",
+              "description": "Short and specific title that describes the data points below it. Max character count: 66",
               "attribute": "carouselTitle"
             },
             {
@@ -590,7 +590,7 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "Component title. Max character count: 66",
+              "description": "Short and specific title that describes the data points below it. Max character count: 66",
               "fieldName": "carouselTitle"
             },
             {
@@ -671,7 +671,7 @@
           "name": "StatsCarouselSlide",
           "slots": [
             {
-              "description": "Slot for description text. Max character count: 152",
+              "description": "Slot for description text that provides additional or important details that describes further about the numerical value. Optimal character count: 110-160",
               "name": "unnamed"
             }
           ],
@@ -683,7 +683,7 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "Stat value should be a number, but it can include a text character (e.g. 100k). Max character count: 7",
+              "description": "Stat value should be a number, but it can include a symbol (e.g. $100). Max character count: 7",
               "attribute": "stat"
             },
             {
@@ -693,7 +693,7 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "Symbol associated with stat value (e.g. $, %, etc.). Max character count: 1",
+              "description": "Symbol associated with the numerical value (>, <, %, $) or letters representing thousand (k), million (M) or billion (B). Max character count: 1",
               "attribute": "symbol"
             },
             {
@@ -722,7 +722,7 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "Stat value should be a number, but it can include a text character (e.g. 100k). Max character count: 7",
+              "description": "Stat value should be a number, but it can include a symbol (e.g. $100). Max character count: 7",
               "fieldName": "stat"
             },
             {
@@ -731,7 +731,7 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "Symbol associated with stat value (e.g. $, %, etc.). Max character count: 1",
+              "description": "Symbol associated with the numerical value (>, <, %, $) or letters representing thousand (k), million (M) or billion (B). Max character count: 1",
               "fieldName": "symbol"
             },
             {

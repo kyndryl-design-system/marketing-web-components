@@ -25,9 +25,9 @@ export default {
 };
 
 const args = {
-	stat: '100',
-	symbol: '$',
-	symbolPlacement: STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS.BEFORE,
+	stat: '$100',
+	symbol: 'M',
+	symbolPlacement: STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS.AFTER,
 	symbolAlignment: STAT_CAROUSEL_SLIDE_SYMBOL_ALIGNMENT.SUPERSCRIPT,
 }
 
