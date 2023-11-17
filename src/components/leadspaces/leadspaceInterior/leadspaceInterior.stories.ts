@@ -10,7 +10,7 @@ deleteObjectPropertyByValue(customColorPaletteValues, [COLOR_PALETTE_VALUES.WARM
 deleteObjectPropertyByValue(customColorPaletteLabels, [COLOR_PALETTE_LABELS.WARM_RED]);
 
 export default {
-	title: 'Components/Leadspaces/Leadspace Interior',
+	title: 'Leadspaces/Leadspace Interior',
 	component: 'kd-leadspace-interior',
 	argTypes: {
 		colorPalette: {
