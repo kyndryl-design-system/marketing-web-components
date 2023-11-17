@@ -2,7 +2,7 @@ import { html } from 'lit';
 import './index';
 
 export default {
-	title: 'Components/Call to Action/Persistent CTA',
+	title: 'Call to Action/Persistent CTA',
 	component: 'kd-persistent-cta',
 	argTypes: {
 		ctaText: {
