@@ -5,7 +5,7 @@ import './index';
 import { STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS } from './defs';
 
 export default {
-	title: 'Components/Patterns/Stats Carousel',
+	title: 'Patterns/Stats Carousel',
 	component: 'kd-stats-carousel',
 	argTypes: {
 		carouselTitle: {
