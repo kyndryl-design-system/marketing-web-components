@@ -1,0 +1,64 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+
+@use 'sass:map';
+
+@use '~@kyndryl-design-system/shidoka-foundation/scss/variables/breakpoints.scss';
+@use '~@kyndryl-design-system/shidoka-foundation/scss/utility/grid.scss';
+@use '~@kyndryl-design-system/shidoka-foundation/scss/utility/typography.scss';
+
+.kd-leadspace-press-release-with-image {
+  color: var(--kd-color-text-primary);
+  background: var(--kd-color-background-ui-default);
+
+  .relative {
+    position: relative;
+  }
+
+  .kd-grid-padding {
+    padding: 0 1rem;
+  }
+  .start-point {
+    grid-column-start: 3;
+  }
+
+  .text-block,
+  .media-block {
+    z-index: 10;
+  }
+
+  .text-block {
+    margin-top: var(--kd-spacing-80);
+  }
+
+  .page-type-and-date {
+    margin-top: var(--kd-spacing-32);
+    margin-bottom: var(--kd-spacing-32);
+  }
+
+  .accent-background {
+    background: var(--kd-color-cloud-10);
+    width: 100%;
+    height: calc(100% + 200px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  @media (max-width: breakpoints.$bp-lg) {
+    .start-point {
+      grid-column-start: 1;
+    }
+    .accent-background {
+      height: calc(100% + 120px);
+    }
+  }
+
+  @media (max-width: breakpoints.$bp-md) {
+    .accent-background {
+      height: calc(100% + 100px);
+    }
+  }
+}

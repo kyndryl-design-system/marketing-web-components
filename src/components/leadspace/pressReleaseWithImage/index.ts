@@ -1,0 +1,1 @@
+export { LeadspacePressReleaseWithImage } from './pressReleaseWithImage';
