@@ -14,7 +14,7 @@ import stylesheet from './statsCarousel.scss';
 export class StatsCarousel extends LitElement {
 	static override styles = stylesheet;
 
-	/** Component title. Max character count: 66 */
+	/** Short and specific title that describes the data points below it. Max character count: 66 */
 	@property({ type: String })
 	carouselTitle = '';
 
