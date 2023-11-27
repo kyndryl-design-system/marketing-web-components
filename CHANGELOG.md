@@ -1,3 +1,14 @@
+# [1.0.0-beta.14](https://github.com/kyndryl-design-system/shidoka-content/compare/v1.0.0-beta.13...v1.0.0-beta.14) (2023-11-27)
+
+
+### Bug Fixes
+
+* **stats-carousel:** add tests ([f9d844f](https://github.com/kyndryl-design-system/shidoka-content/commit/f9d844ff211a743a016212892e563054667f9420))
+* **stats-carousel:** adjust layout from design QA feedback and update field descriptions ([c760d33](https://github.com/kyndryl-design-system/shidoka-content/commit/c760d33917a53a6be1169e45f5317742f9f72acc))
+* **stats-carousel:** fix build error ([71e3e77](https://github.com/kyndryl-design-system/shidoka-content/commit/71e3e77cf2ef9c0599b4923b9c2ef6d0a06bc9ed))
+* **stats-carousel:** move component to patterns directory ([984a6bb](https://github.com/kyndryl-design-system/shidoka-content/commit/984a6bbc9ec352e21e48ca1b05c718f1c0f306cd))
+* **stats-carousel:** update storybook category ([a38bab4](https://github.com/kyndryl-design-system/shidoka-content/commit/a38bab407fc2dd19966db9b25450a8460ee0eb97))
+
 # [1.0.0-beta.13](https://github.com/kyndryl-design-system/shidoka-content/compare/v1.0.0-beta.12...v1.0.0-beta.13) (2023-11-16)
 
 
