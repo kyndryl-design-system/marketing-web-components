@@ -3,7 +3,13 @@
 @use '~@kyndryl-design-system/shidoka-foundation/scss/utility/typography.scss';
 
 .kd-stats-carousel-slide {
-	align-items: center;
+	display: flex;
+	flex-direction: column;
+	row-gap: var(--kd-grid-gap);
+
+	@media (min-width: breakpoints.$bp-lg) {
+		flex-direction: row;
+	}
 }
 
 .kd-stats-carousel-slide-stat-container {
@@ -12,11 +18,6 @@
 	display: flex;
 
 	@media (min-width: breakpoints.$bp-lg) {
-		justify-content: flex-end;
-		padding-right: var(--kd-spacing-16);
-	}
-
-	@media (min-width: breakpoints.$bp-xl) {
 		padding-right: var(--kd-spacing-48);
 	}
 
@@ -39,6 +40,7 @@
 
 .kd-stats-carousel-slide-description {
 	border-top: 2px solid var(--kd-color-background-accent-primary);
+	flex: 1;
 	padding-top: var(--kd-spacing-32);
 
 	::slotted(*) {

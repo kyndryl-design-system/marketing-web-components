@@ -6,17 +6,17 @@ import stylesheet from './statsCarouselSlide.scss';
 /**
  * Stats Carousel Slide.
  * Component to be used within a Stats Carousel container component.
- * @slot unnamed - Slot for description text. Max character count: 152
+ * @slot unnamed - Slot for description text that provides additional or important details that describes further about the numerical value. Optimal character count: 110-160
  */
 @customElement('kd-stats-carousel-slide')
 export class StatsCarouselSlide extends LitElement {
 	static override styles = stylesheet;
 
-	/** Stat value should be a number, but it can include a text character (e.g. 100k). Max character count: 7 */
+	/** Stat value should be a number, but it can include a symbol (e.g. $100). Max character count: 7 */
 	@property({ type: String })
 	stat = '';
 
-	/** Symbol associated with stat value (e.g. $, %, etc.). Max character count: 1 */
+	/** Symbol associated with the numerical value (>, <, %, $) or letters representing thousand (k), million (M) or billion (B). Max character count: 1 */
 	@property({ type: String })
 	symbol = '';
 
@@ -72,11 +72,9 @@ export class StatsCarouselSlide extends LitElement {
 	}
 	override render() {
 		return html`
-			<div class="kd-stats-carousel-slide kd-grid">
-				<div class="kd-grid__col--sm-4 kd-grid__col--md-8 kd-grid__col--lg-6">
-					${this.renderStat}
-				</div>
-				<div class="kd-stats-carousel-slide-description kd-grid__col--sm-4 kd-grid__col--md-8 kd-grid__col--lg-6 kd-type--body-01">
+			<div class="kd-stats-carousel-slide">
+				${this.renderStat}
+				<div class="kd-stats-carousel-slide-description kd-type--body-01">
 					<slot></slot>
 				</div>
 			</div>
