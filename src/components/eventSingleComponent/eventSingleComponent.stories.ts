@@ -51,7 +51,7 @@ const args = {
   eventSingleBaseComponent: 'yes',
 };
 
-export const ImageDateandTime= {
+export const ImageDateandTime = {
   args,
   render: (args: any) => {
     return html`

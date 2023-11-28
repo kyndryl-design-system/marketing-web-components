@@ -3,4 +3,3 @@ export { AlternatingFeatureWithImage } from './components/alternatingFeatureWith
 export { KdEventMultipleComponent } from './components/EventMultipleComponent';
 export { EventSingleBase } from './components/EventSingleBase';
 export { EventSingleComponent } from './components/eventSingleComponent';
-
