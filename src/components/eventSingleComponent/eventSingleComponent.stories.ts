@@ -69,7 +69,7 @@ export const ImageDateandTime= {
       >
         <div slot="media">
           <img
-            src="https://s7d1.scene7.com/is/image/kyndryl/ls_windingriver_16x9?qlt=85&amp;wid=1200&amp;ts=1650983065999&amp;dpr=off"
+            src="https://s7d1.scene7.com/is/image/kyndryl/diverse-board-meeting?qlt=85&wid=1600&dpr=off"
             alt="image alt text"
             class="kd-layout__aspect-ratio--16x9 kd-layout__object-fit--cover"
           />
