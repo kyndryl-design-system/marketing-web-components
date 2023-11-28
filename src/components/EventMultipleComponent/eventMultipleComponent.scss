@@ -4,7 +4,12 @@
 
 .container {
   .title {
-    margin-left: var(--kd-spacing-24);
+    h1 {
+      font-weight: 600;
+      color: transparent;
+      -webkit-text-stroke: 1px var(--kd-color-background-accent-secondary);
+      margin-bottom: var(--kd-spacing-0);
+    }
 
     .title-color {
       color: var(--kd-color-background-accent-secondary);
@@ -17,23 +22,23 @@
 }
 
 @media (min-width: breakpoints.$bp-sm) {
+  .container {
+    padding-left: var(--kd-spacing-02);
+    padding-right: var(--kd-spacing-02);
+  }
 }
+
 @media (min-width: breakpoints.$bp-md) {
   .full-bleed-grid {
     grid-template-columns: 1fr;
   }
-  .full-bleed-internal-container {
+  .container {
     padding-left: var(--kd-spacing-24);
     padding-right: var(--kd-spacing-24);
   }
 
-  .container {
-    .title {
-      svg {
-        width: 368px;
-        height: 78px;
-      }
-    }
+  .full-bleed-internal-container {
+    margin-top: var(--kd-spacing-48);
   }
 }
 
@@ -41,7 +46,7 @@
   .full-bleed-grid {
     grid-template-columns: 1fr 1fr;
   }
-  .full-bleed-internal-container {
+  .container {
     padding-left: var(--kd-spacing-24);
     padding-right: var(--kd-spacing-24);
   }
@@ -51,17 +56,8 @@
   .full-bleed-grid {
     grid-template-columns: 1fr 1fr;
   }
-  .full-bleed-internal-container {
+  .container {
     padding-left: var(--kd-spacing-24);
     padding-right: var(--kd-spacing-24);
-  }
-
-  .container {
-    .title {
-      svg {
-        width: 628px;
-        height: 133px;
-      }
-    }
   }
 }

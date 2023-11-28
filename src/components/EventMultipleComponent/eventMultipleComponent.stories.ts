@@ -22,8 +22,8 @@ export default {
 };
 
 const args = {
-  headlineTextOne: 'Lorem ipsum dolor sit amet dsdsdsdsdssd',
-  headlineTextTwo: 'Lorem ipsum dolor sit amet dsdsdsdsdssd',
+  headlineTextOne: 'Quis feugiat laoreet proin suscipit vulputate amet lectus.',
+  headlineTextTwo: 'Quis feugiat laoreet proin suscipit vulputate amet lectus.',
 };
 
 export const Template = {
@@ -35,31 +35,21 @@ export const Template = {
         headlineTextTwo="${args.headlineTextTwo}"
       >
         <div slot="text-one">
-          <p class="kd-type--body-02 kd-type--weight-regular">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu
-            facilisi pellentesque morbi molestie sed ut at sed ac. Semper tortor
-            feugiat non sem eget libero. Risus semper facilisis convallis vitae.
-          </p>
           <kd-event-single-base
             time="12:00 PM EST"
-            location="Syndey"
+            location="San Francisco"
             date="Nov 29"
           ></kd-event-single-base>
           <kd-event-single-base
             time="12:00 PM EST"
-            location="Syndey"
+            location="San Francisco"
             date="Nov 29"
           ></kd-event-single-base>
         </div>
         <div slot="text-two">
-          <p class="kd-type--body-02 kd-type--weight-regular">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu
-            facilisi pellentesque morbi molestie sed ut at sed ac. Semper tortor
-            feugiat non sem eget libero. Risus semper facilisis convallis vitae.
-          </p>
           <kd-event-single-base
             time="12:00 PM EST"
-            location="Syndey"
+            location="San Francisco"
             date="Nov 29"
           ></kd-event-single-base>
           <kd-event-single-base
