@@ -10,7 +10,7 @@
 
 .kd-leadspace-press-release-with-image {
   color: var(--kd-color-text-primary);
-  background: var(--kd-color-background-ui-default);
+  background: var(--kd-color-neutral-white);
 
   .relative {
     position: relative;
@@ -35,10 +35,18 @@
   .page-type-and-date {
     margin-top: var(--kd-spacing-32);
     margin-bottom: var(--kd-spacing-32);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .icons {
+    text-align: right;
+    flex-grow: 1;
   }
 
   .accent-background {
-    background: var(--kd-color-cloud-10);
+    background: var(--kd-color-background-ui-default);
     width: 100%;
     height: calc(100% + 200px);
     position: absolute;

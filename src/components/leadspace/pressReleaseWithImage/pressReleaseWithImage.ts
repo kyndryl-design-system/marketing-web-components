@@ -37,7 +37,10 @@ export class LeadspacePressReleaseWithImage extends LitElement {
                 <slot name="title"></slot>
               </div>
               <div class="page-type-and-date kd-type--ui-03">
-                <slot name="pagetype"></slot> | <slot name="date"></slot>
+                <span class="type-and-date">
+                  <slot name="pagetype"></slot> | <slot name="date"></slot>
+                </span>
+                <span class="icons"><slot name="socialmedia"></slot></span>
               </div>
             </div>
           </div>

@@ -4,6 +4,9 @@
 
 import { html } from 'lit';
 import './pressReleaseWithImage';
+import twitterIcon from '@carbon/icons/es/logo--twitter/24';
+import linkedinIcon from '@carbon/icons/es/logo--linkedin/24';
+import linkIcon from '@carbon/icons/es/link/24';
 
 export default {
   title: 'Components/Leadspace/Press Release with Image',
@@ -34,8 +37,10 @@ export const leadspacePressReleaseWithImage = {
         >
         <span slot="pagetype">Press Release</span>
         <span slot="date">Oct 04, 2023</span>
-        <span slot="socialmedia">
-          <kd-icon></kd-icon>
+        <span slot="socialmedia"
+          ><kd-icon slot="icon" .icon=${twitterIcon}></kd-icon>
+          <kd-icon slot="icon" .icon=${linkedinIcon}></kd-icon>
+          <kd-icon slot="icon" .icon=${linkIcon}></kd-icon>
         </span>
       </kd-leadspace-press-release-with-image>
     `;
