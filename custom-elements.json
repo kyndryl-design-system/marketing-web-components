@@ -43,6 +43,12 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/common/defs/colorPalettes.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/common/helpers/helpers.ts",
       "declarations": [
         {
@@ -87,6 +93,29 @@
             }
           ],
           "description": "Convert an object to an array of only its values.\nUsed when importing enums in component stories for populating argType dropdowns."
+        },
+        {
+          "kind": "function",
+          "name": "createColorPaletteLabels",
+          "parameters": [
+            {
+              "name": "labels",
+              "default": "{}",
+              "type": {
+                "text": "{[index: string]:string}"
+              },
+              "description": "Object of color palette labels (COLOR_PALETTE_LABELS)"
+            },
+            {
+              "name": "values",
+              "default": "{}",
+              "type": {
+                "text": "{[index: string]:string}"
+              },
+              "description": "Object of color palette values (COLOR_PALETTE_VALUES)"
+            }
+          ],
+          "description": "Return an object of color palette labels for a Storybook select control.\nEach property of the object has a key of the css class (COLOR_PALETTE_VALUES)\nand a value of the friendly label name (COLOR_PALETTE_LABELS)\nExample: {\n  [COLOR_PALETTE_VALUES.DARK_STONE]: COLOR_PALETTE_LABELS.DARK_STONE,\n  ...\n}"
         }
       ],
       "exports": [
@@ -111,6 +140,14 @@
           "name": "createOptionsArray",
           "declaration": {
             "name": "createOptionsArray",
+            "module": "src/common/helpers/helpers.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "createColorPaletteLabels",
+          "declaration": {
+            "name": "createColorPaletteLabels",
             "module": "src/common/helpers/helpers.ts"
           }
         }
@@ -391,13 +428,13 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/statsCarousel/defs.ts",
+      "path": "src/components/patterns/statsCarousel/defs.ts",
       "declarations": [],
       "exports": []
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/statsCarousel/index.ts",
+      "path": "src/components/patterns/statsCarousel/index.ts",
       "declarations": [],
       "exports": [
         {
@@ -420,15 +457,15 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/statsCarousel/statsCarousel.stories.ts",
+      "path": "src/components/patterns/statsCarousel/statsCarousel.stories.ts",
       "declarations": [
         {
           "kind": "variable",
-          "name": "statsCarousel",
+          "name": "StatsCarousel",
           "type": {
             "text": "object"
           },
-          "default": "{\n\targs,\n\trender: (args: any) => {\n\t\treturn html`\n\t\t\t<kd-stats-carousel\n\t\t\t\tcarouselTitle=\"${args.carouselTitle}\"\n\t\t\t>\n\t\t\t\t<kd-stats-carousel-slide\n\t\t\t\t\tstat=\"100\"\n\t\t\t\t\tsymbol=\"$\"\n\t\t\t\t\tsymbolPlacement=\"${STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS.BEFORE}\"\n\t\t\t\t>\n\t\t\t\t\t<p>Fregellanum quae quis optimis id traditur pertinacior viros dici et. Vos quam etiam quidem restatis mecum inquam redargueret quidem me nihil dedocendi homines et. In nihil autem se homines est lorem eo.</p>\n\t\t\t\t</kd-stats-carousel-slide>\n\t\t\t\t<kd-stats-carousel-slide\n\t\t\t\t\tstat=\"200\"\n\t\t\t\t\tsymbol=\"%\"\n\t\t\t\t\tsymbolPlacement=\"${STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS.AFTER}\"\n\t\t\t\t>\n\t\t\t\t\t<p>Sironem flagitiosum eo est esse eo odit locus lustravit atqui. Nisi eius est habent.</p>\n\t\t\t\t</kd-stats-carousel-slide>\n\t\t\t\t<kd-stats-carousel-slide\n\t\t\t\t\tstat=\"300k\"\n\t\t\t\t\tsymbol=\"$\"\n\t\t\t\t\tsymbolPlacement=\"${STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS.BEFORE}\"\n\t\t\t\t>\n\t\t\t\t\t<p>In nihil autem se homines est lorem eo.</p>\n\t\t\t\t</kd-stats-carousel-slide>\n\t\t\t</kd-stats-carousel>\n\t\t`;\n\t}\n}"
+          "default": "{\n\targs,\n\trender: ({...args}) => {\n\t\treturn html`\n\t\t\t<kd-stats-carousel\n\t\t\t\tcarouselTitle=\"${args.carouselTitle}\"\n\t\t\t\tcolorPalette=\"${args.colorPalette}\"\n\t\t\t>\n\t\t\t\t<kd-stats-carousel-slide\n\t\t\t\t\tstat=\"$100\"\n\t\t\t\t\tsymbol=\"M\"\n\t\t\t\t\tsymbolPlacement=\"${STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS.AFTER}\"\n\t\t\t\t>\n\t\t\t\t\t<p>Fregellanum quae quis optimis id traditur pertinacior viros dici et. Vos quam etiam quidem restatis mecum inquam redargueret quidem me nihil dedocendi homines et. In nihil autem se homines est lorem eo.</p>\n\t\t\t\t</kd-stats-carousel-slide>\n\t\t\t\t<kd-stats-carousel-slide\n\t\t\t\t\tstat=\"50\"\n\t\t\t\t\tsymbol=\"%\"\n\t\t\t\t\tsymbolPlacement=\"${STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS.AFTER}\"\n\t\t\t\t>\n\t\t\t\t\t<p>Sironem flagitiosum eo est esse eo odit locus lustravit atqui. Nisi eius est habentuae an inquit arcesilas ratio quod eo autem avia an noster est.</p>\n\t\t\t\t</kd-stats-carousel-slide>\n\t\t\t\t<kd-stats-carousel-slide\n\t\t\t\t\tstat=\"$60,000\"\n\t\t\t\t\tsymbol=\"\"\n\t\t\t\t\tsymbolPlacement=\"${STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS.AFTER}\"\n\t\t\t\t>\n\t\t\t\t\t<p>In nihil autem se homines est lorem eocomitetur est inquam est tamen dolor aliud adiunxit quis dicis ad.</p>\n\t\t\t\t</kd-stats-carousel-slide>\n\t\t\t</kd-stats-carousel>\n\t\t`;\n\t}\n}"
         }
       ],
       "exports": [
@@ -436,22 +473,22 @@
           "kind": "js",
           "name": "default",
           "declaration": {
-            "module": "src/components/statsCarousel/statsCarousel.stories.ts"
+            "module": "src/components/patterns/statsCarousel/statsCarousel.stories.ts"
           }
         },
         {
           "kind": "js",
-          "name": "statsCarousel",
+          "name": "StatsCarousel",
           "declaration": {
-            "name": "statsCarousel",
-            "module": "src/components/statsCarousel/statsCarousel.stories.ts"
+            "name": "StatsCarousel",
+            "module": "src/components/patterns/statsCarousel/statsCarousel.stories.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/statsCarousel/statsCarousel.ts",
+      "path": "src/components/patterns/statsCarousel/statsCarousel.ts",
       "declarations": [
         {
           "kind": "class",
@@ -471,8 +508,18 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "Component title. Max character count: 66",
+              "description": "Short and specific title that describes the data points below it. Max character count: 66",
               "attribute": "carouselTitle"
+            },
+            {
+              "kind": "field",
+              "name": "colorPalette",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Global Color Palette",
+              "attribute": "colorPalette"
             },
             {
               "kind": "method",
@@ -495,6 +542,43 @@
             },
             {
               "kind": "method",
+              "name": "getTweenIn",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "slide",
+                  "type": {
+                    "text": "HTMLElement"
+                  }
+                },
+                {
+                  "name": "i",
+                  "type": {
+                    "text": "number"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "getTweenOut",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "slide",
+                  "type": {
+                    "text": "HTMLElement"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "getTweenSpacer",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
               "name": "initScrollTrigger",
               "privacy": "private"
             }
@@ -506,8 +590,17 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "Component title. Max character count: 66",
+              "description": "Short and specific title that describes the data points below it. Max character count: 66",
               "fieldName": "carouselTitle"
+            },
+            {
+              "name": "colorPalette",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Global Color Palette",
+              "fieldName": "colorPalette"
             }
           ],
           "superclass": {
@@ -524,7 +617,7 @@
           "name": "StatsCarousel",
           "declaration": {
             "name": "StatsCarousel",
-            "module": "src/components/statsCarousel/statsCarousel.ts"
+            "module": "src/components/patterns/statsCarousel/statsCarousel.ts"
           }
         },
         {
@@ -532,22 +625,22 @@
           "name": "kd-stats-carousel",
           "declaration": {
             "name": "StatsCarousel",
-            "module": "src/components/statsCarousel/statsCarousel.ts"
+            "module": "src/components/patterns/statsCarousel/statsCarousel.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/statsCarousel/statsCarouselSlide.stories.ts",
+      "path": "src/components/patterns/statsCarousel/statsCarouselSlide.stories.ts",
       "declarations": [
         {
           "kind": "variable",
-          "name": "statsCarouselSlide",
+          "name": "StatsCarouselSlide",
           "type": {
             "text": "object"
           },
-          "default": "{\n\targs,\n\trender: (args: any) => {\n\t\treturn html`\n\t\t\t<kd-stats-carousel-slide\n\t\t\t\tstat=\"${args.stat}\"\n\t\t\t\tsymbol=\"${args.symbol}\"\n\t\t\t\tsymbolPlacement=\"${args.symbolPlacement}\"\n\t\t\t\tsymbolAlignment=\"${args.symbolAlignment}\"\n\t\t\t>\n\t\t\t\t<p>Fregellanum quae quis optimis id traditur pertinacior viros dici et. Vos quam etiam quidem restatis mecum inquam redargueret quidem me nihil dedocendi homines et. In nihil autem se homines est lorem eo.</p>\n\t\t\t</kd-stats-carousel-slide>\n\t\t`;\n\t}\n}"
+          "default": "{\n\targs,\n\trender: ({...args}) => {\n\t\treturn html`\n\t\t\t<kd-stats-carousel-slide\n\t\t\t\tstat=\"${args.stat}\"\n\t\t\t\tsymbol=\"${args.symbol}\"\n\t\t\t\tsymbolPlacement=\"${args.symbolPlacement}\"\n\t\t\t\tsymbolAlignment=\"${args.symbolAlignment}\"\n\t\t\t>\n\t\t\t\t<p>Fregellanum quae quis optimis id traditur pertinacior viros dici et. Vos quam etiam quidem restatis mecum inquam redargueret quidem me nihil dedocendi homines et. In nihil autem se homines est lorem eo.</p>\n\t\t\t</kd-stats-carousel-slide>\n\t\t`;\n\t}\n}"
         }
       ],
       "exports": [
@@ -555,22 +648,22 @@
           "kind": "js",
           "name": "default",
           "declaration": {
-            "module": "src/components/statsCarousel/statsCarouselSlide.stories.ts"
+            "module": "src/components/patterns/statsCarousel/statsCarouselSlide.stories.ts"
           }
         },
         {
           "kind": "js",
-          "name": "statsCarouselSlide",
+          "name": "StatsCarouselSlide",
           "declaration": {
-            "name": "statsCarouselSlide",
-            "module": "src/components/statsCarousel/statsCarouselSlide.stories.ts"
+            "name": "StatsCarouselSlide",
+            "module": "src/components/patterns/statsCarousel/statsCarouselSlide.stories.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/statsCarousel/statsCarouselSlide.ts",
+      "path": "src/components/patterns/statsCarousel/statsCarouselSlide.ts",
       "declarations": [
         {
           "kind": "class",
@@ -578,7 +671,7 @@
           "name": "StatsCarouselSlide",
           "slots": [
             {
-              "description": "Slot for description text. Max character count: 152",
+              "description": "Slot for description text that provides additional or important details that describes further about the numerical value. Optimal character count: 110-160",
               "name": "unnamed"
             }
           ],
@@ -590,7 +683,7 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "Stat value should be a number, but it can include a text character (e.g. 100k). Max character count: 7",
+              "description": "Stat value should be a number, but it can include a symbol (e.g. $100). Max character count: 7",
               "attribute": "stat"
             },
             {
@@ -600,7 +693,7 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "Symbol associated with stat value (e.g. $, %, etc.). Max character count: 1",
+              "description": "Symbol associated with the numerical value (>, <, %, $) or letters representing thousand (k), million (M) or billion (B). Max character count: 1",
               "attribute": "symbol"
             },
             {
@@ -629,7 +722,7 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "Stat value should be a number, but it can include a text character (e.g. 100k). Max character count: 7",
+              "description": "Stat value should be a number, but it can include a symbol (e.g. $100). Max character count: 7",
               "fieldName": "stat"
             },
             {
@@ -638,7 +731,7 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "Symbol associated with stat value (e.g. $, %, etc.). Max character count: 1",
+              "description": "Symbol associated with the numerical value (>, <, %, $) or letters representing thousand (k), million (M) or billion (B). Max character count: 1",
               "fieldName": "symbol"
             },
             {
@@ -672,7 +765,7 @@
           "name": "StatsCarouselSlide",
           "declaration": {
             "name": "StatsCarouselSlide",
-            "module": "src/components/statsCarousel/statsCarouselSlide.ts"
+            "module": "src/components/patterns/statsCarousel/statsCarouselSlide.ts"
           }
         },
         {
@@ -680,7 +773,7 @@
           "name": "kd-stats-carousel-slide",
           "declaration": {
             "name": "StatsCarouselSlide",
-            "module": "src/components/statsCarousel/statsCarouselSlide.ts"
+            "module": "src/components/patterns/statsCarousel/statsCarouselSlide.ts"
           }
         }
       ]

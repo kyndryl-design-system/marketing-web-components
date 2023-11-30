@@ -4,3 +4,4 @@ export { Eyebrow } from './components/eyebrow';
 export { AlternatingFeatureWithImage } from './components/alternatingFeatureWithImage';
 export { StatsCarousel, StatsCarouselSlide } from './components/statsCarousel';
 export { LeadspacePressReleaseWithImage } from './components/leadspace/pressReleaseWithImage';
+export { StatsCarousel, StatsCarouselSlide } from './components/patterns/statsCarousel';
