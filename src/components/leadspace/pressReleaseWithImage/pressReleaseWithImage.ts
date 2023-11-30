@@ -13,7 +13,6 @@ import '@kyndryl-design-system/shidoka-foundation/components/link';
 import '../../eyebrow';
 
 import stylesheet from './pressReleaseWithImage.scss';
-import { Eyebrow } from '../../eyebrow';
 
 @customElement('kd-leadspace-press-release-with-image')
 export class LeadspacePressReleaseWithImage extends LitElement {

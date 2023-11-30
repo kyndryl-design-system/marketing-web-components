@@ -19,6 +19,7 @@
   .kd-grid-padding {
     padding: 0 1rem;
   }
+
   .start-point {
     grid-column-start: 3;
   }
@@ -56,15 +57,24 @@
   }
 
   @media (max-width: breakpoints.$bp-lg) {
+    padding-left: 32px;
+    padding-right: 32px;
+
+
     .start-point {
       grid-column-start: 1;
     }
+
     .accent-background {
       height: calc(100% + 120px);
     }
   }
 
   @media (max-width: breakpoints.$bp-md) {
+    padding-left: 16px;
+    padding-right: 16px;
+
+
     .accent-background {
       height: calc(100% + 100px);
     }

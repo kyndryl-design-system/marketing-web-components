@@ -14,34 +14,36 @@ export default {
   argTypes: {},
 };
 
-const args = {};
 
 export const leadspacePressReleaseWithImage = {
-  args,
-  render: (args: any) => {
-    return html`
-      <kd-leadspace-press-release-with-image>
-        <div slot="media">
+  args: {
+        title: html`<span slot="title">Kyndryl UK Named to Newsweek’s List of the Top 100 Most Loved Workplaces for 2023</span>`,
+        eyebrow: html`<span slot="eyebrow"><kd-eyebrow>Awards and recognition</kd-eyebrow></span>`,
+        media: html`<div slot="media">
           <img
             src="https://s7d1.scene7.com/is/image/kyndryl/ls_windingriver_16x9?qlt=85&amp;wid=1200&amp;ts=1650983065999&amp;dpr=off"
             alt="image alt text"
             class="kd-layout__aspect-ratio--16x9 kd-layout__object-fit--cover"
           />
-        </div>
-        <span slot="title">
-          Kyndryl UK Named to Newsweek’s List of the Top 100 Most Loved
-          Workplaces for 2023
-        </span>
-        <span slot="eyebrow"
-          ><kd-eyebrow>Awards and recognition</kd-eyebrow></span
-        >
-        <span slot="pagetype">Press Release</span>
-        <span slot="date">Oct 04, 2023</span>
-        <span slot="socialmedia"
-          ><kd-icon slot="icon" .icon=${twitterIcon}></kd-icon>
-          <kd-icon slot="icon" .icon=${linkedinIcon}></kd-icon>
-          <kd-icon slot="icon" .icon=${linkIcon}></kd-icon>
-        </span>
+        </div>`,
+    socialmedia: html`
+        <span slot="socialmedia">
+            <kd-icon .icon=${twitterIcon}></kd-icon>
+            <kd-icon .icon=${linkedinIcon}></kd-icon>
+            <kd-icon .icon=${linkIcon}></kd-icon>
+         </span>`,
+    pagetype: html`<span slot="pagetype">Press Release</span>`,
+    date: html`<span slot="date">Oct 04, 2023</span>`,
+   }, 
+  render: (args: any) => {
+    return html`
+      <kd-leadspace-press-release-with-image>
+        ${args.media}
+        ${args.eyebrow}
+        ${args.title}
+        ${args.socialmedia}
+        ${args.pagetype}
+        ${args.date}
       </kd-leadspace-press-release-with-image>
     `;
   },
