@@ -38,6 +38,14 @@
             "name": "StatsCarouselSlide",
             "module": "./components/statsCarousel"
           }
+        },
+        {
+          "kind": "js",
+          "name": "PersistentCta",
+          "declaration": {
+            "name": "PersistentCta",
+            "module": "./components/callToAction/persistentCta"
+          }
         }
       ]
     },
@@ -774,6 +782,167 @@
           "declaration": {
             "name": "StatsCarouselSlide",
             "module": "src/components/patterns/statsCarousel/statsCarouselSlide.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/callToAction/persistentCta/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "PersistentCta",
+          "declaration": {
+            "name": "PersistentCta",
+            "module": "./persistentCta"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/callToAction/persistentCta/persistentCta.stories.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "PersistentCta",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\n\targs,\n\trender: ({...args}) => {\n\t\treturn html`\n\t\t\t<div style=\"height: 50vh;\"></div><!-- simulate content height in Storybook  -->\n\t\t\t<kd-persistent-cta\n\t\t\t\tctaText=\"${args.ctaText}\"\n\t\t\t\tctaLink=\"${args.ctaLink}\"\n\t\t\t\t.openNewWindow=\"${args.openNewWindow}\"\n\t\t\t\tbodyText=\"${args.bodyText}\"\n\t\t\t></kd-persistent-cta>\n\t\t`;\n\t}\n}"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "src/components/callToAction/persistentCta/persistentCta.stories.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "PersistentCta",
+          "declaration": {
+            "name": "PersistentCta",
+            "module": "src/components/callToAction/persistentCta/persistentCta.stories.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/callToAction/persistentCta/persistentCta.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PersistentCta",
+          "members": [
+            {
+              "kind": "field",
+              "name": "ctaText",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Brief text that invites the reader to download the entire article or paper. Max character count: 28",
+              "attribute": "ctaText"
+            },
+            {
+              "kind": "field",
+              "name": "ctaLink",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "URL of the downloadable article or paper.",
+              "attribute": "ctaLink"
+            },
+            {
+              "kind": "field",
+              "name": "openNewWindow",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "true",
+              "description": "Open the download in a new window.",
+              "attribute": "openNewWindow"
+            },
+            {
+              "kind": "field",
+              "name": "bodyText",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "A brief explanation of the entire article or paper used to pique the interest of the reader. Max character count: 120",
+              "attribute": "bodyText"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "ctaText",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Brief text that invites the reader to download the entire article or paper. Max character count: 28",
+              "fieldName": "ctaText"
+            },
+            {
+              "name": "ctaLink",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "URL of the downloadable article or paper.",
+              "fieldName": "ctaLink"
+            },
+            {
+              "name": "openNewWindow",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "true",
+              "description": "Open the download in a new window.",
+              "fieldName": "openNewWindow"
+            },
+            {
+              "name": "bodyText",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "A brief explanation of the entire article or paper used to pique the interest of the reader. Max character count: 120",
+              "fieldName": "bodyText"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "kd-persistent-cta",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "PersistentCta",
+          "declaration": {
+            "name": "PersistentCta",
+            "module": "src/components/callToAction/persistentCta/persistentCta.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "kd-persistent-cta",
+          "declaration": {
+            "name": "PersistentCta",
+            "module": "src/components/callToAction/persistentCta/persistentCta.ts"
           }
         }
       ]
