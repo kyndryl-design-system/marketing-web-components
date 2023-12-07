@@ -1,5 +1,6 @@
 import { html } from 'lit';
-import { createColorPaletteLabels, createOptionsArray } from '../../../common/helpers/helpers';
+import { createOptionsArray } from '@kyndryl-design-system/shidoka-foundation/common/helpers/storybook';
+import { createColorPaletteLabels } from '../../../common/helpers/helpers';
 import { COLOR_PALETTE_LABELS, COLOR_PALETTE_VALUES } from '../../../common/defs/colorPalettes';
 import './index';
 import { STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS } from './defs';
