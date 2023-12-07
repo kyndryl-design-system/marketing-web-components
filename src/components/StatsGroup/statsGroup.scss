@@ -2,12 +2,20 @@
 @use '~@kyndryl-design-system/shidoka-foundation/scss/utility/typography.scss';
 @use '~@kyndryl-design-system/shidoka-foundation/scss/mixins/spacing.scss';
 
-.title-color {
-  color: var(--kd-color-background-accent-primary);
-}
-
 .full-bleed-grid {
   display: grid;
+  .full-bleed-internal-container {
+    .title-color {
+      color: var(--kd-color-background-accent-primary);
+    }
+    .second-title {
+      h1 {
+        font-weight: 600;
+        color: transparent;
+        -webkit-text-stroke: 2px var(--kd-color-background-accent-primary);
+      }
+    }
+  }
 }
 
 @media (min-width: breakpoints.$bp-sm) {

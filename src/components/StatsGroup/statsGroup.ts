@@ -16,7 +16,10 @@ export class KdStatsGroup extends LitElement {
         <h1 class="kd-type--headline-07 title-color">
           ${this.firstEventTitle}
         </h1>
-        <slot name="text-one"></slot>
+        <div class="second-title">
+          <h1 class="kd-type--display-02">$000k</h1>
+          <slot name="text-one"> </slot>
+        </div>
       </div>
     `;
   }
@@ -27,14 +30,20 @@ export class KdStatsGroup extends LitElement {
         <h1 class="kd-type--headline-07 title-color">
           ${this.secondEventTitle}
         </h1>
-        <slot name="text-two"></slot>
+        <div class="second-title">
+          <h1 class="kd-type--display-02">$000k</h1>
+          <slot name="text-two"></slot>
+        </div>
       </div>
     `;
   }
   get textCardThree() {
     return html`<div class="full-bleed-internal-container">
       <h1 class="kd-type--headline-07 title-color">${this.thirdEventTitle}</h1>
-      <slot name="text-three"></slot>
+      <div class="second-title">
+        <h1 class="kd-type--display-02">$000k</h1>
+        <slot name="text-three"></slot>
+      </div>
     </div>`;
   }
 

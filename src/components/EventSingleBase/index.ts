@@ -1,1 +1,0 @@
-export { EventSingleBase } from './eventSingleBase';
