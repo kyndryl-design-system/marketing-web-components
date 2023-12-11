@@ -1,3 +1,32 @@
+# [1.0.0-beta.16](https://github.com/kyndryl-design-system/shidoka-content/compare/v1.0.0-beta.15...v1.0.0-beta.16) (2023-12-11)
+
+
+### Bug Fixes
+
+* **helpers:** remove duplicate helpers and use them from foundation ([96d7b93](https://github.com/kyndryl-design-system/shidoka-content/commit/96d7b9302e25a398b869f2a20fcb47d10c72b099))
+
+# [1.0.0-beta.15](https://github.com/kyndryl-design-system/shidoka-content/compare/v1.0.0-beta.14...v1.0.0-beta.15) (2023-12-07)
+
+
+### Features
+
+* **persistent-cta:** add tests ([098bf6e](https://github.com/kyndryl-design-system/shidoka-content/commit/098bf6e39046bc9bf0faa7f53b8523aadc1a3944))
+* **persistent-cta:** move component to callToAction/persistentCta directory ([0a7f868](https://github.com/kyndryl-design-system/shidoka-content/commit/0a7f8687cb63a3c73e8cfbf74de96e61ba257ed5))
+* **persistent-cta:** set foundation as a dependency ([6b169df](https://github.com/kyndryl-design-system/shidoka-content/commit/6b169df5ca42790a25b5772073342c1a65cff6d0))
+* **persistent-cta:** update foundation version. use breakpoint helper to swap icons. use updated grid. ([204f36a](https://github.com/kyndryl-design-system/shidoka-content/commit/204f36a67682cdb244b41463c498c67c072135b8))
+* **persistent-cta:** update storybook category ([a978e34](https://github.com/kyndryl-design-system/shidoka-content/commit/a978e34177678165c5bd76d9b8f049ba25dd61fe))
+
+# [1.0.0-beta.14](https://github.com/kyndryl-design-system/shidoka-content/compare/v1.0.0-beta.13...v1.0.0-beta.14) (2023-11-27)
+
+
+### Bug Fixes
+
+* **stats-carousel:** add tests ([f9d844f](https://github.com/kyndryl-design-system/shidoka-content/commit/f9d844ff211a743a016212892e563054667f9420))
+* **stats-carousel:** adjust layout from design QA feedback and update field descriptions ([c760d33](https://github.com/kyndryl-design-system/shidoka-content/commit/c760d33917a53a6be1169e45f5317742f9f72acc))
+* **stats-carousel:** fix build error ([71e3e77](https://github.com/kyndryl-design-system/shidoka-content/commit/71e3e77cf2ef9c0599b4923b9c2ef6d0a06bc9ed))
+* **stats-carousel:** move component to patterns directory ([984a6bb](https://github.com/kyndryl-design-system/shidoka-content/commit/984a6bbc9ec352e21e48ca1b05c718f1c0f306cd))
+* **stats-carousel:** update storybook category ([a38bab4](https://github.com/kyndryl-design-system/shidoka-content/commit/a38bab407fc2dd19966db9b25450a8460ee0eb97))
+
 # [1.0.0-beta.13](https://github.com/kyndryl-design-system/shidoka-content/compare/v1.0.0-beta.12...v1.0.0-beta.13) (2023-11-16)
 
 
