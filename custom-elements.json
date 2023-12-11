@@ -28,7 +28,7 @@
           "name": "StatsCarousel",
           "declaration": {
             "name": "StatsCarousel",
-            "module": "./components/statsCarousel"
+            "module": "./components/patterns/statsCarousel"
           }
         },
         {
@@ -36,7 +36,7 @@
           "name": "StatsCarouselSlide",
           "declaration": {
             "name": "StatsCarouselSlide",
-            "module": "./components/statsCarousel"
+            "module": "./components/patterns/statsCarousel"
           }
         },
         {
@@ -52,8 +52,44 @@
     {
       "kind": "javascript-module",
       "path": "src/common/defs/colorPalettes.ts",
-      "declarations": [],
-      "exports": []
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "COLOR_PALETTE_LABELS",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\n\tDEFAULT: 'default',\n\tDARK_STONE: 'Darkstone',\n\tSPRUCE_DARK: 'Spruce Dark',\n\tSPRUCE: 'Spruce',\n\tDARK_GREEN: 'Dark Green',\n\tLIGHT_GREEN: 'Light Green',\n\tWARM_RED: 'Warm Red',\n\tCLOUD: 'Cloud',\n\tSKYE: 'Skye',\n}",
+          "description": "Used to create Storybook control labels that are simple and user-friendly."
+        },
+        {
+          "kind": "variable",
+          "name": "COLOR_PALETTE_VALUES",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\n\tDEFAULT: '',\n\tDARK_STONE: 'kd-component-palette--darkstone',\n\tSPRUCE_DARK: 'kd-component-palette--spruce-dark',\n\tSPRUCE: 'kd-component-palette--spruce',\n\tDARK_GREEN: 'kd-component-palette--darkgreen',\n\tLIGHT_GREEN: 'kd-component-palette--lightgreen',\n\tWARM_RED: 'kd-component-palette--warmred',\n\tCLOUD: 'kd-component-palette--cloud',\n\tSKYE: 'kd-component-palette--skye',\n}",
+          "description": "CSS classes for each color palette. Also used to create Storybook control value arrays."
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "COLOR_PALETTE_LABELS",
+          "declaration": {
+            "name": "COLOR_PALETTE_LABELS",
+            "module": "src/common/defs/colorPalettes.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "COLOR_PALETTE_VALUES",
+          "declaration": {
+            "name": "COLOR_PALETTE_VALUES",
+            "module": "src/common/defs/colorPalettes.ts"
+          }
+        }
+      ]
     },
     {
       "kind": "javascript-module",
@@ -61,46 +97,26 @@
       "declarations": [
         {
           "kind": "function",
-          "name": "debounce",
+          "name": "deleteObjectPropertyByValue",
           "parameters": [
             {
-              "name": "fn",
-              "type": {
-                "text": "Function"
-              }
-            },
-            {
-              "name": "ms",
-              "default": "100"
-            }
-          ]
-        },
-        {
-          "kind": "function",
-          "name": "stringToReactHtml",
-          "parameters": [
-            {
-              "name": "string",
-              "type": {
-                "text": "String"
-              }
-            }
-          ]
-        },
-        {
-          "kind": "function",
-          "name": "createOptionsArray",
-          "parameters": [
-            {
-              "name": "options",
+              "name": "obj",
               "default": "{}",
               "type": {
-                "text": "*"
+                "text": "object"
               },
-              "description": " imported enums object"
+              "description": "Object to modify"
+            },
+            {
+              "name": "values",
+              "default": "[]",
+              "type": {
+                "text": "Array<String>"
+              },
+              "description": "Array of values to remove"
             }
           ],
-          "description": "Convert an object to an array of only its values.\nUsed when importing enums in component stories for populating argType dropdowns."
+          "description": "Return an object after deleting properties by value."
         },
         {
           "kind": "function",
@@ -110,7 +126,7 @@
               "name": "labels",
               "default": "{}",
               "type": {
-                "text": "{[index: string]:string}"
+                "text": "object"
               },
               "description": "Object of color palette labels (COLOR_PALETTE_LABELS)"
             },
@@ -118,7 +134,7 @@
               "name": "values",
               "default": "{}",
               "type": {
-                "text": "{[index: string]:string}"
+                "text": "object"
               },
               "description": "Object of color palette values (COLOR_PALETTE_VALUES)"
             }
@@ -129,25 +145,9 @@
       "exports": [
         {
           "kind": "js",
-          "name": "debounce",
+          "name": "deleteObjectPropertyByValue",
           "declaration": {
-            "name": "debounce",
-            "module": "src/common/helpers/helpers.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "stringToReactHtml",
-          "declaration": {
-            "name": "stringToReactHtml",
-            "module": "src/common/helpers/helpers.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "createOptionsArray",
-          "declaration": {
-            "name": "createOptionsArray",
+            "name": "deleteObjectPropertyByValue",
             "module": "src/common/helpers/helpers.ts"
           }
         },
@@ -430,6 +430,167 @@
           "declaration": {
             "name": "Eyebrow",
             "module": "./eyebrow"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/callToAction/persistentCta/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "PersistentCta",
+          "declaration": {
+            "name": "PersistentCta",
+            "module": "./persistentCta"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/callToAction/persistentCta/persistentCta.stories.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "PersistentCta",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\n\targs,\n\trender: ({...args}) => {\n\t\treturn html`\n\t\t\t<div style=\"height: 50vh;\"></div><!-- simulate content height in Storybook  -->\n\t\t\t<kd-persistent-cta\n\t\t\t\tctaText=\"${args.ctaText}\"\n\t\t\t\tctaLink=\"${args.ctaLink}\"\n\t\t\t\t.openNewWindow=\"${args.openNewWindow}\"\n\t\t\t\tbodyText=\"${args.bodyText}\"\n\t\t\t></kd-persistent-cta>\n\t\t`;\n\t}\n}"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "src/components/callToAction/persistentCta/persistentCta.stories.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "PersistentCta",
+          "declaration": {
+            "name": "PersistentCta",
+            "module": "src/components/callToAction/persistentCta/persistentCta.stories.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/callToAction/persistentCta/persistentCta.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PersistentCta",
+          "members": [
+            {
+              "kind": "field",
+              "name": "ctaText",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Brief text that invites the reader to download the entire article or paper. Max character count: 28",
+              "attribute": "ctaText"
+            },
+            {
+              "kind": "field",
+              "name": "ctaLink",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "URL of the downloadable article or paper.",
+              "attribute": "ctaLink"
+            },
+            {
+              "kind": "field",
+              "name": "openNewWindow",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "true",
+              "description": "Open the download in a new window.",
+              "attribute": "openNewWindow"
+            },
+            {
+              "kind": "field",
+              "name": "bodyText",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "A brief explanation of the entire article or paper used to pique the interest of the reader. Max character count: 120",
+              "attribute": "bodyText"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "ctaText",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Brief text that invites the reader to download the entire article or paper. Max character count: 28",
+              "fieldName": "ctaText"
+            },
+            {
+              "name": "ctaLink",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "URL of the downloadable article or paper.",
+              "fieldName": "ctaLink"
+            },
+            {
+              "name": "openNewWindow",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "true",
+              "description": "Open the download in a new window.",
+              "fieldName": "openNewWindow"
+            },
+            {
+              "name": "bodyText",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "A brief explanation of the entire article or paper used to pique the interest of the reader. Max character count: 120",
+              "fieldName": "bodyText"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "kd-persistent-cta",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "PersistentCta",
+          "declaration": {
+            "name": "PersistentCta",
+            "module": "src/components/callToAction/persistentCta/persistentCta.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "kd-persistent-cta",
+          "declaration": {
+            "name": "PersistentCta",
+            "module": "src/components/callToAction/persistentCta/persistentCta.ts"
           }
         }
       ]
@@ -782,167 +943,6 @@
           "declaration": {
             "name": "StatsCarouselSlide",
             "module": "src/components/patterns/statsCarousel/statsCarouselSlide.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/callToAction/persistentCta/index.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "PersistentCta",
-          "declaration": {
-            "name": "PersistentCta",
-            "module": "./persistentCta"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/callToAction/persistentCta/persistentCta.stories.ts",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "PersistentCta",
-          "type": {
-            "text": "object"
-          },
-          "default": "{\n\targs,\n\trender: ({...args}) => {\n\t\treturn html`\n\t\t\t<div style=\"height: 50vh;\"></div><!-- simulate content height in Storybook  -->\n\t\t\t<kd-persistent-cta\n\t\t\t\tctaText=\"${args.ctaText}\"\n\t\t\t\tctaLink=\"${args.ctaLink}\"\n\t\t\t\t.openNewWindow=\"${args.openNewWindow}\"\n\t\t\t\tbodyText=\"${args.bodyText}\"\n\t\t\t></kd-persistent-cta>\n\t\t`;\n\t}\n}"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "module": "src/components/callToAction/persistentCta/persistentCta.stories.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "PersistentCta",
-          "declaration": {
-            "name": "PersistentCta",
-            "module": "src/components/callToAction/persistentCta/persistentCta.stories.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/callToAction/persistentCta/persistentCta.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "PersistentCta",
-          "members": [
-            {
-              "kind": "field",
-              "name": "ctaText",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "Brief text that invites the reader to download the entire article or paper. Max character count: 28",
-              "attribute": "ctaText"
-            },
-            {
-              "kind": "field",
-              "name": "ctaLink",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "URL of the downloadable article or paper.",
-              "attribute": "ctaLink"
-            },
-            {
-              "kind": "field",
-              "name": "openNewWindow",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "true",
-              "description": "Open the download in a new window.",
-              "attribute": "openNewWindow"
-            },
-            {
-              "kind": "field",
-              "name": "bodyText",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "A brief explanation of the entire article or paper used to pique the interest of the reader. Max character count: 120",
-              "attribute": "bodyText"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "ctaText",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "Brief text that invites the reader to download the entire article or paper. Max character count: 28",
-              "fieldName": "ctaText"
-            },
-            {
-              "name": "ctaLink",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "URL of the downloadable article or paper.",
-              "fieldName": "ctaLink"
-            },
-            {
-              "name": "openNewWindow",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "true",
-              "description": "Open the download in a new window.",
-              "fieldName": "openNewWindow"
-            },
-            {
-              "name": "bodyText",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "A brief explanation of the entire article or paper used to pique the interest of the reader. Max character count: 120",
-              "fieldName": "bodyText"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "tagName": "kd-persistent-cta",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "PersistentCta",
-          "declaration": {
-            "name": "PersistentCta",
-            "module": "src/components/callToAction/persistentCta/persistentCta.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "kd-persistent-cta",
-          "declaration": {
-            "name": "PersistentCta",
-            "module": "src/components/callToAction/persistentCta/persistentCta.ts"
           }
         }
       ]
