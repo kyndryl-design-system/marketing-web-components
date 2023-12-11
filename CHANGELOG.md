@@ -1,3 +1,10 @@
+# [1.0.0-beta.16](https://github.com/kyndryl-design-system/shidoka-content/compare/v1.0.0-beta.15...v1.0.0-beta.16) (2023-12-11)
+
+
+### Bug Fixes
+
+* **helpers:** remove duplicate helpers and use them from foundation ([96d7b93](https://github.com/kyndryl-design-system/shidoka-content/commit/96d7b9302e25a398b869f2a20fcb47d10c72b099))
+
 # [1.0.0-beta.15](https://github.com/kyndryl-design-system/shidoka-content/compare/v1.0.0-beta.14...v1.0.0-beta.15) (2023-12-07)
 
 
