@@ -1,14 +1,15 @@
 import { html, LitElement } from 'lit';
 import { property, customElement } from 'lit/decorators.js';
 import { COLOR_PALETTE_VALUES } from '../../../common/defs/colorPalettes';
-import '../../eyebrow/eyebrow';
 import '@kyndryl-design-system/shidoka-foundation/components/button';
 import '@kyndryl-design-system/shidoka-foundation/components/icon';
 import '@kyndryl-design-system/shidoka-foundation/components/link';
 import chevronRightIcon from '@carbon/icons/es/chevron--right/16';
 import playIcon from '@carbon/icons/es/play/16';
-import stylesheet from './leadspaceInterior.scss';
+import '../../common/eyebrow/eyebrow';
+import '../../common/spacerLine/spacerLine';
 import { LEADSPACE_INTERIOR_MEDIA_POSITIONS } from './defs';
+import stylesheet from './leadspaceInterior.scss';
 
 @customElement('kd-leadspace-interior')
 export class LeadspaceInterior extends LitElement {
@@ -48,7 +49,10 @@ export class LeadspaceInterior extends LitElement {
 	 */
 	get renderEyebrow() {
 		if (this.eyebrowText) {
-			return html` <kd-eyebrow>${this.eyebrowText}</kd-eyebrow> `;
+			return html`
+				<kd-eyebrow>${this.eyebrowText}</kd-eyebrow>
+				<kd-spacer-line></kd-spacer-line>
+			`;
 		} else {
 			return null;
 		}
