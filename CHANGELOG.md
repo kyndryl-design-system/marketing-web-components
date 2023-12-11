@@ -1,3 +1,21 @@
+# [1.0.0-beta.16](https://github.com/kyndryl-design-system/shidoka-content/compare/v1.0.0-beta.15...v1.0.0-beta.16) (2023-12-11)
+
+
+### Bug Fixes
+
+* **helpers:** remove duplicate helpers and use them from foundation ([96d7b93](https://github.com/kyndryl-design-system/shidoka-content/commit/96d7b9302e25a398b869f2a20fcb47d10c72b099))
+
+# [1.0.0-beta.15](https://github.com/kyndryl-design-system/shidoka-content/compare/v1.0.0-beta.14...v1.0.0-beta.15) (2023-12-07)
+
+
+### Features
+
+* **persistent-cta:** add tests ([098bf6e](https://github.com/kyndryl-design-system/shidoka-content/commit/098bf6e39046bc9bf0faa7f53b8523aadc1a3944))
+* **persistent-cta:** move component to callToAction/persistentCta directory ([0a7f868](https://github.com/kyndryl-design-system/shidoka-content/commit/0a7f8687cb63a3c73e8cfbf74de96e61ba257ed5))
+* **persistent-cta:** set foundation as a dependency ([6b169df](https://github.com/kyndryl-design-system/shidoka-content/commit/6b169df5ca42790a25b5772073342c1a65cff6d0))
+* **persistent-cta:** update foundation version. use breakpoint helper to swap icons. use updated grid. ([204f36a](https://github.com/kyndryl-design-system/shidoka-content/commit/204f36a67682cdb244b41463c498c67c072135b8))
+* **persistent-cta:** update storybook category ([a978e34](https://github.com/kyndryl-design-system/shidoka-content/commit/a978e34177678165c5bd76d9b8f049ba25dd61fe))
+
 # [1.0.0-beta.14](https://github.com/kyndryl-design-system/shidoka-content/compare/v1.0.0-beta.13...v1.0.0-beta.14) (2023-11-27)
 
 

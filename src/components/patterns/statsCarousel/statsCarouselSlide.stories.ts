@@ -1,5 +1,5 @@
 import { html } from 'lit';
-import { createOptionsArray } from '../../../common/helpers/helpers';
+import { createOptionsArray } from '@kyndryl-design-system/shidoka-foundation/common/helpers/storybook';
 import './index';
 import { STAT_CAROUSEL_SLIDE_SYMBOL_POSITIONS, STAT_CAROUSEL_SLIDE_SYMBOL_ALIGNMENT } from './defs';
 

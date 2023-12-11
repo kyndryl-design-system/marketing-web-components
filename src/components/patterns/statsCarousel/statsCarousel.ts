@@ -2,6 +2,7 @@ import { html, LitElement } from 'lit';
 import { customElement, query, queryAssignedElements, property, state } from 'lit/decorators.js';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import { debounce } from '@kyndryl-design-system/shidoka-foundation/common/helpers/events';
 import stylesheet from './statsCarousel.scss';
 
 /**
@@ -65,18 +66,6 @@ export class StatsCarousel extends LitElement {
 	activeSlideIndex = 0;
 
 	/**
-	 * SetTimeout used to reset view on resize event.
-	 * @ignore
-	 */
-	private resizeTimer: ReturnType<typeof setTimeout> | undefined;
-
-	/**
-	 * resizeTimer delay to wait until all resize events complete.
-	 * @ignore
-	 */
-	private resizeDelay = 100;
-
-	/**
 	 * Delay resetting view until repaint completes.
 	 * @ignore
 	 */
@@ -93,12 +82,10 @@ export class StatsCarousel extends LitElement {
 		gsap.registerPlugin(ScrollTrigger);
 
 		// wait until resize ends to reset the view
-		window.addEventListener('resize', () => {
-			clearTimeout(this.resizeTimer);
-			this.resizeTimer = setTimeout(() => {
+		window.addEventListener('resize', debounce(() => {
 				this.resetView();
-			}, this.resizeDelay);
-		});
+			})
+		);
 	}
 
 	handleSlotChange() {

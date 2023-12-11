@@ -1,15 +1,3 @@
-export const debounce = (fn: Function, ms = 100) => {
-  let timer: ReturnType<typeof setTimeout>;
-  return function (e: Event) {
-    clearTimeout(timer);
-    timer = setTimeout(() => fn.apply(e), ms);
-  };
-};
-
-export const stringToReactHtml = (string: String) => {
-  return { __html: string };
-};
-
 /**
  * Return an object after deleting properties by value.
  * @param obj Object to modify
@@ -22,21 +10,6 @@ export function deleteObjectPropertyByValue(obj: object = {}, values: Array<Stri
     }
   }
   return obj;
-}
-
-/**
- * Convert an object to an array of only its values.
- * Used when importing enums in component stories for populating argType dropdowns.
- * @param options Object to options to convert
- */
-export function createOptionsArray(options: object = {}) {
-  const optionsArray: Array<string> = [];
-
-  Object.keys(options).map((key) => {
-    optionsArray.push(options[key as keyof typeof options]);
-  });
-
-  return optionsArray;
 }
 
 /**
@@ -59,7 +32,7 @@ export function createColorPaletteLabels(labels: object = {}, values: object = {
     if (key in values) {
       optionsLabels[values[key as keyof typeof values]] = labels[key as keyof typeof labels];
     }
-  });
+  })
 
   return optionsLabels;
 }
