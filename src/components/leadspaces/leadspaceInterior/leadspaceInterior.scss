@@ -35,22 +35,10 @@
 .kd-leadspace-interior-media-container {
 	height: 100%;
 	position: relative;
+	width: 100vw;
 
 	@media (min-width: breakpoints.$bp-lg) {
-		transform: none;
-		width: 100%;
-	}
-
-	.is-full-bleed & {
-		left: 50%;
-		transform: translateX(-50%);
-		width: 100vw;
-
-		@media (min-width: breakpoints.$bp-lg) {
-			left: 0;
-			transform: none;
-			width: 50vw;
-		}
+		width: 50vw;
 	}
 }
 
@@ -63,34 +51,43 @@
 .kd-leadspace-interior-media-cta {
 	bottom: var(--kd-spacing-48);
 	position: absolute;
-	right: var(--kd-spacing-16);
+	right: var(--kd-page-gutter);
 
 	@media (min-width: breakpoints.$bp-md) {
 		right: var(--kd-spacing-32);
 	}
 
 	@media (min-width: breakpoints.$bp-lg) {
-		right: var(--kd-spacing-40);
+		right: var(--kd-spacing-48);
+	}
+
+	.layout-option-2 & {
+		right: var(--kd-page-gutter);
 	}
 }
 
 // Content column
 // -------------------------------
 .kd-leadspace-interior-content-col {
-	padding: var(--kd-spacing-64) var(--kd-spacing-16);
-
-	@media (min-width: breakpoints.$bp-md) {
-		padding-left: var(--kd-spacing-32);
-		padding-right: var(--kd-spacing-32);
-	}
+	padding: var(--kd-spacing-64) var(--kd-page-gutter);
 
 	@media (min-width: breakpoints.$bp-lg) {
-		padding-left: var(--kd-spacing-40);
-		padding-right: var(--kd-spacing-40);
+		padding-left: var(--kd-spacing-32);
+		padding-right: var(--kd-spacing-32);
 
 		.layout-option-2 & {
 			order: 0;
 		}
+	}
+
+	@media (min-width: breakpoints.$bp-xl) {
+		padding-left: var(--kd-spacing-48);
+		padding-right: var(--kd-spacing-48);
+	}
+
+	@media (min-width: breakpoints.$bp-max) {
+		padding-left: var(--kd-spacing-40);
+		padding-right: var(--kd-spacing-40);
 	}
 }
 

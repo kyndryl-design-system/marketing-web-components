@@ -22,10 +22,6 @@ export class LeadspaceInterior extends LitElement {
 	@property({ type: String })
 	mediaPosition: string = LEADSPACE_INTERIOR_MEDIA_POSITIONS.LEFT;
 
-	/** Media and background go to the edge of the browser. */
-	@property({ type: Boolean })
-	isFullBleed = true;
-
 	/** Eyebrow text. */
 	@property({ type: String })
 	eyebrowText = '';
@@ -42,7 +38,7 @@ export class LeadspaceInterior extends LitElement {
 	@property({ type: String })
 	primaryCtaLink = '';
 
-	/** Secondary Media CTA text. */
+	/** Secondary Video CTA text. */
 	@property({ type: String })
 	secondaryCtaText = '';
 
@@ -81,7 +77,7 @@ export class LeadspaceInterior extends LitElement {
 	}
 
 	/**
-	 * Render Secondary Media CTA
+	 * Render Secondary Video CTA
 	 * @ignore
 	 */
 	get renderSecondaryCta() {
@@ -104,10 +100,9 @@ export class LeadspaceInterior extends LitElement {
 
 	override render() {
 		const classLayout = this.mediaPosition === LEADSPACE_INTERIOR_MEDIA_POSITIONS.LEFT ? '' : 'layout-option-2';
-		const classFullBleed = this.isFullBleed ? 'is-full-bleed' : 'kd-grid-container';
 		return html`
-			<div class="kd-leadspace-interior ${classFullBleed} ${this.colorPalette}">
-				<div class="kd-leadspace-interior-grid kd-grid kd-grid--no-max kd-grid--no-pad ${classLayout} ${classFullBleed}">
+			<div class="kd-leadspace-interior ${this.colorPalette}">
+				<div class="kd-leadspace-interior-grid kd-grid kd-grid--no-gap ${classLayout}">
 					<div class="kd-leadspace-interior-media-col kd-grid__col kd-grid__col--sm-4 kd-grid__col--md-8 kd-grid__col--lg-6">
 						<div class="kd-leadspace-interior-media-container">
 							<slot name="media"></slot>
