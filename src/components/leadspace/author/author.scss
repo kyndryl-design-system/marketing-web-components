@@ -1,0 +1,68 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+
+@use 'sass:map';
+
+@use '~@kyndryl-design-system/shidoka-foundation/scss/variables/breakpoints.scss';
+@use '~@kyndryl-design-system/shidoka-foundation/scss/utility/grid.scss';
+@use '~@kyndryl-design-system/shidoka-foundation/scss/utility/typography.scss';
+
+.kd-leadspace-author {
+  color: var(--kd-color-text-primary);
+  background: var(--kd-color-neutral-white);
+
+  .text-block {
+    padding-right: var(--kd-spacing-32);
+    padding-top: var(--kd-spacing-40);
+  }
+
+
+  .kd-grid-padding {
+    padding: 0 1rem;
+  }
+
+  .name {
+  }
+
+  .title {
+    padding-top: var(--kd-spacing-12);
+  }
+
+  .industry-and-location {
+    padding-top: var(--kd-spacing-12);
+  }
+
+  .socialmedia {
+    padding-top: var(--kd-spacing-24);
+  }
+
+  @media (max-width: breakpoints.$bp-lg) {
+    padding-left: 32px;
+    padding-right: 32px;
+
+    .side-pad {
+      display: none;
+    }
+  }
+
+  @media (max-width: breakpoints.$bp-md) {
+    padding-left: 16px;
+    padding-right: 16px;
+
+
+    .side-pad {
+      display: none;
+    }
+
+    .media-block {
+      order: 1;
+    }
+
+    .text-block {
+      order: 2;
+      padding-top: var(--kd-spacing-16);
+      padding-right: 0;
+    }
+  }
+}
