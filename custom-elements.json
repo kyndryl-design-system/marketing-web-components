@@ -46,6 +46,14 @@
             "name": "PersistentCta",
             "module": "./components/callToAction/persistentCta"
           }
+        },
+        {
+          "kind": "js",
+          "name": "IntroPrimary",
+          "declaration": {
+            "name": "IntroPrimary",
+            "module": "./components/text/introPrimary"
+          }
         }
       ]
     },
@@ -943,6 +951,133 @@
           "declaration": {
             "name": "StatsCarouselSlide",
             "module": "src/components/patterns/statsCarousel/statsCarouselSlide.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/text/introPrimary/defs.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/text/introPrimary/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "IntroPrimary",
+          "declaration": {
+            "name": "IntroPrimary",
+            "module": "./introPrimary"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/text/introPrimary/introPrimary.stories.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "IntroductionPrimary",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\n\targs,\n\trender: ({...args}) => {\n\t\treturn html`\n\t\t\t<kd-intro-primary \n\t\t\t\tintroTitle=\"${args.introTitle}\" \n\t\t\t\tintroTitleColor=\"${args.introTitleColor}\"\n\t\t\t>\n\t\t\t\t<div slot=\"text\">${args.text}</div>\n\t\t\t</kd-intro-primary>\n\t\t`;\n\t}\n}"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "src/components/text/introPrimary/introPrimary.stories.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "IntroductionPrimary",
+          "declaration": {
+            "name": "IntroductionPrimary",
+            "module": "src/components/text/introPrimary/introPrimary.stories.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/text/introPrimary/introPrimary.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "IntroPrimary",
+          "slots": [
+            {
+              "description": "Slot for description text. Character count: 450-550",
+              "name": "text"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "introTitle",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The main point to be elaborated upon throughout the rest of the page. Character count: 50-80",
+              "attribute": "introTitle"
+            },
+            {
+              "kind": "field",
+              "name": "introTitleColor",
+              "description": "Title color. Darkstone (default) or Spruce.",
+              "attribute": "introTitleColor"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "introTitle",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The main point to be elaborated upon throughout the rest of the page. Character count: 50-80",
+              "fieldName": "introTitle"
+            },
+            {
+              "name": "introTitleColor",
+              "description": "Title color. Darkstone (default) or Spruce.",
+              "fieldName": "introTitleColor"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "kd-intro-primary",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "IntroPrimary",
+          "declaration": {
+            "name": "IntroPrimary",
+            "module": "src/components/text/introPrimary/introPrimary.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "kd-intro-primary",
+          "declaration": {
+            "name": "IntroPrimary",
+            "module": "src/components/text/introPrimary/introPrimary.ts"
           }
         }
       ]
