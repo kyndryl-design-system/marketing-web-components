@@ -1,0 +1,36 @@
+@use '~@kyndryl-design-system/shidoka-foundation/scss/variables/breakpoints.scss';
+@use '~@kyndryl-design-system/shidoka-foundation/scss/utility/typography.scss';
+@use '~@kyndryl-design-system/shidoka-foundation/scss/mixins/spacing.scss';
+
+.full-bleed-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  div {
+    padding: var(--kd-spacing-32);
+    padding-top: var(--kd-spacing-0);
+
+    h1,
+    p {
+      color: var(--kd-color-text-primary);
+    }
+
+    .second-button {
+      margin-left: var(--kd-spacing-32);
+    }
+  }
+}
+
+.back-image {
+  background: url('https://www.kyndryl.com/etc.clientlibs/kyndrylprogram/clientlibs/clientlib-site/resources/images/trellis.svg')
+    0 no-repeat;
+  background-size: cover;
+  content: '';
+  display: block;
+  height: 100%;
+  max-width: 460px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 20%;
+}
