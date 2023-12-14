@@ -1,1 +1,0 @@
-export { KdStatsGroup } from './statsGroup';

@@ -1,21 +1,55 @@
 @use '~@kyndryl-design-system/shidoka-foundation/scss/variables/breakpoints.scss';
 @use '~@kyndryl-design-system/shidoka-foundation/scss/utility/typography.scss';
 @use '~@kyndryl-design-system/shidoka-foundation/scss/mixins/spacing.scss';
+@use '../../../scss/utility/component-palettes.scss';
 
 .full-bleed-grid {
   display: grid;
+  background: var(--kd-color-background-ui-default);
+  color: var(--kd-color-text-primary);
   .full-bleed-internal-container {
     .title-color {
       color: var(--kd-color-background-accent-primary);
     }
     .second-title {
-      h1 {
-        font-weight: 600;
+      h2 {
+        color: transparent;
+        -webkit-text-stroke: 2px var(--kd-color-background-accent-primary);
+        margin: var(--kd-spacing-04);
+      }
+
+      div {
         color: transparent;
         -webkit-text-stroke: 2px var(--kd-color-background-accent-primary);
       }
     }
   }
+}
+
+.kd-stats-carousel-slide-stat-container {
+  align-items: flex-start;
+  color: var(--kd-color-background-accent-primary);
+  display: flex;
+
+  @media (min-width: breakpoints.$bp-lg) {
+    padding-right: var(--kd-spacing-48);
+  }
+
+  &.is-center {
+    align-items: center;
+  }
+
+  &.is-subscript {
+    align-items: flex-end;
+  }
+}
+
+.kd-stats-carousel-slide-stat {
+  display: inline-flex;
+}
+
+.kd-stats-carousel-slide-symbol {
+  display: inline-flex;
 }
 
 @media (min-width: breakpoints.$bp-sm) {
