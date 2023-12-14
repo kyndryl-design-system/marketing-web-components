@@ -19,6 +19,12 @@ export default {
 		text: {
 			control: { type: 'text' },
 		},
+		ctaText: {
+			control: { type: 'text' },
+		},
+		ctaLink: {
+			control: { type: 'text' },
+		},
 	},
 };
 
@@ -27,7 +33,9 @@ const args = {
 	introTitleColor: INTRO_PRIMARY_TITLE_COLOR.DARKSTONE,
 	text: html`
 		<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas faucibus mollis interdum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
-	`
+	`,
+	ctaText: 'CTA text',
+	ctaLink: 'https://www.kyndryl.com',
 }
 
 export const IntroductionPrimary = {
@@ -37,6 +45,8 @@ export const IntroductionPrimary = {
 			<kd-intro-primary 
 				introTitle="${args.introTitle}" 
 				introTitleColor="${args.introTitleColor}"
+				ctaText="${args.ctaText}"
+				ctaLink="${args.ctaLink}"
 			>
 				<div slot="text">${args.text}</div>
 			</kd-intro-primary>
