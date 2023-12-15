@@ -46,47 +46,13 @@
             "name": "PersistentCta",
             "module": "./components/callToAction/persistentCta"
           }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/common/defs/colorPalettes.ts",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "COLOR_PALETTE_LABELS",
-          "type": {
-            "text": "object"
-          },
-          "default": "{\n\tDEFAULT: 'default',\n\tDARK_STONE: 'Darkstone',\n\tSPRUCE_DARK: 'Spruce Dark',\n\tSPRUCE: 'Spruce',\n\tDARK_GREEN: 'Dark Green',\n\tLIGHT_GREEN: 'Light Green',\n\tWARM_RED: 'Warm Red',\n\tCLOUD: 'Cloud',\n\tSKYE: 'Skye',\n}",
-          "description": "Used to create Storybook control labels that are simple and user-friendly."
-        },
-        {
-          "kind": "variable",
-          "name": "COLOR_PALETTE_VALUES",
-          "type": {
-            "text": "object"
-          },
-          "default": "{\n\tDEFAULT: '',\n\tDARK_STONE: 'kd-component-palette--darkstone',\n\tSPRUCE_DARK: 'kd-component-palette--spruce-dark',\n\tSPRUCE: 'kd-component-palette--spruce',\n\tDARK_GREEN: 'kd-component-palette--darkgreen',\n\tLIGHT_GREEN: 'kd-component-palette--lightgreen',\n\tWARM_RED: 'kd-component-palette--warmred',\n\tCLOUD: 'kd-component-palette--cloud',\n\tSKYE: 'kd-component-palette--skye',\n}",
-          "description": "CSS classes for each color palette. Also used to create Storybook control value arrays."
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "COLOR_PALETTE_LABELS",
-          "declaration": {
-            "name": "COLOR_PALETTE_LABELS",
-            "module": "src/common/defs/colorPalettes.ts"
-          }
         },
         {
           "kind": "js",
-          "name": "COLOR_PALETTE_VALUES",
+          "name": "IntroPrimary",
           "declaration": {
-            "name": "COLOR_PALETTE_VALUES",
-            "module": "src/common/defs/colorPalettes.ts"
+            "name": "IntroPrimary",
+            "module": "./components/text/introPrimary"
           }
         }
       ]
@@ -157,6 +123,48 @@
           "declaration": {
             "name": "createColorPaletteLabels",
             "module": "src/common/helpers/helpers.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/common/defs/colorPalettes.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "COLOR_PALETTE_LABELS",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\n\tDEFAULT: 'default',\n\tDARK_STONE: 'Darkstone',\n\tSPRUCE_DARK: 'Spruce Dark',\n\tSPRUCE: 'Spruce',\n\tDARK_GREEN: 'Dark Green',\n\tLIGHT_GREEN: 'Light Green',\n\tWARM_RED: 'Warm Red',\n\tCLOUD: 'Cloud',\n\tSKYE: 'Skye',\n}",
+          "description": "Used to create Storybook control labels that are simple and user-friendly."
+        },
+        {
+          "kind": "variable",
+          "name": "COLOR_PALETTE_VALUES",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\n\tDEFAULT: '',\n\tDARK_STONE: 'kd-component-palette--darkstone',\n\tSPRUCE_DARK: 'kd-component-palette--spruce-dark',\n\tSPRUCE: 'kd-component-palette--spruce',\n\tDARK_GREEN: 'kd-component-palette--darkgreen',\n\tLIGHT_GREEN: 'kd-component-palette--lightgreen',\n\tWARM_RED: 'kd-component-palette--warmred',\n\tCLOUD: 'kd-component-palette--cloud',\n\tSKYE: 'kd-component-palette--skye',\n}",
+          "description": "CSS classes for each color palette. Also used to create Storybook control value arrays."
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "COLOR_PALETTE_LABELS",
+          "declaration": {
+            "name": "COLOR_PALETTE_LABELS",
+            "module": "src/common/defs/colorPalettes.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "COLOR_PALETTE_VALUES",
+          "declaration": {
+            "name": "COLOR_PALETTE_VALUES",
+            "module": "src/common/defs/colorPalettes.ts"
           }
         }
       ]
@@ -943,6 +951,183 @@
           "declaration": {
             "name": "StatsCarouselSlide",
             "module": "src/components/patterns/statsCarousel/statsCarouselSlide.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/text/introPrimary/defs.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/text/introPrimary/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "IntroPrimary",
+          "declaration": {
+            "name": "IntroPrimary",
+            "module": "./introPrimary"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/text/introPrimary/introPrimary.stories.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "IntroductionPrimary",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\n\targs,\n\trender: ({...args}) => {\n\t\treturn html`\n\t\t\t<kd-intro-primary \n\t\t\t\tintroTitle=\"${args.introTitle}\" \n\t\t\t\tintroTitleColor=\"${args.introTitleColor}\"\n\t\t\t\tctaText=\"${args.ctaText}\"\n\t\t\t\tctaLink=\"${args.ctaLink}\"\n\t\t\t>\n\t\t\t\t<div slot=\"text\">${args.text}</div>\n\t\t\t</kd-intro-primary>\n\t\t`;\n\t}\n}"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "src/components/text/introPrimary/introPrimary.stories.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "IntroductionPrimary",
+          "declaration": {
+            "name": "IntroductionPrimary",
+            "module": "src/components/text/introPrimary/introPrimary.stories.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/text/introPrimary/introPrimary.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "IntroPrimary",
+          "slots": [
+            {
+              "description": "Slot for description text. Character count: 450-550",
+              "name": "text"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "introTitle",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The main point to be elaborated upon throughout the rest of the page. Character count: 50-80",
+              "attribute": "introTitle"
+            },
+            {
+              "kind": "field",
+              "name": "introTitleColor",
+              "description": "Title color. Darkstone (default) or Spruce.",
+              "attribute": "introTitleColor"
+            },
+            {
+              "kind": "field",
+              "name": "ctaText",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "CTA text.",
+              "attribute": "ctaText"
+            },
+            {
+              "kind": "field",
+              "name": "ctaLink",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "URL of the CTA.",
+              "attribute": "ctaLink"
+            },
+            {
+              "kind": "method",
+              "name": "renderCta",
+              "parameters": [
+                {
+                  "name": "layout",
+                  "type": {
+                    "text": "String"
+                  }
+                }
+              ]
+            }
+          ],
+          "attributes": [
+            {
+              "name": "introTitle",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The main point to be elaborated upon throughout the rest of the page. Character count: 50-80",
+              "fieldName": "introTitle"
+            },
+            {
+              "name": "introTitleColor",
+              "description": "Title color. Darkstone (default) or Spruce.",
+              "fieldName": "introTitleColor"
+            },
+            {
+              "name": "ctaText",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "CTA text.",
+              "fieldName": "ctaText"
+            },
+            {
+              "name": "ctaLink",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "URL of the CTA.",
+              "fieldName": "ctaLink"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "kd-intro-primary",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "IntroPrimary",
+          "declaration": {
+            "name": "IntroPrimary",
+            "module": "src/components/text/introPrimary/introPrimary.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "kd-intro-primary",
+          "declaration": {
+            "name": "IntroPrimary",
+            "module": "src/components/text/introPrimary/introPrimary.ts"
           }
         }
       ]
