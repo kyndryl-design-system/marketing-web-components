@@ -31,7 +31,9 @@ export class IntroPrimary extends LitElement {
 	ctaLink = '';
 
 	renderCta(layout: String) {
-		const classLayout = layout === 'mobile' ? 'kd-intro-primary--cta-mobile' : 'kd-intro-primary--cta-desktop';
+		const classLayout = layout === 'mobile' ?
+			'kd-visibility--hidden-lg kd-visibility--hidden-xl kd-visibility--hidden-max' :
+			'kd-visibility--hidden-sm kd-visibility--hidden-md';
 		if (this.ctaLink) {
 			return html`
 				<div class="${classLayout} kd-spacing--margin-top-40">

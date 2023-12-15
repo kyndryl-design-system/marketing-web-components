@@ -4,6 +4,7 @@
 @use '~@kyndryl-design-system/shidoka-foundation/scss/utility/grid.scss';
 @use '~@kyndryl-design-system/shidoka-foundation/scss/utility/spacing.scss';
 @use '~@kyndryl-design-system/shidoka-foundation/scss/utility/typography.scss';
+@use '~@kyndryl-design-system/shidoka-foundation/scss/utility/visibility.scss';
 
 .kd-intro-primary {
 	background: var(--kd-color-background-ui-default);
@@ -21,22 +22,5 @@
 .kd-intro-primary--text {
 	@media (min-width: breakpoints.$bp-lg) {
 		grid-column-start: 7;
-	}
-}
-
-// TODO replace these with utility classes from foundation once they are added.
-.kd-intro-primary--cta-desktop {
-	display: none;
-
-	@media (min-width: breakpoints.$bp-lg) {
-		display: block;
-	}
-}
-
-.kd-intro-primary--cta-mobile {
-	display: block;
-
-	@media (min-width: breakpoints.$bp-lg) {
-		display: none;
 	}
 }
