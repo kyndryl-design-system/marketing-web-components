@@ -14,12 +14,6 @@ export default {
       options: ['left', 'right'],
       description: 'Media on the left or right',
     },
-
-    bleedMedia: {
-      control: { type: 'radio' },
-      options: ['true', 'false'],
-      description: 'Bleed the media slot to the edge of the browser',
-    },
     headlineText: {
       control: { type: 'text' },
       description: 'Headline Text (required)',
@@ -41,7 +35,6 @@ export default {
 
 const args = {
   mediaPosition: 'left',
-  bleedMedia: 'false',
   eyebrowText: 'Lorem Ipsum',
   headlineText: 'Lorem ipsum dolor sit amet',
   buttonLabel: 'Button text',
@@ -54,7 +47,6 @@ export const leadspaceInterior = {
     return html`
       <kd-leadspace-interior
         mediaPosition="${args.mediaPosition}"
-        bleedmedia="${args.bleedMedia}"
         headlineText="${args.headlineText}"
         eyebrowtext="${args.eyebrowText}"
         buttonLabel="${args.buttonLabel}"

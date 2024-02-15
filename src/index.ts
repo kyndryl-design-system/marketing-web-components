@@ -6,6 +6,5 @@ export {
 } from './components/patterns/statsCarousel';
 export { PersistentCta } from './components/callToAction/persistentCta';
 export {
-  StatsCarousel,
-  StatsCarouselSlide,
-} from './components/patterns/leadspace';
+  LeadspaceInterior
+} from './components/patterns/leadspace/interior';

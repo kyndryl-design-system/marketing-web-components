@@ -26,6 +26,9 @@ export class LeadspaceInterior extends LitElement {
   @property({ type: String }) headlineText = '';
   @property({ type: String }) eyebrowText = '';
 
+  /** Global Color Palette */
+  @property({ type: String }) colorPalette = '';
+
   get eyebrowTemplate() {
     if (this.eyebrowText) {
       return html` <kd-eyebrow>${this.eyebrowText}</kd-eyebrow>
@@ -107,13 +110,9 @@ export class LeadspaceInterior extends LitElement {
   }
 
   override render() {
-    const classesContainer = {
-      [`kd-leadspace-interior`]: true,
-    };
-
     if (this.mediaPosition === 'left') {
       return html`
-        <div class="${classMap(classesContainer)}">
+        <div class="kd-leadspace-interior ${this.colorPalette}">
           <div class="full-bleed-grid">
             ${this.slot1Template} ${this.slot2Template}
           </div>
@@ -121,7 +120,7 @@ export class LeadspaceInterior extends LitElement {
       `;
     } else {
       return html`
-        <div class="${classMap(classesContainer)}">
+        <div class="kd-leadspace-interior ${this.colorPalette}">
           <div class="full-bleed-grid">
             ${this.slot2Template} ${this.slot1Template}
           </div>
