@@ -1,3 +1,12 @@
+# [1.0.0-beta.18](https://github.com/kyndryl-design-system/shidoka-content/compare/v1.0.0-beta.17...v1.0.0-beta.18) (2024-02-29)
+
+
+### Features
+
+* **leadspace-interior:** create leadspace interior ([81e8a72](https://github.com/kyndryl-design-system/shidoka-content/commit/81e8a7247ea548b1fd39c581282a3cb1805c5bb1))
+* **leadspace/interior:** remove unused classMap ([6713e7c](https://github.com/kyndryl-design-system/shidoka-content/commit/6713e7c3c3a6288d21994f436539b188e56677ee))
+* **leadspace/interior:** revisions to leadspace/interior ([9ea8ddc](https://github.com/kyndryl-design-system/shidoka-content/commit/9ea8ddc945df6fd799d355ba96829306d7e5a02e))
+
 # [1.0.0-beta.17](https://github.com/kyndryl-design-system/shidoka-content/compare/v1.0.0-beta.16...v1.0.0-beta.17) (2024-02-28)
 
 
