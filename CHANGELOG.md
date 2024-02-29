@@ -1,3 +1,11 @@
+# [1.0.0-beta.17](https://github.com/kyndryl-design-system/shidoka-content/compare/v1.0.0-beta.16...v1.0.0-beta.17) (2024-02-28)
+
+
+### Bug Fixes
+
+* **absolute-imports:** update build to allow absolute imports with aliases ([9cadba5](https://github.com/kyndryl-design-system/shidoka-content/commit/9cadba52d5c6a6807e27ab0f0fa7f15bd6d5287f))
+* **build:** update node version ([64a0573](https://github.com/kyndryl-design-system/shidoka-content/commit/64a05733de11b9be4d1939788dc2c5e80ebfb946))
+
 # [1.0.0-beta.16](https://github.com/kyndryl-design-system/shidoka-content/compare/v1.0.0-beta.15...v1.0.0-beta.16) (2023-12-11)
 
 
