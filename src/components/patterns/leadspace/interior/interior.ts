@@ -5,8 +5,6 @@
 import { html, LitElement } from 'lit';
 import { property, customElement } from 'lit/decorators.js';
 
-import { classMap } from 'lit-html/directives/class-map.js';
-
 import '@kyndryl-design-system/shidoka-foundation/components/button';
 import '@kyndryl-design-system/shidoka-foundation/components/icon';
 import '@kyndryl-design-system/shidoka-foundation/components/link';
